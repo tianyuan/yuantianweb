@@ -35,4 +35,4 @@ weight = 5
 
 # Biography
 
-Yuan Tian is also a PhD candidate in Computer Science. Her research primarily focus on using simulation modelling to better inform decision making in stroke care, Tuberculosis control, patient flow and seniors' care. Yuan Tian is also a researcher in Saskatchewan Health Quality Council (Canada).  I am working with Saskatchewan Emergency Department Waits and Patient Flow Initiative, She developed simulation models to enhance the understanding of Emergency Department overcrowding and identify interventions to streamline the patient flow in Saskatchewan hospitals. 
+Yuan Tian is a PhD candidate in Computer Science. Her research primarily focus on using simulation modelling to better inform decision making in stroke care, Tuberculosis control, patient flow and seniors' care. Yuan Tian is also a researcher in Saskatchewan Health Quality Council (Canada).  I am working with Saskatchewan Emergency Department Waits and Patient Flow Initiative, She developed simulation models to enhance the understanding of Emergency Department overcrowding and identify interventions to streamline the patient flow in Saskatchewan hospitals. 
