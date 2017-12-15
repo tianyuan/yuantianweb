@@ -1,10 +1,10 @@
 +++
 # Hero widget.
 widget = "hero"
-active = true
+active = false
 date = 2017-10-15
 
-title = "Academic"
+title = "Yuan Tian"
 
 # Order that this section will appear in.
 weight = 3
