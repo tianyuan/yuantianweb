@@ -10,9 +10,9 @@ weight = 5
 # List your academic interests.
 [interests]
   interests = [
+   "System Science and Computational Epidemiology",
     "Data Science and Machine Learning",
-    "Health Economics and Health Policy",
-    "System Science and Computational Epidemiology"
+    "Health Economics and Health Policy"
   ]
 
 # List your qualifications (such as academic degrees).
@@ -28,7 +28,7 @@ weight = 5
 
 [[education.courses]]
   course = "Bachelor in Management Science"
-  institution = "University of Saskatchewan"
+  institution = "Jinan University, Guangzhou, China"
   year = 2009
  
 +++
