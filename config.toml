@@ -40,18 +40,18 @@ defaultContentLanguageInSubdir = false
 
   # Your details.
   name = "Yuan Tian"
-  role = "PhD Candidate at University of Saskatchewan"
+  role = "PhD Candidate & Researcher"
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-  organizations = [ { name = "University of Saskatchewan", url = "" } ]
+  organizations = [ { name = "University of Saskatchewan", url = "https://www.cs.usask.ca/" },
+                    { name = "SK Health Quality Council", url = "https://hqc.sk.ca/"}]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
   email = "yuan.tian09@gmail.com"
   address = "176 Thorvaldson Bldg,110 Science Place,University of Saskatchewan,Saskatoon, SK S7N 5C9, Canada"
   phone = "306-966-1947"
-  Lab = "Computational Epidemiology and Public Health Informatics Lab"
   # Enable Keybase in Contact widget by entering your keybase.io username.
   keybase = ""
 
@@ -205,20 +205,24 @@ defaultContentLanguageInSubdir = false
     link = "mailto:yuan.tian09@gmail.com"
 
   [[params.social]]
-    icon = "twitter"
+    icon = "linkedin"
     icon_pack = "fa"
-    link = "//twitter.com/GeorgeCushen"
+    link = "https://www.linkedin.com/in/yuan-tian-37256727/"
 
   [[params.social]]
     icon = "google-scholar"
     icon_pack = "ai"
-    link = "https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ"
+    link = "https://scholar.google.ca/citations?hl=en&user=8x0i6jAAAAAJ"
 
   [[params.social]]
-    icon = "github"
+    icon = "facebook"
     icon_pack = "fa"
-    link = "//github.com/gcushen"
+    link = "https://www.facebook.com/yuan.tian.98284"
 
+  [[params.social]]
+    icon = "instagram"
+    icon_pack = "fa"
+    link = "https://www.instagram.com/tianyuan09/?hl=en"
 
 # Navigation Links
 #   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
@@ -234,7 +238,7 @@ defaultContentLanguageInSubdir = false
   weight = 1
 
 [[menu.main]]
-  name = "Posts"
+  name = "Theme Posts"
   url = "#posts"
   weight = 2
 
@@ -242,7 +246,6 @@ defaultContentLanguageInSubdir = false
   name = "Publications"
   url = "#publications"
   weight = 3
-
 
 
 #[[menu.main]]
