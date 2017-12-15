@@ -1,13 +1,13 @@
 +++
 # Hero widget.
 widget = "hero"
-active = true
+active = false
 date = 2017-10-15
 
 title = "Yuan Tian"
 
 # Order that this section will appear in.
-weight = 6
+weight = 3
 
 # Overlay a color or image (optional).
 #   Deactivate an option by commenting out the line, prefixing it with `#`.
