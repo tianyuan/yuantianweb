@@ -19,7 +19,7 @@ weight = 5
 [[education.courses]]
   course = "PhD Candidate in Computer Science"
   institution = "University of Saskatchewan"
-  year = 2020
+  year = "2016 -- Present"
   
 [[education.courses]]
   course = "MSc in Computer Science"
