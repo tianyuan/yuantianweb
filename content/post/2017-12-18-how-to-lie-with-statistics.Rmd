@@ -1,0 +1,74 @@
+---
+title: How to Lie with Statistics
+author: Yuan Tian
+date: '2017-12-18'
+categories:
+  - iRead
+tags:
+  - Books
+  - Statistics
+output:
+  html_document:
+    df_print: paged
+slug: how-to-lie-with-statistics
+---
+
+  ![](/img/lietostatistics.jpg)
+
+This little book stands the test of time for over half a century. It has numerous hilarious examples regarding the ways that statistics might be biased. I love the author's comments in the introduction: 
+
+>The crooks already know these tricks,honest men must learn them in self-dense.
+
+####1. Is it a trully representative sample of the studied population?
+
+We encountered a key question when interpreting the sample data in the real world:`Is the sample a representative sample of the studied population?`
+
+Without `randomization`,all kinds of `selection biases` might be present for a population study using a so-called "representative" sample. If the subject is human being, are we studying (or selecting) people with more education, more information and alertness, and better appearance? Even with randomization, such data might also be susceptible to other types of biases such as [recall bias](https://en.wikipedia.org/wiki/Recall_bias), [volunteer bias](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3706448/), etc. So it is important to be aware of such biases when interpreting the results. 
+ 
+#### 2. How to produce significant outcomes in a study more easily? 
+
+Using small sample size, you can leverage ` "variability"` and `chance` to produce `sound` results quite easily. [Amos Tversky](https://en.wikipedia.org/wiki/Amos_Tversky) (1971) published an article on the [belief in the Law of Small Numbers](http://stats.org.uk/statistical-inference/TverskyKahneman1971.pdf) to demonstrate that people are quite susceptible to this judgement bias.
+
+In real life, we often see `"Users reported 23% fewer cavities with Doakes' tooth paste"`, `"80% users reported significant reduction in wrinkles"`. The question is how many users actually reported, and often in the footnote, you might find a sample size smaller than 100, maybe 20 or 40. 
+
+A small sample size enables a much higher chance to produce *`difference or extreme`* outcomes. Given that most people have a tendency to jump to the conclusion without questioning the details (such as `sample size`), isn't that a good trick for headlines/buy-in with "sound" rigor? 
+ 
+Just as one quote from the book said: 
+
+>Knowing nothing about a subject is frequently healthier than knowing what is not so, and a little learning may be a dangerous thing.
+
+####3. If you can't prove A, you can prove B and assert that B equals to A, and people often can hardly notice the difference. 
+
+By substituting the concept, you have a good chance of misleading your audience in your "designed" way, and people can hardly notice the difference.
+
+>You can't prove that your nostrum cures colds, but you can publish (in large type) a sworn laboratory report that half an ounce of the stuff killed 31,108 germs in a test tube in 11 seconds. While you are about it, make sure that the laboratory is reputable or has an impressive name. Reproduce the report in full. Photograph a doctor-type model in white clothes and put his picture alongside
+
+This is such `a great trap`! Who cares what germs cause colds? Who wants to reason about the stuff in the tube and its associations with the colds? It looks like it works. 
+
+####4. Can polls help us get closer to the truth?
+
+Image that you are assigned with a research question: do people think blacks have as good a chance as white people to get jobs? ( or whether race prejudice is growing?)
+
+You decide to set up a poll. You can ask a group of people with follow-ups at intervals to report the trending.
+Princeton's Office of Public Opinion Research tested this question, and the results are astonishing.  
+
+> Each person who was asked the question abut jobs was also asked some questions designed to discover if he was strongly prejudiced against blacks. It turns out that people most strongly prejudiced were most likely to answer "YES" to the question about the job opportunities.  Two-thirds of those who were sympathetic toward blacks didn't think the black had as good a chance at a job as a white person did, and about two-thirds of those showing prejudice said that blacks were getting as good breaks as whites.  
+
+`How much you can learn about employment conditions for blacks from this poll?`
+The `better` your poll looks like (increasing number of answers `"Yes"` to the effect that blacks have equal chance as white people in employment), the `worse` things get (maybe it just shows you the number of people who hold race prejudice is increasing).   
+
+Similarly, for any kind of polls or survey, it is subjective to quite a lot of hidden biases. 
+
+
+####5. Predictive Modelling, Poll Data and GIGO (Garbage In, Garbage Out!)
+The [failure of predictive models in predicting Trump election](https://www.forbes.com/sites/forbestechcouncil/2017/02/08/what-the-election-taught-us-about-predictive-analytics/#5956fd9b6532) might trigger many distrust towards these methodologies.  In my personal opinion, the predictive models might be the scapegoat for the failure.  If you put into the machine the wrong data (poor poll data), how can the right answer come out?  The output can only be as accurate as the data entered into it!
+
+####6. If B follows A, then A has caused B? Correlation is not causation, "Diapers" and "Beer" are merely association. 
+
+If you find people with high grades, compared with those low grads, are less likely to be the smoker, can you conclude that smoking makes dull minds? Or having high grades will help you quit smoking?
+
+if you find most people died in a hopistal, can you conclude that hospital kills people? 
+
+Another example is the famous and sound **"Diapers and Beer" story** firstly published in 1998. It is usually featured as an encouraging story for data mining. [Prof. Daniel J. Power](http://www.dssresources.com/newsletters/66.php) investigated this story in greater details, and he revealed that the supermarket never utilized this information to move the products closer together on the shelves, and such correlation was found using only 50 stores'  data in 1 day period.
+Basically, **we have no idea whether putting diaper together with beer will increase the sales of either. **The conclusion is merely a correlation, which  can be found quite easily but far from enough to support good decision making.
+Personally speaking, this is not a good story about data mining today from the lens of decision making. **Data mining should really go beyond identifying where events were happening together. It should answer whether one event leads to a significant increased/decreased likelihood of another events. For instance, whether purchasing A will significantly increase the chance that B will be purchased.**
