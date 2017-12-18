@@ -239,7 +239,7 @@ defaultContentLanguageInSubdir = false
   weight = 1
 
 [[menu.main]]
-  name = "Theme Posts"
+  name = "My Posts"
   url = "#posts"
   weight = 2
 
