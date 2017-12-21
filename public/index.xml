@@ -11,6 +11,58 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Key Commands about Git and GitHub Shell</title>
+      <link>/post/tips-about-git/</link>
+      <pubDate>Thu, 21 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/tips-about-git/</guid>
+      <description>&lt;p&gt;Thanks to the &lt;a href=&#34;https://alison.rbind.io/post/up-and-running-with-blogdown/&#34;&gt;Step-by-Step Instruction provided by ALISON PRESMANES HILL&lt;/a&gt; and &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;“Blogdown: Creating Websites with R Markdown”&lt;/a&gt;, I was able to create this website. The repository of this website is kept on Git. When I tried to get refreshed on the common Git commands, I came across this wonderful &lt;a href=&#34;http://dh.newtfire.org/explainGitShell.html&#34;&gt;Guide to Git Shell&lt;/a&gt;. This post is merely a note on the key common Git commands and core workflow in Git Shell (although you can complete all these actions via Git Desktop without interfering with the Shell).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Two basic commands: &lt;code&gt;git pull&lt;/code&gt; and &lt;code&gt;git push&lt;/code&gt;.&lt;/strong&gt; The &lt;strong&gt;&lt;code&gt;git pull&lt;/code&gt;&lt;/strong&gt; can be divided into &lt;strong&gt;&lt;code&gt;git fetch&lt;/code&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;code&gt;git merge&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Assuming you already have the repo on your local machine, then &lt;strong&gt;a common workflow&lt;/strong&gt; will have 4 steps:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;You &lt;strong&gt;&lt;code&gt;ALWAYS&lt;/code&gt;&lt;/strong&gt; need to be sure your local repo is up-to-date with the remote repo.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;#Make sure there are no untracked files.
+git status 
+
+#Pull in all the files changed on the remote
+git fetch
+
+#Comfirm that all the files are ready to merge
+git status
+
+#A final step in pulling the remote changes into local machine
+git merge
+
+#A final &amp;quot;git status&amp;quot; to confirm everything is good to go
+git status&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;With some modifications/changes in your working directory, it is time to inform Git about your new changes using &lt;strong&gt;&lt;code&gt;git add -A&lt;/code&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;#Stage all the changed or newly added files in the working directory
+git add -A
+
+#Confirm again.
+git status&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;It’s time to &lt;strong&gt;&lt;code&gt;git commit -m&lt;/code&gt;&lt;/strong&gt;!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;git commit -m &amp;quot;this is my commit&amp;quot;
+
+#Confirm again
+git status&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;The final &lt;strong&gt;&lt;code&gt;git push&lt;/code&gt;&lt;/strong&gt; to the remote repository.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;git push
+
+# Confirm everything is up-to-date
+git status&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Other commands that might be useful include: &lt;strong&gt;&lt;code&gt;git branch --list&lt;/code&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;code&gt;git help&lt;/code&gt;&lt;/strong&gt;, etc. More can be found in the &lt;a href=&#34;http://dh.newtfire.org/explainGitShell.html&#34;&gt;Guide to Git Shell&lt;/a&gt; with illustrative figures and tutorials.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>How to Lie with Statistics</title>
       <link>/post/how-to-lie-with-statistics/</link>
       <pubDate>Mon, 18 Dec 2017 00:00:00 +0000</pubDate>
