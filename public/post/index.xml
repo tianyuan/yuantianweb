@@ -11,6 +11,17 @@
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>R for Data Science： Get ALL the Exercises Done! </title>
+      <link>/post/r-for-data-science-get-all-the-exercises-done/</link>
+      <pubDate>Fri, 22 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/r-for-data-science-get-all-the-exercises-done/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/img/rfordatascience.png&#34; alt=&#34;R for Data Science: Import, Tidy, Transform, Visualize, and Model Data&#34; /&gt; &lt;strong&gt;Reference:&lt;/strong&gt; &lt;a href=&#34;https://www.amazon.com/Data-Science-Transform-Visualize-Model/dp/1491910399&#34;&gt;R for Data Science: Import, Tidy, Transform, Visualize, and Model Data&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Using &lt;code&gt;R Markdown&lt;/code&gt; together with exercises in this book, I am trying to document my learning path on R. So the reader for this post is &lt;strong&gt;MYSELF&lt;/strong&gt;. :smile:&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Key Commands about Git and GitHub Shell</title>
       <link>/post/tips-about-git/</link>
       <pubDate>Thu, 21 Dec 2017 00:00:00 +0000</pubDate>

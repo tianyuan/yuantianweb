@@ -17,8 +17,9 @@ weight = 19
 tags_include = []
 tags_exclude = []
 
+
 # Number of posts to list.
-count = 5
+count = 2
 
 +++
 

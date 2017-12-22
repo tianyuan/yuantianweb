@@ -50,9 +50,9 @@ defaultContentLanguageInSubdir = false
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
-  email = "yuan.tian09@gmail.com"
+  email = ""
   address = "176 Thorvaldson Bldg,110 Science Place,University of Saskatchewan,Saskatoon, SK S7N 5C9, Canada"
-  phone = "306-966-1947"
+  phone = ""
   # Enable Keybase in Contact widget by entering your keybase.io username.
   keybase = ""
 
@@ -239,13 +239,13 @@ defaultContentLanguageInSubdir = false
   weight = 1
 
 [[menu.main]]
-  name = "My Posts"
+  name = "My Blog"
   url = "#posts"
   weight = 2
 
 #[[menu.main]]
-#  name = "Publications"
-#  url = "#publications"
+#  name = "中文"
+#  url = "#chinese"
 #  weight = 3
 
 
