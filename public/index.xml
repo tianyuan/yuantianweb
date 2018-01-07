@@ -18,11 +18,29 @@
       <guid>/post/functional-programming-in-scala/</guid>
       <description>
 
-&lt;p&gt;Functional programming (FP) finally goes &lt;a href=&#34;http://www.zdnet.com/article/functional-programming-finally-goes-mainstream-heres-what-you-need-to-know/&#34; target=&#34;_blank&#34;&gt;mainstream&lt;/a&gt;. It is not a new concept, but it is absolutely a complex one for beginners including me. I got exposed to a large set of references and books, and I will try to organize it in a way that might be helpful for others.&lt;/p&gt;
+&lt;p&gt;Functional programming (FP) finally goes &lt;a href=&#34;http://www.zdnet.com/article/functional-programming-finally-goes-mainstream-heres-what-you-need-to-know/&#34; target=&#34;_blank&#34;&gt;mainstream&lt;/a&gt;. It is not a new concept, but it is absolutely a complex one for beginners including me. I got exposed to a large set of references, online courses and books, and I will try to organize them in a useful way.&lt;/p&gt;
 
-&lt;h3 id=&#34;functional-programming-fp-in-scala&#34;&gt;Functional Programming (FP) in Scala&lt;/h3&gt;
+&lt;h3 id=&#34;why-functional-programming-fp-why-scala&#34;&gt;Why Functional Programming (FP)? Why Scala?&lt;/h3&gt;
 
-&lt;p&gt;###&lt;/p&gt;
+&lt;p&gt;I enjoyed the talk given by Martin Odersky, which answer the two key questions with very simple code examples. The 15-minutes talk is &lt;a href=&#34;https://www.youtube.com/watch?v=3jg1AheF4n0&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Working Hard to Keep it Simple&lt;/em&gt;&lt;/a&gt; with &lt;a href=&#34;https://www.slideshare.net/Odersky/oscon-keynote-working-hard-to-keep-it-simple&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;slides&lt;/em&gt;&lt;/a&gt; on SlideShare.&lt;/p&gt;
+
+&lt;h3 id=&#34;where-should-i-start-with-fp-in-scala-click-here-http-docs-scala-lang-org-getting-started-html&#34;&gt;Where should I start with FP in Scala? &lt;a href=&#34;http://docs.scala-lang.org/getting-started.html&#34; target=&#34;_blank&#34;&gt;click here&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h4 id=&#34;1-set-up-and-get-started-in-scala&#34;&gt;1. Set up and get started in Scala:&lt;/h4&gt;
+
+&lt;p&gt;A super quick start will be using &lt;a href=&#34;https://scastie.scala-lang.org/&#34; target=&#34;_blank&#34;&gt;Scastie&lt;/a&gt;, Scala in browser, to jump directy into Scala without installing anything.&lt;/p&gt;
+
+&lt;p&gt;You always can choose to work with an IDE such as&lt;a href=&#34;http://docs.scala-lang.org/getting-started-intellij-track/building-a-scala-project-with-intellij-and-sbt.html&#34; target=&#34;_blank&#34;&gt;IntelliJ with sbt&lt;/a&gt;, which you need to set up the environment in your local machine.&lt;/p&gt;
+
+&lt;h4 id=&#34;2-beginner-s-guide&#34;&gt;2. Beginner&amp;rsquo;s Guide&lt;/h4&gt;
+
+&lt;p&gt;The &lt;a href=&#34;http://docs.scala-lang.org/getting-started.html&#34; target=&#34;_blank&#34;&gt;documentation&lt;/a&gt; is always the first-hand source you need to explore. There is no better way to learn a programming language than getting your hands dirty in the codes. Of course, we need instructions and guidance. Here is a list of places that you can start:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The tour of &lt;a href=&#34;https://www.scala-exercises.org/scala_tutorial/terms_and_types&#34; target=&#34;_blank&#34;&gt;our interactive introduction to Scala on scala-exercises.com&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://docs.scala-lang.org/tour/tour-of-scala.html&#34; target=&#34;_blank&#34;&gt;The tour of Scala&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://docs.scala-lang.org/cheatsheets/index.html&#34; target=&#34;_blank&#34;&gt;Scala Cheatsheet for Syntactic Constructions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

@@ -14,8 +14,26 @@ output:
     toc_depth: 5
 ---
 
-Functional programming (FP) finally goes [mainstream](http://www.zdnet.com/article/functional-programming-finally-goes-mainstream-heres-what-you-need-to-know/). It is not a new concept, but it is absolutely a complex one for beginners including me. I got exposed to a large set of references and books, and I will try to organize it in a way that might be helpful for others. 
+Functional programming (FP) finally goes [mainstream](http://www.zdnet.com/article/functional-programming-finally-goes-mainstream-heres-what-you-need-to-know/). It is not a new concept, but it is absolutely a complex one for beginners including me. I got exposed to a large set of references, online courses and books, and I will try to organize them in a useful way.  
 
-### Functional Programming (FP) in Scala
+### Why Functional Programming (FP)? Why Scala?
 
-###
+I enjoyed the talk given by Martin Odersky, which answer the two key questions with very simple code examples. The 15-minutes talk is [*Working Hard to Keep it Simple*](https://www.youtube.com/watch?v=3jg1AheF4n0) with [*slides*](https://www.slideshare.net/Odersky/oscon-keynote-working-hard-to-keep-it-simple) on SlideShare. 
+
+### Where should I start with FP in Scala? [click here](http://docs.scala-lang.org/getting-started.html)
+
+#### 1. Set up and get started in Scala: 
+
+A super quick start will be using [Scastie](https://scastie.scala-lang.org/), Scala in browser, to jump directy into Scala without installing anything. 
+
+You always can choose to work with an IDE such as[IntelliJ with sbt](http://docs.scala-lang.org/getting-started-intellij-track/building-a-scala-project-with-intellij-and-sbt.html), which you need to set up the environment in your local machine. 
+
+#### 2. Beginner's Guide
+
+The [documentation](http://docs.scala-lang.org/getting-started.html) is always the first-hand source you need to explore. There is no better way to learn a programming language than getting your hands dirty in the codes. Of course, we need instructions and guidance. Here is a list of places that you can start: 
+
+* The tour of [our interactive introduction to Scala on scala-exercises.com](https://www.scala-exercises.org/scala_tutorial/terms_and_types).
+* [The tour of Scala](http://docs.scala-lang.org/tour/tour-of-scala.html)
+* [Scala Cheatsheet for Syntactic Constructions](http://docs.scala-lang.org/cheatsheets/index.html)
+
+
