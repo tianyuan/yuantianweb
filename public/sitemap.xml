@@ -50,17 +50,8 @@
     
     <url>
     
-      <loc>/tags/academic/</loc>
-      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>/post/</loc>
-      <lastmod>2017-01-01T00:00:00+08:00</lastmod>
+      <lastmod>2017-01-01T00:00:00-06:00</lastmod>
     </url>
     
   
@@ -69,7 +60,16 @@
     <url>
     
       <loc>/chinese/</loc>
-      <lastmod>2017-01-01T00:00:00+08:00</lastmod>
+      <lastmod>2017-01-01T00:00:00-06:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/tags/academic/</loc>
+      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -96,7 +96,7 @@
     <url>
     
       <loc>/post/getting-started/</loc>
-      <lastmod>2017-09-03T00:00:00+08:00</lastmod>
+      <lastmod>2017-09-03T00:00:00-06:00</lastmod>
     </url>
     
   
@@ -105,7 +105,7 @@
     <url>
     
       <loc>/post/widgets/</loc>
-      <lastmod>2016-04-19T00:00:00+08:00</lastmod>
+      <lastmod>2016-04-19T00:00:00-06:00</lastmod>
     </url>
     
   
@@ -114,7 +114,7 @@
     <url>
     
       <loc>/post/managing-content/</loc>
-      <lastmod>2016-04-18T00:00:00+08:00</lastmod>
+      <lastmod>2016-04-18T00:00:00-06:00</lastmod>
     </url>
     
   
@@ -123,7 +123,7 @@
     <url>
     
       <loc>/post/writing-markdown-latex/</loc>
-      <lastmod>2016-04-17T00:00:00+08:00</lastmod>
+      <lastmod>2016-04-17T00:00:00-06:00</lastmod>
     </url>
     
   
@@ -132,7 +132,7 @@
     <url>
     
       <loc>/post/faq/</loc>
-      <lastmod>2016-04-10T00:00:00+08:00</lastmod>
+      <lastmod>2016-04-10T00:00:00-06:00</lastmod>
     </url>
     
   
@@ -150,7 +150,15 @@
     <url>
     
       <loc>/post/migrate-from-jekyll/</loc>
-      <lastmod>2014-03-10T00:00:00+08:00</lastmod>
+      <lastmod>2014-03-10T00:00:00-06:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/post/managing-content/</loc>
     </url>
     
   
@@ -228,7 +236,7 @@
     <url>
     
       <loc>/tags/hugo/</loc>
-      <lastmod>2017-09-03T00:00:00+08:00</lastmod>
+      <lastmod>2017-09-03T00:00:00-06:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -248,7 +256,7 @@
     <url>
     
       <loc>/tags/jekyll/</loc>
-      <lastmod>2014-03-10T00:00:00+08:00</lastmod>
+      <lastmod>2014-03-10T00:00:00-06:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -297,7 +305,7 @@
     <url>
     
       <loc>/categories/r/</loc>
-      <lastmod>2017-12-22T00:00:00+00:00</lastmod>
+      <lastmod>2017-12-15T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -357,7 +365,7 @@
     <url>
     
       <loc>/</loc>
-      <lastmod>2017-10-15T00:00:00+08:00</lastmod>
+      <lastmod>2017-10-15T00:00:00-06:00</lastmod>
       <priority>0</priority>
     </url>
     
