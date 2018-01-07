@@ -11,6 +11,22 @@
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Functional Programming in Scala </title>
+      <link>/post/functional-programming-in-scala/</link>
+      <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/functional-programming-in-scala/</guid>
+      <description>
+
+&lt;p&gt;Functional programming (FP) finally goes &lt;a href=&#34;http://www.zdnet.com/article/functional-programming-finally-goes-mainstream-heres-what-you-need-to-know/&#34; target=&#34;_blank&#34;&gt;mainstream&lt;/a&gt;. It is not a new concept, but it is absolutely a complex one for beginners including me. I got exposed to a large set of references and books, and I will try to organize it in a way that might be helpful for others.&lt;/p&gt;
+
+&lt;h3 id=&#34;functional-programming-fp-in-scala&#34;&gt;Functional Programming (FP) in Scala&lt;/h3&gt;
+
+&lt;p&gt;###&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>R for Data Science: Get ALL the Exercises Done! </title>
       <link>/post/r-for-data-science-get-all-the-exercises-done/</link>
       <pubDate>Fri, 22 Dec 2017 00:00:00 +0000</pubDate>
