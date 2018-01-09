@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.31.1" />
+  <meta name="generator" content="Hugo 0.32.2" />
   <meta name="author" content="Yuan Tian">
   <meta name="description" content="PhD Candidate &amp; Researcher">
 
@@ -272,7 +272,27 @@
 
 <p>You always can choose to work with an IDE such as<a href="http://docs.scala-lang.org/getting-started-intellij-track/building-a-scala-project-with-intellij-and-sbt.html" target="_blank">IntelliJ with sbt</a>, which you need to set up the environment in your local machine.</p>
 
-<h4 id="2-beginner-s-guide">2. Beginner&rsquo;s Guide</h4>
+<p>A third option is to user <a href="https://www.docker.com/" target="_blank">docker</a>. Install docker and then use the docker image to launch <a href="https://zeppelin.apache.org/download.html" target="_blank">Appache Zepplin</a> which has mutiple interpreters supporting Spark, Scala, Python and other languages.</p>
+
+<ul>
+<li>Launch Apache Zeppeline in a container. <strong>If you haven&rsquo;t download it, this command will take care of the download for you</strong>.</li>
+</ul>
+
+<pre><code>docker run -p 8080:8080 --rm --name zeppelin apache/zeppelin:0.7.3
+</code></pre>
+
+<ul>
+<li>To retain the <code>logs</code> and <code>notebook</code> directories, launch it with the following command:</li>
+</ul>
+
+<pre><code>docker run -p 8080:8080 --rm -v $PWD/logs:/logs -v $PWD/notebook:/notebook -e ZEPPELIN_LOG_DIR='/logs' -e ZEPPELIN_NOTEBOOK_DIR='/notebook' --name zeppelin apache/zeppelin:0.7.3
+</code></pre>
+
+<ul>
+<li><p>Open your broswer, and access <a href="http://localhost:8080/#/" target="_blank"><code>localhost：8080</code></a> to start your session. Information about Appache Zeppelin&rsquo;s UI can be found <a href="http://zeppelin.apache.org/docs/0.7.3/quickstart/explorezeppelinui.html" target="_blank">here</a>.</p>
+
+<h4 id="2-beginner-s-guide">2. Beginner&rsquo;s Guide</h4></li>
+</ul>
 
 <p>The <a href="http://docs.scala-lang.org/getting-started.html" target="_blank">documentation</a> is always the first-hand source you need to explore. There is no better way to learn a programming language than getting your hands dirty in the codes. Of course, we need instructions and guidance. Here is a list of places that you can start:</p>
 

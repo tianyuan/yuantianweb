@@ -28,6 +28,19 @@ A super quick start will be using [Scastie](https://scastie.scala-lang.org/), Sc
 
 You always can choose to work with an IDE such as[IntelliJ with sbt](http://docs.scala-lang.org/getting-started-intellij-track/building-a-scala-project-with-intellij-and-sbt.html), which you need to set up the environment in your local machine. 
 
+A third option is to user [docker](https://www.docker.com/). Install docker and then use the docker image to launch [Appache Zepplin](https://zeppelin.apache.org/download.html) which has mutiple interpreters supporting Spark, Scala, Python and other languages.
+
+* Launch Apache Zeppeline in a container. **If you haven't download it, this command will take care of the download for you**.
+
+```
+docker run -p 8080:8080 --rm --name zeppelin apache/zeppelin:0.7.3
+```
+* To retain the `logs` and `notebook` directories, launch it with the following command: 
+
+```
+docker run -p 8080:8080 --rm -v $PWD/logs:/logs -v $PWD/notebook:/notebook -e ZEPPELIN_LOG_DIR='/logs' -e ZEPPELIN_NOTEBOOK_DIR='/notebook' --name zeppelin apache/zeppelin:0.7.3
+```
+* Open your broswer, and access [`localhost：8080`](http://localhost:8080/#/) to start your session. Information about Appache Zeppelin's UI can be found [here](http://zeppelin.apache.org/docs/0.7.3/quickstart/explorezeppelinui.html). 
 #### 2. Beginner's Guide
 
 The [documentation](http://docs.scala-lang.org/getting-started.html) is always the first-hand source you need to explore. There is no better way to learn a programming language than getting your hands dirty in the codes. Of course, we need instructions and guidance. Here is a list of places that you can start: 
