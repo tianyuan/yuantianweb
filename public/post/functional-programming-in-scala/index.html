@@ -288,6 +288,11 @@
 <pre><code>docker run -p 8080:8080 --rm -v $PWD/logs:/logs -v $PWD/notebook:/notebook -e ZEPPELIN_LOG_DIR='/logs' -e ZEPPELIN_NOTEBOOK_DIR='/notebook' --name zeppelin apache/zeppelin:0.7.3
 </code></pre>
 
+<p>After setting up the Cassandra Spark Connector with login, here is the new command:</p>
+
+<pre><code>docker run -p 8080:8080 --rm -d -v $PWD/interpreter.json:/zeppelin/conf/interpreter.json -v $PWD/logs:/logs -v $PWD/notebook:/notebook -e ZEPPELIN_LOG_DIR='/logs' -e ZEPPELIN_NOTEBOOK_DIR='/notebook' --name zeppelin apache/zeppelin:0.7.3
+</code></pre>
+
 <ul>
 <li><p>Open your broswer, and access <a href="http://localhost:8080/#/" target="_blank"><code>localhost：8080</code></a> to start your session. Information about Appache Zeppelin&rsquo;s UI can be found <a href="http://zeppelin.apache.org/docs/0.7.3/quickstart/explorezeppelinui.html" target="_blank">here</a>.</p>
 
@@ -331,7 +336,7 @@
     
     <li><a href="/post/r-for-data-science-get-all-the-exercises-done/">R for Data Science: Get ALL the Exercises Done! </a></li>
     
-    <li><a href="/chinese/2017-12-22-/">好的开始是成功的一半</a></li>
+    <li><a href="/chinese/2017-12-22-/">Hello World</a></li>
     
     <li><a href="/post/tips-about-git/">Key Commands about Git and GitHub Shell</a></li>
     

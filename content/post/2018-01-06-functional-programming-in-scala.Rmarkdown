@@ -40,6 +40,12 @@ docker run -p 8080:8080 --rm --name zeppelin apache/zeppelin:0.7.3
 ```
 docker run -p 8080:8080 --rm -v $PWD/logs:/logs -v $PWD/notebook:/notebook -e ZEPPELIN_LOG_DIR='/logs' -e ZEPPELIN_NOTEBOOK_DIR='/notebook' --name zeppelin apache/zeppelin:0.7.3
 ```
+After setting up the Cassandra Spark Connector with login, here is the new command: 
+```
+docker run -p 8080:8080 --rm -d -v $PWD/interpreter.json:/zeppelin/conf/interpreter.json -v $PWD/logs:/logs -v $PWD/notebook:/notebook -e ZEPPELIN_LOG_DIR='/logs' -e ZEPPELIN_NOTEBOOK_DIR='/notebook' --name zeppelin apache/zeppelin:0.7.3
+```
+
+
 * Open your broswer, and access [`localhost：8080`](http://localhost:8080/#/) to start your session. Information about Appache Zeppelin's UI can be found [here](http://zeppelin.apache.org/docs/0.7.3/quickstart/explorezeppelinui.html). 
 #### 2. Beginner's Guide
 
