@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chinese on Yuan Tian</title>
+    <link>/tags/chinese/</link>
+    <description>Recent content in Chinese on Yuan Tian</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Yuan Tian</copyright>
+    <lastBuildDate>Fri, 22 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/chinese/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hello World</title>
+      <link>/chinese/2017-12-22-/</link>
+      <pubDate>Fri, 22 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/chinese/2017-12-22-/</guid>
+      <description>你好，欢迎光临！</description>
+    </item>
+    
+  </channel>
+</rss>

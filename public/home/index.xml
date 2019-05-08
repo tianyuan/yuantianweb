@@ -7,8 +7,101 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Yuan Tian</copyright>
-    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 -0600</lastBuildDate>
-    <atom:link href="/home/" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/home/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Yuan Tian</title>
+      <link>/home/hero/</link>
+      <pubDate>Sun, 15 Oct 2017 00:00:00 -0600</pubDate>
+      
+      <guid>/home/hero/</guid>
+      <description>The highly flexible website framework for Hugo with an extensible plugin mechanism. Create a beautifully simple site in under 10 minutes 🚀 Latest release  
+(function defer() { if (window.jQuery) { jQuery(document).ready(function(){ GetLatestReleaseInfo(); }); } else { setTimeout(function() { defer() }, 50); } })(); function GetLatestReleaseInfo() { $.getJSON(&#39;https://api.github.com/repos/gcushen/hugo-academic/tags&#39;).done(function (json) { let release = json[0]; // let downloadURL = release.zipball_url; $(&#39;#academic-release&#39;).text(&#39;Latest release &#39; + release.name); }); }  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/home/about/</link>
+      <pubDate>Wed, 13 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/home/about/</guid>
+      <description>Biography Yuan Tian is a PhD candidate in Computer Science. Her research primarily focus on using simulation modelling to better inform decision making in stroke care, Tuberculosis control, patient flow and seniors&amp;rsquo; care. Yuan Tian is also a researcher in Saskatchewan Health Quality Council (Canada). She is working with Saskatchewan Emergency Department Waits and Patient Flow Initiative, She developed simulation models to enhance the understanding of Emergency Department overcrowding and identify interventions to streamline the patient flow in Saskatchewan hospitals.</description>
+    </item>
+    
+    <item>
+      <title>Selected Publications</title>
+      <link>/home/publications_selected/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0600</pubDate>
+      
+      <guid>/home/publications_selected/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent Posts</title>
+      <link>/home/posts/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/home/posts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>/home/publications/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0600</pubDate>
+      
+      <guid>/home/publications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>中文博客</title>
+      <link>/home/chinese/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/home/chinese/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent &amp; Upcoming Talks</title>
+      <link>/home/talks/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/home/talks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>/home/projects/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/home/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tags</title>
+      <link>/home/tags/</link>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 -0600</pubDate>
+      
+      <guid>/home/tags/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>/home/contact/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/home/contact/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

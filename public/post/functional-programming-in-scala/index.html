@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.32.2" />
+  <meta name="generator" content="Hugo 0.55.5" />
   <meta name="author" content="Yuan Tian">
   <meta name="description" content="PhD Candidate &amp; Researcher">
 
@@ -275,18 +275,16 @@
 <p>A third option is to user <a href="https://www.docker.com/" target="_blank">docker</a>. Install docker and then use the docker image to launch <a href="https://zeppelin.apache.org/download.html" target="_blank">Appache Zepplin</a> which has mutiple interpreters supporting Spark, Scala, Python and other languages.</p>
 
 <ul>
-<li>Launch Apache Zeppeline in a container. <strong>If you haven&rsquo;t download it, this command will take care of the download for you</strong>.</li>
-</ul>
+<li><p>Launch Apache Zeppeline in a container. <strong>If you haven&rsquo;t download it, this command will take care of the download for you</strong>.</p>
 
 <pre><code>docker run -p 8080:8080 --rm --name zeppelin apache/zeppelin:0.7.3
-</code></pre>
+</code></pre></li>
 
-<ul>
-<li>To retain the <code>logs</code> and <code>notebook</code> directories, launch it with the following command:</li>
-</ul>
+<li><p>To retain the <code>logs</code> and <code>notebook</code> directories, launch it with the following command:</p>
 
 <pre><code>docker run -p 8080:8080 --rm -v $PWD/logs:/logs -v $PWD/notebook:/notebook -e ZEPPELIN_LOG_DIR='/logs' -e ZEPPELIN_NOTEBOOK_DIR='/notebook' --name zeppelin apache/zeppelin:0.7.3
-</code></pre>
+</code></pre></li>
+</ul>
 
 <p>After setting up the Cassandra Spark Connector with login, here is the new command:</p>
 

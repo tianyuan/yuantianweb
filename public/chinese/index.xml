@@ -8,7 +8,9 @@
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Yuan Tian</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0600</lastBuildDate>
-    <atom:link href="/chinese/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="/chinese/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Hello World</title>
@@ -16,8 +18,7 @@
       <pubDate>Fri, 22 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>/chinese/2017-12-22-/</guid>
-      <description>&lt;p&gt;你好，欢迎光临！&lt;/p&gt;
-</description>
+      <description>你好，欢迎光临！</description>
     </item>
     
   </channel>
