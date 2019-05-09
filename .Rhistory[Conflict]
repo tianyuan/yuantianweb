@@ -1,7 +1,0 @@
-blogdown:::serve_site()
-blogdown:::new_post_addin()
-blogdown:::serve_site()
-blogdown:::serve_site()
-install.packages("xaringan")
-install.packages("xaringan")
-blogdown:::serve_site()

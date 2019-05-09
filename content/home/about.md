@@ -1,39 +1,14 @@
 +++
-# About/Biography widget.
-widget = "about"
-active = true 
-date = "2017-12-13T00:00:00"
+# About widget.
+widget = "about"  # See https://sourcethemes.com/academic/docs/page-builder/
+headless = true  # This file represents a page section.
+active = true  # Activate this widget? true/false
+weight = 20  # Order that this section will appear in.
 
-# Order that this section will appear in.
-weight = 5
+title = "Biography"
 
-# List your academic interests.
-[interests]
-  interests = [
-   "System Science and Computational Epidemiology",
-    "Data Science and Machine Learning",
-    "Health Economics and Health Policy"
-  ]
-
-# List your qualifications (such as academic degrees).
-[[education.courses]]
-  course = "PhD Candidate in Computer Science"
-  institution = "University of Saskatchewan"
-  year = "2016 -"
-  
-[[education.courses]]
-  course = "MSc in Computer Science"
-  institution = "University of Saskatchewan"
-  year = 2011
-
-[[education.courses]]
-  course = "Bachelor in Management Science"
-  institution = "Jinan University, Guangzhou, China"
-  year = 2009
-
- 
+# Choose the user profile to display
+# This should be the username of a profile in your `content/authors/` folder.
+# See https://sourcethemes.com/academic/docs/get-started/#introduce-yourself
+author = "admin"
 +++
-
-# Biography
-
-Yuan Tian is a PhD candidate in Computer Science. Her research primarily focus on using simulation modelling to better inform decision making in stroke care, Tuberculosis control, patient flow and seniors' care. Yuan Tian is also a researcher in Saskatchewan Health Quality Council (Canada).  She is working with Saskatchewan Emergency Department Waits and Patient Flow Initiative, She developed simulation models to enhance the understanding of Emergency Department overcrowding and identify interventions to streamline the patient flow in Saskatchewan hospitals. 

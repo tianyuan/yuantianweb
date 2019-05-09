@@ -1,140 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Yuan Tian</title>
+    <title>Posts on Academic</title>
     <link>/post/</link>
-    <description>Recent content in Posts on Yuan Tian</description>
+    <description>Recent content in Posts on Academic</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2017 Yuan Tian</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0600</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Functional Programming in Scala </title>
-      <link>/post/functional-programming-in-scala/</link>
-      <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/post/functional-programming-in-scala/</guid>
-      <description>Functional programming (FP) finally goes mainstream. It is not a new concept, but it is absolutely a complex one for beginners including me. I got exposed to a large set of references, online courses and books, and I will try to organize them in a useful way.
-Why Functional Programming (FP)? Why Scala? I enjoyed the talk given by Martin Odersky, which answer the two key questions with very simple code examples.</description>
-    </item>
-    
-    <item>
-      <title>R for Data Science: Get ALL the Exercises Done! </title>
-      <link>/post/r-for-data-science-get-all-the-exercises-done/</link>
-      <pubDate>Fri, 22 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/post/r-for-data-science-get-all-the-exercises-done/</guid>
-      <description>1. Data Visulization with ggplot2The mpg dataset examplesThe diamonds dataset examplesPosition Adjustment and Coordinate SystemsSummary on ggplot2. Workflow:Basics &amp;amp; Shortcuts (print,&amp;lt;-,Alt+Shift+K,tab)3. Data Transformation with dplyrFilter Rows with filter()Reorder/sort the rows with arrange()Pick variables by names with select()Create new variables with functions of existing variables with mutate()Collapse many values to a summary statistics with summarize()Workflow scripts and Exploratory Data AnalysisReference: R for Data Science: Import, Tidy, Transform, Visualize, and Model Data</description>
-    </item>
-    
-    <item>
-      <title>Key Commands about Git and GitHub Shell</title>
-      <link>/post/tips-about-git/</link>
-      <pubDate>Thu, 21 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/post/tips-about-git/</guid>
-      <description>Thanks to the Step-by-Step Instruction provided by ALISON PRESMANES HILL and “Blogdown: Creating Websites with R Markdown”, I was able to create this website. The repository of this website is kept on Git. When I tried to get refreshed on the common Git commands, I came across this wonderful Guide to Git Shell. This post is merely a note on the key common Git commands and core workflow in Git Shell (although you can complete all these actions via Git Desktop without interfering with the Shell).</description>
-    </item>
-    
-    <item>
-      <title>How to Lie with Statistics</title>
-      <link>/post/how-to-lie-with-statistics/</link>
-      <pubDate>Mon, 18 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/post/how-to-lie-with-statistics/</guid>
-      <description>This little book stands the test of time for over half a century. It has numerous hilarious examples regarding the ways that statistics might be biased. I love the author’s comments in the introduction:
-The crooks already know these tricks,honest men must learn them in self-dense.
-1. Is it a trully representative sample of the studied population?We encountered a key question when interpreting the sample data in the real world:Is the sample a representative sample of the studied population?</description>
-    </item>
-    
-    <item>
-      <title>Hello World Testing</title>
-      <link>/post/hello-world-testing/</link>
-      <pubDate>Fri, 15 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/post/hello-world-testing/</guid>
-      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
-    </item>
-    
-    <item>
-      <title>Getting started with the Academic framework for Hugo</title>
-      <link>/post/getting-started/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0600</pubDate>
-      
-      <guid>/post/getting-started/</guid>
-      <description>Create a beautifully simple personal or academic website in under 10 minutes.</description>
-    </item>
-    
-    <item>
-      <title>Customizing the homepage with widgets</title>
-      <link>/post/widgets/</link>
-      <pubDate>Tue, 19 Apr 2016 00:00:00 -0600</pubDate>
-      
-      <guid>/post/widgets/</guid>
-      <description>Enable/disable and configure widgets to customize your homepage.</description>
-    </item>
-    
-    <item>
-      <title>Managing content</title>
-      <link>/post/managing-content/</link>
-      <pubDate>Mon, 18 Apr 2016 00:00:00 -0600</pubDate>
-      
-      <guid>/post/managing-content/</guid>
-      <description>Hello</description>
-    </item>
-    
-    <item>
-      <title>Writing content with Markdown, LaTeX, and Shortcodes</title>
-      <link>/post/writing-markdown-latex/</link>
-      <pubDate>Sun, 17 Apr 2016 00:00:00 -0600</pubDate>
-      
-      <guid>/post/writing-markdown-latex/</guid>
-      <description>&lt;p&gt;Content can be written using &lt;a href=&#34;https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet&#34; target=&#34;_blank&#34;&gt;Markdown&lt;/a&gt;, &lt;a href=&#34;https://en.wikibooks.org/wiki/LaTeX/Mathematics&#34; target=&#34;_blank&#34;&gt;LaTeX math&lt;/a&gt;, and &lt;a href=&#34;http://gohugo.io/extras/shortcodes/&#34; target=&#34;_blank&#34;&gt;Hugo Shortcodes&lt;/a&gt;. Additionally, HTML may be used for advanced formatting.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Frequently Asked Questions (FAQ)</title>
-      <link>/post/faq/</link>
-      <pubDate>Sun, 10 Apr 2016 00:00:00 -0600</pubDate>
-      
-      <guid>/post/faq/</guid>
-      <description>Troubleshoot common issues.</description>
-    </item>
-    
-    <item>
-      <title>Hello R Markdown</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
-      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
-    </item>
-    
-    <item>
-      <title>Migrate from Jekyll to Hugo</title>
-      <link>/post/migrate-from-jekyll/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 -0600</pubDate>
-      
-      <guid>/post/migrate-from-jekyll/</guid>
-      <description>Learn how to migrate an existing website from Jekyll to Hugo.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/post/managing-content/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/post/managing-content/</guid>
-      <description>managing-content.utf8.md/*! jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */!function(a,b){&#34;object&#34;==typeof module&amp;&amp;&#34;object&#34;==typeof module.exports?module.exports=a.document?b(a,!0):function(a){if(!a.document)throw new Error(&#34;jQuery requires a window with a document&#34;);return b(a)}:b(a)}(&#34;undefined&#34;!=typeof window?window:this,function(a,b){var c=[],d=c.slice,e=c.concat,f=c.push,g=c.indexOf,h={},i=h.toString,j=h.hasOwnProperty,k={},l=&#34;1.11.3&#34;,m=function(a,b){return new m.fn.init(a,b)},n=/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,o=/^-ms-/,p=/-([\da-z])/gi,q=function(a,b){return b.toUpperCase()};m.fn=m.prototype={jquery:l,constructor:m,selector:&#34;&#34;,length:0,toArray:function(){return d.call(this)},get:function(a){return null!=a?0a?this[a+this.length]:this[a]:d.call(this)},pushStack:function(a){var b=m.merge(this.constructor(),a);return b.prevObject=this,b.context=this.context,b},each:function(a,b){return m.each(this,a,b)},map:function(a){return this.pushStack(m.map(this,function(b,c){return a.call(b,c,b)}))},slice:function(){return this.pushStack(d.apply(this,arguments))},first:function(){return this.eq(0)},last:function(){return this.eq(-1)},eq:function(a){var b=this.length,c=+a+(0a?b:0);return this.pushStack(c=0&amp;&amp;bc?[this[c]]:[])},end:function(){return this.prevObject||this.constructor(null)},push:f,sort:c.sort,splice:c.splice},m.extend=m.fn.extend=function(){var a,b,c,d,e,f,g=arguments[0]||{},h=1,i=arguments.length,j=!1;for(&#34;boolean&#34;==typeof g&amp;&amp;(j=g,g=arguments[h]||{},h++),&#34;object&#34;==typeof g||m.isFunction(g)||(g={}),h===i&amp;&amp;(g=this,h--);ih;h++)if(null!=(e=arguments[h]))for(d in e)a=g[d],c=e[d],g!==c&amp;&amp;(j&amp;&amp;c&amp;&amp;(m.isPlainObject(c)||(b=m.isArray(c)))?(b?(b=!1,f=a&amp;&amp;m.isArray(a)?a:[]):f=a&amp;&amp;m.isPlainObject(a)?a:{},g[d]=m.extend(j,f,c)):void 0!==c&amp;&amp;(g[d]=c));return g},m.extend({expando:&#34;jQuery&#34;+(l+Math.random()).replace(/\D/g,&#34;&#34;),isReady:!0,error:function(a){throw new Error(a)},noop:function(){},isFunction:function(a){return&#34;function&#34;===m.type(a)},isArray:Array.isArray||function(a){return&#34;array&#34;===m.type(a)},isWindow:function(a){return null!=a&amp;&amp;a==a.window},isNumeric:function(a){return!m.isArray(a)&amp;&amp;a-parseFloat(a)+1=0},isEmptyObject:function(a){var b;for(b in a)return!1;return!0},isPlainObject:function(a){var b;if(!a||&#34;object&#34;!==m.type(a)||a.nodeType||m.isWindow(a))return!1;try{if(a.constructor&amp;&amp;!j.call(a,&#34;constructor&#34;)&amp;&amp;!j.call(a.constructor.prototype,&#34;isPrototypeOf&#34;))return!1}catch(c){return!1}if(k.ownLast)for(b in a)return j.call(a,b);for(b in a);return void 0===b||j.call(a,b)},type:function(a){return null==a?a+&#34;&#34;:&#34;object&#34;==typeof a||&#34;function&#34;==typeof a?h[i.call(a)]||&#34;object&#34;:typeof a},globalEval:function(b){b&amp;&amp;m.trim(b)&amp;&amp;(a.execScript||function(b){a.eval.call(a,b)})(b)},camelCase:function(a){return a.</description>
-    </item>
     
   </channel>
 </rss>

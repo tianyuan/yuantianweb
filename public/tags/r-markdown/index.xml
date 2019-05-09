@@ -1,36 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>R Markdown on Yuan Tian</title>
-    <link>/tags/r-markdown/</link>
-    <description>Recent content in R Markdown on Yuan Tian</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2017 Yuan Tian</copyright>
-    <lastBuildDate>Fri, 22 Dec 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/r-markdown/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>R for Data Science: Get ALL the Exercises Done! </title>
-      <link>/post/r-for-data-science-get-all-the-exercises-done/</link>
-      <pubDate>Fri, 22 Dec 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/post/r-for-data-science-get-all-the-exercises-done/</guid>
-      <description>1. Data Visulization with ggplot2The mpg dataset examplesThe diamonds dataset examplesPosition Adjustment and Coordinate SystemsSummary on ggplot2. Workflow:Basics &amp;amp; Shortcuts (print,&amp;lt;-,Alt+Shift+K,tab)3. Data Transformation with dplyrFilter Rows with filter()Reorder/sort the rows with arrange()Pick variables by names with select()Create new variables with functions of existing variables with mutate()Collapse many values to a summary statistics with summarize()Workflow scripts and Exploratory Data AnalysisReference: R for Data Science: Import, Tidy, Transform, Visualize, and Model Data</description>
-    </item>
-    
-    <item>
-      <title>Hello R Markdown</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
-      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
-    </item>
-    
-  </channel>
-</rss>
