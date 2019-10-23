@@ -6,9 +6,60 @@
     <description>Recent content in Posts on Academic</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Fri, 13 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Piano Notebook</title>
+      <link>/post/piano-notebook/</link>
+      <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/piano-notebook/</guid>
+      <description>This is a running notebook about piano.
+ChordsG7 chord is a four note chords with G-B-D-F.
+</description>
+    </item>
+    
+    <item>
+      <title>Git Notebook</title>
+      <link>/post/git-notebook/</link>
+      <pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/git-notebook/</guid>
+      <description>1 Why should we care about Version Control? 1.1 Git with RStudio and GitLab2 Core Git Commands and Workflow in Git Shell2.1 Two basic commands: git pull and git push.2.2 4-step common workflow in Git1 Why should we care about Version Control? When writing up a paper with multiple collaborators, we want to avoid the following situation:
+1.1 Git with RStudio and GitLab2 Core Git Commands and Workflow in Git ShellAlthough you can complete most of the git commands via Git Desktop’s GUI without interfering with the Shell, it is often beneficial to know a few key Git commands and core workflow in the Git Shell.</description>
+    </item>
+    
+    <item>
+      <title>R Notebook</title>
+      <link>/post/r-notebook/</link>
+      <pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/r-notebook/</guid>
+      <description>1 R Setup 1011.1 R Packages for Basic R Installation or Update1.2 Read SAS sas7bdat data into R1.2.1 Use library sas7bdat in R1.2.2 Use library haven package in R1.2.3 Load Data files in R Studio1.3 RMarkdown Package1.3.1 Blogdown &amp;amp; Hugo - Fix ToC (with Rmd)1.3.2 Writing a Reproducible Paper in R Markdown1 R Setup 1011.</description>
+    </item>
+    
+    <item>
+      <title>Statistical Learning</title>
+      <link>/post/statistical-learning/</link>
+      <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/statistical-learning/</guid>
+      <description>1 Little Statistical Learning Book1.1 Model Representation: a function \(h : X → Y\)1.2 Linear Algebra Review2 ML Resources2.1 Superb Online Courses and Books2.2 Other Resources1 Little Statistical Learning Book1.1 Model Representation: a function \(h : X → Y\)This function \(h\) is called a hypothesis.
+Accuracy of our hypothesis function \(h\) is measured using a cost/loss function.</description>
+    </item>
+    
+    <item>
+      <title>SAS Notebook</title>
+      <link>/post/sas-notebook-101/</link>
+      <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/sas-notebook-101/</guid>
+      <description>1 My Little SAS Book1.1 Using PROC SORT to remove duplicates1.2 Input() and put() for variable type conversion1.3 Merging/Stacking Datasets – Truncated Values1 My Little SAS BookThe aim is to document code chunks that are likely to be re-used for fast searching and indexing.
+1.1 Using PROC SORT to remove duplicatesThere are three options that might be helpful: DUPOUT=, NODUPRECS, and NODUPKEYS.</description>
+    </item>
     
   </channel>
 </rss>

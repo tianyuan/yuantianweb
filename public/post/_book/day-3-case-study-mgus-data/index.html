@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>7 Day 3: Case Study: MGUS Data | Little SAS Programming Notes</title>
+  <meta name="description" content="7 Day 3: Case Study: MGUS Data | Little SAS Programming Notes" />
+  <meta name="generator" content="bookdown 0.10 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="7 Day 3: Case Study: MGUS Data | Little SAS Programming Notes" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="7 Day 3: Case Study: MGUS Data | Little SAS Programming Notes" />
+  
+  
+  
+
+<meta name="author" content="Yuan Tian" />
+
+
+<meta name="date" content="2019-05-09" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="day-1-2-machine-learning.html">
+<link rel="next" href="day-4-high-dimensional-data.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; }  
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; }  
+code span.at { color: #7d9029; }  
+code span.bn { color: #40a070; }  
+code span.bu { }  
+code span.cf { color: #007020; font-weight: bold; }  
+code span.ch { color: #4070a0; }  
+code span.cn { color: #880000; }  
+code span.co { color: #60a0b0; font-style: italic; }  
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; }  
+code span.do { color: #ba2121; font-style: italic; }  
+code span.dt { color: #902000; }  
+code span.dv { color: #40a070; }  
+code span.er { color: #ff0000; font-weight: bold; }  
+code span.ex { }  
+code span.fl { color: #40a070; }  
+code span.fu { color: #06287e; }  
+code span.im { }  
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; }  
+code span.kw { color: #007020; font-weight: bold; }  
+code span.op { color: #666666; }  
+code span.ot { color: #007020; }  
+code span.pp { color: #bc7a00; }  
+code span.sc { color: #4070a0; }  
+code span.ss { color: #bb6688; }  
+code span.st { color: #4070a0; }  
+code span.va { color: #19177c; }  
+code span.vs { color: #4070a0; }  
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; }  
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="proc-procedure.html"><a href="proc-procedure.html"><i class="fa fa-check"></i><b>1</b> Proc Procedure</a><ul>
+<li class="chapter" data-level="1.1" data-path="proc-procedure.html"><a href="proc-procedure.html#using-proc-sort-to-remove-duplicates"><i class="fa fa-check"></i><b>1.1</b> Using <code>PROC SORT</code> to remove duplicates</a></li>
+<li class="chapter" data-level="1.2" data-path="proc-procedure.html"><a href="proc-procedure.html#input-and-put-for-variable-type-conversion"><i class="fa fa-check"></i><b>1.2</b> <code>Input()</code> and <code>put()</code> for variable type conversion</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="data-steps.html"><a href="data-steps.html"><i class="fa fa-check"></i><b>2</b> Data Steps</a><ul>
+<li class="chapter" data-level="2.1" data-path="data-steps.html"><a href="data-steps.html#some-paragraph"><i class="fa fa-check"></i><b>2.1</b> Some paragraph <a name="paragraph1"></a></a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="my-little-r-book.html"><a href="my-little-r-book.html"><i class="fa fa-check"></i><b>3</b> <strong>My Little R Book</strong></a><ul>
+<li class="chapter" data-level="3.1" data-path="my-little-r-book.html"><a href="my-little-r-book.html#r-packages-for-r-installation-or-update"><i class="fa fa-check"></i><b>3.1</b> R Packages for R Installation or Update</a></li>
+<li class="chapter" data-level="3.2" data-path="my-little-r-book.html"><a href="my-little-r-book.html#create-a-website-using-rmarkdown"><i class="fa fa-check"></i><b>3.2</b> Create a Website Using RMarkdown</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="my-little-r-book.html"><a href="my-little-r-book.html#the-hugo-academic-theme"><i class="fa fa-check"></i><b>3.2.1</b> The <code>Hugo-Academic</code> Theme</a></li>
+<li class="chapter" data-level="3.2.2" data-path="my-little-r-book.html"><a href="my-little-r-book.html#blogdown-hugo---fix-toc-with-rmd"><i class="fa fa-check"></i><b>3.2.2</b> Blogdown &amp; Hugo - Fix ToC (with Rmd)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="sas-faq-and-tips.html"><a href="sas-faq-and-tips.html"><i class="fa fa-check"></i><b>4</b> <strong>SAS FAQ and Tips</strong></a><ul>
+<li class="chapter" data-level="4.1" data-path="sas-faq-and-tips.html"><a href="sas-faq-and-tips.html#using-proc-sort-to-remove-duplicates-1"><i class="fa fa-check"></i><b>4.1</b> Using <code>PROC SORT</code> to remove duplicates</a></li>
+<li class="chapter" data-level="4.2" data-path="sas-faq-and-tips.html"><a href="sas-faq-and-tips.html#input-and-put-for-variable-type-conversion-1"><i class="fa fa-check"></i><b>4.2</b> <code>Input()</code> and <code>put()</code> for variable type conversion</a></li>
+<li class="chapter" data-level="4.3" data-path="sas-faq-and-tips.html"><a href="sas-faq-and-tips.html#mergingstacking-datasets-truncated-values"><i class="fa fa-check"></i><b>4.3</b> Merging/Stacking Datasets – Truncated Values</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="core-git-commends-and-workflow-in-git-shell.html"><a href="core-git-commends-and-workflow-in-git-shell.html"><i class="fa fa-check"></i><b>5</b> <strong>Core Git Commends and Workflow in Git Shell</strong></a><ul>
+<li class="chapter" data-level="5.1" data-path="core-git-commends-and-workflow-in-git-shell.html"><a href="core-git-commends-and-workflow-in-git-shell.html#two-basic-commands-git-pull-and-git-push."><i class="fa fa-check"></i><b>5.1</b> Two <em>basic</em> commands: <code>git pull</code> and <code>git push</code>.</a></li>
+<li class="chapter" data-level="5.2" data-path="core-git-commends-and-workflow-in-git-shell.html"><a href="core-git-commends-and-workflow-in-git-shell.html#step-common-workflow-in-git"><i class="fa fa-check"></i><b>5.2</b> 4-step common workflow in Git</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="day-1-2-machine-learning.html"><a href="day-1-2-machine-learning.html"><i class="fa fa-check"></i><b>6</b> Day 1-2: Machine Learning</a><ul>
+<li class="chapter" data-level="6.1" data-path="day-1-2-machine-learning.html"><a href="day-1-2-machine-learning.html#r-packages-installations"><i class="fa fa-check"></i><b>6.1</b> R Packages Installations</a></li>
+<li class="chapter" data-level="6.2" data-path="day-1-2-machine-learning.html"><a href="day-1-2-machine-learning.html#feature-vector"><i class="fa fa-check"></i><b>6.2</b> Feature Vector</a></li>
+<li class="chapter" data-level="6.3" data-path="day-1-2-machine-learning.html"><a href="day-1-2-machine-learning.html#model-selection"><i class="fa fa-check"></i><b>6.3</b> Model Selection</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="day-3-case-study-mgus-data.html"><a href="day-3-case-study-mgus-data.html"><i class="fa fa-check"></i><b>7</b> Day 3: Case Study: MGUS Data</a><ul>
+<li class="chapter" data-level="7.1" data-path="day-3-case-study-mgus-data.html"><a href="day-3-case-study-mgus-data.html#mgus-data-study"><i class="fa fa-check"></i><b>7.1</b> MGUS Data Study</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="day-4-high-dimensional-data.html"><a href="day-4-high-dimensional-data.html"><i class="fa fa-check"></i><b>8</b> Day 4: High Dimensional Data</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Little SAS Programming Notes</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="day-3-case-study-mgus-data" class="section level1">
+<h1><span class="header-section-number">7</span> Day 3: Case Study: MGUS Data</h1>
+<div id="mgus-data-study" class="section level2">
+<h2><span class="header-section-number">7.1</span> MGUS Data Study</h2>
+<ul>
+<li><strong>Outcome/Response variable</strong>: time to occurance of an event.</li>
+<li><strong>Covariates</strong>: age, sex, pstat and mspike.
+<ul>
+<li>mspike: size of the monoclonal serum spike</li>
+<li>ptime: time until progression to a plasma cell malignancy (PCM) or last contact (months)</li>
+<li>pstat: occurrence of PCM: 0 = no, 1 = yes</li>
+<li>futime: time until death or last contact (months)</li>
+<li>death: occurrence of death: 0 = no, 1 = yes</li>
+</ul></li>
+<li><strong>Model</strong>: A multi-state model to describe the path to death.
+<ul>
+<li>T: survival time</li>
+<li>C: censoring time</li>
+<li><em>t = min(T,C)</em></li>
+<li><span class="math inline">\(\delta\)</span> = 1 (T <span class="math inline">\(\le\)</span> C)
+<ul>
+<li>t is an observed lifetime (full information) if T<span class="math inline">\(\le\)</span> C</li>
+<li>t is an sensoring time (incomplete information, e.g., withdraw, alive when the study ends) if T<span class="math inline">\(\ge\)</span> C</li>
+</ul></li>
+</ul></li>
+<li><p>If <span class="math inline">\(h_0(t)\)</span> is left unspecified, then it is called the Cox PH (Proportionality Assumption and Hazard Ratio) Model.</p></li>
+<li>How to Interpret HR? (Example 1):
+<ul>
+<li>Event: Death</li>
+<li>Covariates: age, sex, pstat, mspike</li>
+<li>𝒙 = (age = 75, sex, pstat, mspike)′</li>
+<li>𝒙∗= (age = 70, sex, pstat, mspike)′</li>
+<li>HR = ?
+Answer:
+<span class="math display">\[HR=e^{\beta_1(75-70) + \beta_2(Sex-Sex) +\beta_3(pstat-pstat) + \beta_4(mspike-mspike) }\]</span></li>
+</ul></li>
+</ul>
+<p><span class="math inline">\(HR=e^{\beta_1(75-70) + \beta_2(Sex-Sex) +\beta_3(pstat-pstat) + \beta_4(mspike-mspike) }\)</span>
+<span class="math inline">\(\beta_1 = 0.05\)</span>, <span class="math inline">\(HR=exp(5*0.06)=1.35\)</span>
+The event relative risk will increase 35% for 5 units (year) controlling for other factors.</p>
+<p><strong>Page 18. </strong> Barry: At that time, all four subjects were at risk for the event. The first term has the sum of the four subjects’ hazards inthe demoniator and Barry’s hazard in the numberator.</p>
+<p><strong>Page 22. </strong> The idea behind *Checking PH Assumption" is that if PH assumption holds for a particular covariate, then the Schoenfeld residuals for that covariate will not be related to survival time.</p>
+<p><strong>Page 23. </strong> Why the Cox PH model is popular?<br />
+The Cox PH model is a robust model, so that results from using the Cox model will closely approximate the results from the correct parametric model.</p>
+<p>Even though <span class="math inline">\(h_0(t)\)</span> is unspecified, we estimate the <span class="math inline">\(\beta\)</span>s. We can estimate <span class="math inline">\(S(t,x)\)</span> using a minimum of assumptions.</p>
+<p>There are two techniques to adjust the partical likelihood for tied lifetimes: Brceslow and Efron.</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(survival)
+mgus.data&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;C:/Users/ytian/Google Drive/PhD/Data Science Bootcamp June 10-21 2019/D3 Code/mgus.data.csv&quot;</span>,<span class="dt">header =</span> <span class="ot">TRUE</span>)</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">with</span>(mgus.data,<span class="kw">table</span>(sex))</code></pre>
+<pre><code>## sex
+##   F   M 
+## 631 753</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">with</span>(mgus.data,<span class="kw">mean</span>(age))</code></pre>
+<pre><code>## [1] 70.42341</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">with</span>(mgus.data,<span class="kw">tapply</span>(age,sex,mean))</code></pre>
+<pre><code>##        F        M 
+## 71.32171 69.67065</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co">##########################################</span>
+<span class="co"># Standard survival analysis. The event of interest is death.</span>
+<span class="co">##########################################</span>
+sfit0&lt;-<span class="kw">coxph</span>(<span class="kw">Surv</span>(futime,death)<span class="op">~</span>age<span class="op">+</span>sex<span class="op">+</span>pstat<span class="op">+</span>mspike,mgus.data)
+<span class="kw">summary</span>(sfit0)</code></pre>
+<pre><code>## Call:
+## coxph(formula = Surv(futime, death) ~ age + sex + pstat + mspike, 
+##     data = mgus.data)
+## 
+##   n= 1373, number of events= 957 
+##    (11 observations deleted due to missingness)
+## 
+##            coef exp(coef) se(coef)      z Pr(&gt;|z|)    
+## age    0.063278  1.065322 0.003462 18.275  &lt; 2e-16 ***
+## sexM   0.354309  1.425195 0.065843  5.381  7.4e-08 ***
+## pstat  0.303788  1.354982 0.107278  2.832  0.00463 ** 
+## mspike 0.002737  1.002741 0.060613  0.045  0.96399    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+##        exp(coef) exp(-coef) lower .95 upper .95
+## age        1.065     0.9387    1.0581     1.073
+## sexM       1.425     0.7017    1.2526     1.622
+## pstat      1.355     0.7380    1.0980     1.672
+## mspike     1.003     0.9973    0.8904     1.129
+## 
+## Concordance= 0.668  (se = 0.01 )
+## Likelihood ratio test= 400.2  on 4 df,   p=&lt;2e-16
+## Wald test            = 344.7  on 4 df,   p=&lt;2e-16
+## Score (logrank) test = 344.4  on 4 df,   p=&lt;2e-16</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Analysis by taking pstat time-dependent.</span>
+<span class="co"># First, we will have to convert the data into counting process format.</span>
+<span class="co"># What is a counting process format?</span>
+<span class="co"># Each row of the data set represents a time interval [start, stop). </span>
+<span class="co"># Covariate values for that row are the covariate values that apply </span>
+<span class="co"># over that interval.</span>
+<span class="co"># The event variable for each row is 1 if the time interval ends </span>
+<span class="co"># with an event and 0 otherwise.</span>
+newmgus&lt;-<span class="kw">tmerge</span>(<span class="dt">data1=</span>mgus.data,<span class="dt">data2=</span>mgus.data, <span class="dt">id=</span>id,<span class="dt">status=</span><span class="kw">event</span>(futime,death))
+newmgus[<span class="dv">1</span><span class="op">:</span><span class="dv">100</span>,]
+
+newmgus1&lt;-<span class="kw">tmerge</span>(newmgus,mgus.data,<span class="dt">id=</span>id,<span class="dt">pstat.td=</span><span class="kw">tdc</span>(ptime))
+newmgus1[<span class="dv">1</span><span class="op">:</span><span class="dv">250</span>,]</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">sfit1&lt;-<span class="kw">coxph</span>(<span class="kw">Surv</span>(tstart,tstop,status)<span class="op">~</span>age<span class="op">+</span>sex<span class="op">+</span>pstat.td<span class="op">+</span>mspike,newmgus1)
+<span class="kw">summary</span>(sfit1)</code></pre>
+<pre><code>## Call:
+## coxph(formula = Surv(tstart, tstop, status) ~ age + sex + pstat.td + 
+##     mspike, data = newmgus1)
+## 
+##   n= 1488, number of events= 957 
+##    (11 observations deleted due to missingness)
+## 
+##               coef exp(coef)  se(coef)      z Pr(&gt;|z|)    
+## age       0.063787  1.065865  0.003509 18.175  &lt; 2e-16 ***
+## sexM      0.353876  1.424579  0.065811  5.377 7.57e-08 ***
+## pstat.td  1.739385  5.693839  0.108870 15.977  &lt; 2e-16 ***
+## mspike   -0.064129  0.937884  0.060620 -1.058     0.29    
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+##          exp(coef) exp(-coef) lower .95 upper .95
+## age         1.0659     0.9382    1.0586     1.073
+## sexM        1.4246     0.7020    1.2522     1.621
+## pstat.td    5.6938     0.1756    4.5998     7.048
+## mspike      0.9379     1.0662    0.8328     1.056
+## 
+## Concordance= 0.689  (se = 0.01 )
+## Likelihood ratio test= 566.5  on 4 df,   p=&lt;2e-16
+## Wald test            = 566.5  on 4 df,   p=&lt;2e-16
+## Score (logrank) test = 641.7  on 4 df,   p=&lt;2e-16</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Compare the effects of pstat. An incorrect analysis can lead</span>
+<span class="co"># to misleading conclusion.</span>
+<span class="co"># BUT, how about the PH assumption?</span>
+<span class="kw">cox.zph</span>(sfit1)</code></pre>
+<pre><code>##               rho   chisq        p
+## age       0.14380 24.3233 8.14e-07
+## sexM     -0.02634  0.6599 4.17e-01
+## pstat.td  0.00478  0.0215 8.83e-01
+## mspike    0.01685  0.3055 5.80e-01
+## GLOBAL         NA 26.4304 2.59e-05</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Use survSplit() to split each record into multiple subrecords using a cut time.</span>
+<span class="co"># Then, fit stratified Cox model.</span>
+newmgus2&lt;-<span class="kw">survSplit</span>(<span class="kw">Surv</span>(tstart,tstop,status) <span class="op">~</span><span class="st"> </span>., <span class="dt">data=</span> newmgus1, <span class="dt">cut=</span><span class="kw">c</span>(<span class="dv">60</span>),
+   <span class="dt">episode=</span> <span class="st">&quot;tgroup&quot;</span>, <span class="dt">id=</span><span class="st">&quot;id1&quot;</span>)
+newmgus2[<span class="dv">1</span><span class="op">:</span><span class="dv">200</span>,]
+newdata&lt;-<span class="kw">with</span>(newmgus2,<span class="kw">expand.grid</span>(<span class="dt">age=</span><span class="dv">70</span>,<span class="dt">sex=</span><span class="kw">c</span>(<span class="st">&quot;F&quot;</span>, <span class="st">&quot;M&quot;</span>), <span class="dt">pstat.td=</span><span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),<span class="dt">mspike=</span><span class="fl">1.2</span>,<span class="dt">tgroup=</span><span class="dv">1</span>))</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">newdata</code></pre>
+<pre><code>##   age sex pstat.td mspike tgroup
+## 1  70   F        0    1.2      1
+## 2  70   M        0    1.2      1
+## 3  70   F        1    1.2      1
+## 4  70   M        1    1.2      1</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r">sfit2&lt;-<span class="kw">coxph</span>(<span class="kw">Surv</span>(tstart,tstop,status)<span class="op">~</span>age<span class="op">:</span><span class="kw">strata</span>(tgroup)<span class="op">+</span>sex<span class="op">+</span>pstat.td<span class="op">+</span>mspike,newmgus2)
+<span class="kw">cox.zph</span>(sfit2)</code></pre>
+<pre><code>##                                 rho   chisq     p
+## sexM                       -0.02862 0.78043 0.377
+## pstat.td                   -0.00293 0.00805 0.929
+## mspike                      0.01798 0.34884 0.555
+## age:strata(tgroup)tgroup=1  0.04450 2.39974 0.121
+## age:strata(tgroup)tgroup=2  0.00280 0.00823 0.928
+## GLOBAL                           NA 3.74629 0.586</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(sfit2)</code></pre>
+<pre><code>## Call:
+## coxph(formula = Surv(tstart, tstop, status) ~ age:strata(tgroup) + 
+##     sex + pstat.td + mspike, data = newmgus2)
+## 
+##   n= 2368, number of events= 957 
+##    (16 observations deleted due to missingness)
+## 
+##                                 coef exp(coef)  se(coef)      z Pr(&gt;|z|)
+## sexM                        0.365105  1.440665  0.065970  5.534 3.12e-08
+## pstat.td                    1.770705  5.874992  0.109339 16.195  &lt; 2e-16
+## mspike                     -0.049354  0.951844  0.060798 -0.812    0.417
+## age:strata(tgroup)tgroup=1  0.048477  1.049671  0.004728 10.253  &lt; 2e-16
+## age:strata(tgroup)tgroup=2  0.080192  1.083495  0.005141 15.598  &lt; 2e-16
+##                               
+## sexM                       ***
+## pstat.td                   ***
+## mspike                        
+## age:strata(tgroup)tgroup=1 ***
+## age:strata(tgroup)tgroup=2 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+##                            exp(coef) exp(-coef) lower .95 upper .95
+## sexM                          1.4407     0.6941    1.2659     1.640
+## pstat.td                      5.8750     0.1702    4.7417     7.279
+## mspike                        0.9518     1.0506    0.8449     1.072
+## age:strata(tgroup)tgroup=1    1.0497     0.9527    1.0400     1.059
+## age:strata(tgroup)tgroup=2    1.0835     0.9229    1.0726     1.094
+## 
+## Concordance= 0.69  (se = 0.01 )
+## Likelihood ratio test= 587.3  on 5 df,   p=&lt;2e-16
+## Wald test            = 579.2  on 5 df,   p=&lt;2e-16
+## Score (logrank) test = 653.6  on 5 df,   p=&lt;2e-16</code></pre>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(<span class="kw">survfit</span>(sfit2, <span class="dt">newdata=</span>newdata), <span class="dt">col=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">2</span>),<span class="dt">lty=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">2</span>),<span class="dt">xlab=</span><span class="st">&quot;Months&quot;</span>,
+      <span class="dt">ylab=</span><span class="st">&quot;Survival Probability&quot;</span>)
+<span class="kw">legend</span>(<span class="st">&quot;bottomleft&quot;</span>, <span class="dt">legend=</span><span class="kw">c</span>(<span class="st">&quot;F, pstat=0&quot;</span>,<span class="st">&quot;M, pstat=0&quot;</span>,<span class="st">&quot;F, pstat=1&quot;</span>,<span class="st">&quot;M, pstat=1&quot;</span>),
+  <span class="dt">col=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">2</span>),<span class="dt">lty=</span><span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">2</span>))</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<pre class="sourceCode r"><code class="sourceCode r">pred&lt;-<span class="kw">survfit</span>(sfit2,<span class="dt">newdata=</span>newdata)
+<span class="kw">quantile</span>(pred,<span class="fl">0.5</span>)</code></pre>
+<pre><code>## $quantile
+##   50
+## 1 NA
+## 2 NA
+## 3 22
+## 4 10
+## 
+## $lower
+##   50
+## 1 NA
+## 2 NA
+## 3 13
+## 4  7
+## 
+## $upper
+##   50
+## 1 NA
+## 2 NA
+## 3 31
+## 4 20</code></pre>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="day-1-2-machine-learning.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="day-4-high-dimensional-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

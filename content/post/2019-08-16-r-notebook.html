@@ -1,0 +1,146 @@
+---
+title: R Notebook
+author: Yuan Tian
+date: '2019-08-16'
+slug: r-notebook
+categories:
+  - r
+tags: []
+image:
+  caption: ''
+  focal_point: ''
+output: 
+ blogdown::html_page:
+  number_sections: true
+  toc: true
+  toc_depth: 3
+  css: "/css/custom.css"
+---
+
+  <link rel="stylesheet" href="\css\custom.css" type="text/css" />
+
+<div id="TOC">
+<ul>
+<li><a href="#r-setup-101"><span class="toc-section-number">1</span> <strong>R Setup 101</strong></a><ul>
+<li><a href="#r-packages-for-basic-r-installation-or-update"><span class="toc-section-number">1.1</span> R Packages for Basic R Installation or Update</a></li>
+<li><a href="#read-sas-sas7bdat-data-into-r"><span class="toc-section-number">1.2</span> Read SAS <code>sas7bdat</code> data into R</a><ul>
+<li><a href="#use-library-sas7bdat-in-r"><span class="toc-section-number">1.2.1</span> Use library <code>sas7bdat</code> in R</a></li>
+<li><a href="#use-library-haven-package-in-r"><span class="toc-section-number">1.2.2</span> Use library <code>haven</code> package in R</a></li>
+<li><a href="#load-data-files-in-r-studio"><span class="toc-section-number">1.2.3</span> Load Data files in R Studio</a></li>
+</ul></li>
+<li><a href="#rmarkdown-package"><span class="toc-section-number">1.3</span> RMarkdown Package</a><ul>
+<li><a href="#blogdown-hugo---fix-toc-with-rmd"><span class="toc-section-number">1.3.1</span> Blogdown &amp; Hugo - Fix ToC (with Rmd)</a></li>
+<li><a href="#writing-a-reproducible-paper-in-r-markdown"><span class="toc-section-number">1.3.2</span> Writing a Reproducible Paper in R Markdown</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="r-setup-101" class="section level1">
+<h1><span class="header-section-number">1</span> <strong>R Setup 101</strong></h1>
+<div id="r-packages-for-basic-r-installation-or-update" class="section level2">
+<h2><span class="header-section-number">1.1</span> R Packages for Basic R Installation or Update</h2>
+<p>For new installation, here is a list of most-used packages to install:</p>
+<pre class="r"><code>install.packages(&#39;rmarkdown&#39;)
+install.packages(&quot;tinytex&quot;)
+# install TinyTeX (must-do-this-step)
+tinytex::install_tinytex()  
+install.packages(&#39;tidyverse&#39;)
+install.packages(&#39;ggplot2&#39;)
+#table creation with specific formatting
+install.packages(&#39;kableExtra&#39;)
+#for writing reproducible research paper in R Markdown
+install.packages(c(&quot;stargazer&quot;,&quot;plotly&quot;,&quot;knitr&quot;,&quot;bookdown&quot;))
+#To import the SAS files
+install.packages(&#39;haven&#39;)
+install.packages(&#39;sas7bdat&#39;)
+# Activate the `sas7bdat` library
+library(sas7bdat)
+library(haven)
+# Read in the SAS data
+#mySASData &lt;- read.sas7bdat(&quot;example.sas7bdat&quot;)
+#data &lt;- read_sas(&quot;C:/temp/yoursasdataset.sas7bdat&quot;)</code></pre>
+<p>Once in a while, update all the packages by calling <code>update.packages()</code>.</p>
+</div>
+<div id="read-sas-sas7bdat-data-into-r" class="section level2">
+<h2><span class="header-section-number">1.2</span> Read SAS <code>sas7bdat</code> data into R</h2>
+<div id="use-library-sas7bdat-in-r" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> Use library <code>sas7bdat</code> in R</h3>
+<p>The <a href="https://www.rdocumentation.org/packages/sas7bdat/versions/0.5"><code>sas7bdat</code></a> library , developed by Matt Shotwell, works.</p>
+<pre class="r"><code>library(sas7bdat)
+data &lt;-read.sas7bdat(&quot;psu97ai.sas7bdat&quot;)
+view(data)</code></pre>
+<p><a href="https://stackoverflow.com/questions/30006822/read-sas-sas7bdat-data-into-r">Two issues</a> with the method:</p>
+<ul>
+<li>It’s slow</li>
+<li><code>sas7bdat</code> package is currently considered experimental.</li>
+</ul>
+</div>
+<div id="use-library-haven-package-in-r" class="section level3">
+<h3><span class="header-section-number">1.2.2</span> Use library <code>haven</code> package in R</h3>
+<p>The <code>haven::read_sas</code> method in <code>haven</code> package also works, and it is <strong>faster</strong> than the <code>read.sas7bdat</code> method (<em><a href="https://stackoverflow.com/questions/30006822/read-sas-sas7bdat-data-into-r">99.5% less time</a> than <code>sas7bdat::read.sas7bdat</code>)</em>. The difference is caused by saving a massive list of attributes for the files.</p>
+<pre class="r"><code>library(haven)
+data &lt;- read_sas(&quot;C:/temp/yoursasdataset.sas7bdat&quot;)
+View(data)</code></pre>
+</div>
+<div id="load-data-files-in-r-studio" class="section level3">
+<h3><span class="header-section-number">1.2.3</span> Load Data files in R Studio</h3>
+<p>You can manually load the data in the R Studio environment, choose <code>File &gt;Import Dataset &gt; From SAS...</code>, select the file location and click <code>import</code>.</p>
+</div>
+</div>
+<div id="rmarkdown-package" class="section level2">
+<h2><span class="header-section-number">1.3</span> RMarkdown Package</h2>
+<p>This website is created and powered by <a href="https://rmarkdown.rstudio.com/">RMarkdown</a> developed by <a href="https://yihui.name/en/">Yihui Xie</a>, <a href="https://gohugo.io/">Hugo</a>, <a href="https://sourcethemes.com/academic/#hero">Academic theme</a>, and <a href="https://www.netlify.com/">Netlify</a>.</p>
+<p>The contents are created using <a href="https://rmarkdown.rstudio.com/">RMarkdown</a> with guidance from the <a href="https://alison.rbind.io/post/up-and-running-with-blogdown/">Step-by-Step Instruction provided by ALISON PRESMANES HILL</a>, <a href="https://bookdown.org/yihui/blogdown/">“Blogdown: Creating Websites with R Markdown”</a> and <a href="https://bookdown.org/yihui/rmarkdown/">R Markdown: The Definitive Guide</a></p>
+<p>The website theme – <a href="https://sourcethemes.com/academic/#hero">Hugo-Academic</a>– is a very good choice for the academics. It has a few advantages including:</p>
+<ul>
+<li><p>Latex math rendering via simply enabling it in <code>config</code> toml file.</p>
+<pre class="r"><code># In config\_default\param.toml
+# Enable global LaTeX math rendering?
+#   If false, you can enable it locally on a per page basis.
+math = true</code></pre></li>
+<li><p>rich widget system for customization.</p></li>
+</ul>
+<p><strong>Reference</strong></p>
+<ul>
+<li>Yihui Xie, J. J. Allaire, Garrett Grolemund (2018). <a href="https://bookdown.org/yihui/rmarkdown/">R Markdown: The Definitive Guide</a>. Chapman &amp; Hall/CRC. ISBN 9781138359338.<br />
+</li>
+<li>Yihui Xie, Amber Thomas, Alison Presmanes Hill (2017). <a href="https://bookdown.org/yihui/blogdown/">blogdown: Creating Websites with R Markdown</a>. Chapman &amp; Hall/CRC. ISBN 9780815363729.</li>
+<li>Yihui Xie (2016). <a href="https://bookdown.org/">bookdown</a>: <a href="https://bookdown.org/yihui/bookdown/">Authoring Books and Technical Documents with R Markdown</a>. Chapman and Hall/CRC. ISBN 9781138700109</li>
+</ul>
+<div id="blogdown-hugo---fix-toc-with-rmd" class="section level3">
+<h3><span class="header-section-number">1.3.1</span> Blogdown &amp; Hugo - Fix ToC (with Rmd)</h3>
+<p>The solution to fix Table of Contents (TOC) came from both <a href="https://bookdown.org/yihui/blogdown/default-template.html">Create Websites with RMarkdown</a> and <a href="https://dadascience.design/post/r-some-tricks-when-working-with-blogdown-hugo-working-draft/">Fubits@GIT</a> .
+In the yaml header of your Rmd file, specific the following:</p>
+<pre><code>-----
+output: 
+ blogdown::html_page:
+  number_sections: true
+  toc: true
+  toc_depth: 3
+  css: &quot;/css/custom.css&quot;
+-----</code></pre>
+<p>Create and save the <code>custom.css</code> under the <code>\static\css</code> in the root directory. Using the css formating in <a href="https://dadascience.design/post/r-some-tricks-when-working-with-blogdown-hugo-working-draft/">link</a>, Your <code>custom.css</code> should look like:</p>
+<pre class="css"><code>/* Add some Heading / Title before the TOC */
+#TOC:before{
+    content: &quot;Table of Content&quot;;
+    font-family: &#39;Lato&#39;, sans-serif!important;
+    font-weight:400;
+    font-size: 26px;
+}
+
+/* Numbering suffix in TOC */
+.toc-section-number:after{
+    content: &quot;. &quot;
+}
+/* Numbering suffix in Body/Content */
+.header-section-number:after{
+    content: &quot;. &quot;
+}</code></pre>
+</div>
+<div id="writing-a-reproducible-paper-in-r-markdown" class="section level3">
+<h3><span class="header-section-number">1.3.2</span> Writing a Reproducible Paper in R Markdown</h3>
+<p>Paul C. Bauer created a template for <a href="https://drive.google.com/drive/folders/0BzJFjFv2bz2xVFFJLTVtQnp5V0U">writing a reproducible scientific paper</a>, the files can be downloaded <a href="https://drive.google.com/drive/folders/0BzJFjFv2bz2xVFFJLTVtQnp5V0U">here</a>.</p>
+</div>
+</div>
+</div>
