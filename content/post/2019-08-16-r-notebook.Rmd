@@ -103,7 +103,7 @@ math = true
 ### Blogdown & Hugo - Fix ToC (with Rmd)
 
 The solution to fix Table of Contents (TOC) came from both [Create Websites with RMarkdown](https://bookdown.org/yihui/blogdown/default-template.html) and [Fubits@GIT](https://dadascience.design/post/r-some-tricks-when-working-with-blogdown-hugo-working-draft/) .
-In the yaml header of your Rmd file, specific the following: 
+In the `yaml` header of your Rmd file, specific the following: 
 
 ```
 -----
@@ -137,7 +137,7 @@ Create and save the `custom.css` under the `\static\css` in the root directory. 
 ```
 # **Writing a Reproducible RMarkdown Paper**
 
-## A Template
+## Paul's Template
 
 Paul C. Bauer created a template for [writing a reproducible scientific paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3175518). All the files are downloadable from the [Shared Google Drive Folder](https://drive.google.com/drive/folders/1zJP3cNPrHN-gj0rcmbHQgg-XA0hqDXdd?usp=sharing). 
 

@@ -33,7 +33,7 @@ output:
 </ul></li>
 </ul></li>
 <li><a href="#writing-a-reproducible-rmarkdown-paper"><span class="toc-section-number">2</span> <strong>Writing a Reproducible RMarkdown Paper</strong></a><ul>
-<li><a href="#a-template"><span class="toc-section-number">2.1</span> A Template</a></li>
+<li><a href="#pauls-template"><span class="toc-section-number">2.1</span> Paul’s Template</a></li>
 <li><a href="#yaml-options"><span class="toc-section-number">2.2</span> YAML options</a></li>
 </ul></li>
 </ul>
@@ -114,7 +114,7 @@ math = true</code></pre></li>
 <div id="blogdown-hugo---fix-toc-with-rmd" class="section level3">
 <h3><span class="header-section-number">1.3.1</span> Blogdown &amp; Hugo - Fix ToC (with Rmd)</h3>
 <p>The solution to fix Table of Contents (TOC) came from both <a href="https://bookdown.org/yihui/blogdown/default-template.html">Create Websites with RMarkdown</a> and <a href="https://dadascience.design/post/r-some-tricks-when-working-with-blogdown-hugo-working-draft/">Fubits@GIT</a> .
-In the yaml header of your Rmd file, specific the following:</p>
+In the <code>yaml</code> header of your Rmd file, specific the following:</p>
 <pre><code>-----
 output: 
  blogdown::html_page:
@@ -145,8 +145,8 @@ output:
 </div>
 <div id="writing-a-reproducible-rmarkdown-paper" class="section level1">
 <h1><span class="header-section-number">2</span> <strong>Writing a Reproducible RMarkdown Paper</strong></h1>
-<div id="a-template" class="section level2">
-<h2><span class="header-section-number">2.1</span> A Template</h2>
+<div id="pauls-template" class="section level2">
+<h2><span class="header-section-number">2.1</span> Paul’s Template</h2>
 <p>Paul C. Bauer created a template for <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3175518">writing a reproducible scientific paper</a>. All the files are downloadable from the <a href="https://drive.google.com/drive/folders/1zJP3cNPrHN-gj0rcmbHQgg-XA0hqDXdd?usp=sharing">Shared Google Drive Folder</a>.</p>
 <p>I tested his codes and was able to reproduce the article. I ran into a few issues related to TinyTex installization, so just be mindful of the following steps:</p>
 <ul>

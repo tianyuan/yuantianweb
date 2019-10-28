@@ -133,7 +133,7 @@ git status&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#writing-a-reproducible-rmarkdown-paper&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; &lt;strong&gt;Writing a Reproducible RMarkdown Paper&lt;/strong&gt;&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#a-template&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.1&lt;/span&gt; A Template&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#pauls-template&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.1&lt;/span&gt; Paul’s Template&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#yaml-options&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.2&lt;/span&gt; YAML options&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -214,7 +214,7 @@ math = true&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;div id=&#34;blogdown-hugo---fix-toc-with-rmd&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.3.1&lt;/span&gt; Blogdown &amp;amp; Hugo - Fix ToC (with Rmd)&lt;/h3&gt;
 &lt;p&gt;The solution to fix Table of Contents (TOC) came from both &lt;a href=&#34;https://bookdown.org/yihui/blogdown/default-template.html&#34;&gt;Create Websites with RMarkdown&lt;/a&gt; and &lt;a href=&#34;https://dadascience.design/post/r-some-tricks-when-working-with-blogdown-hugo-working-draft/&#34;&gt;Fubits@GIT&lt;/a&gt; .
-In the yaml header of your Rmd file, specific the following:&lt;/p&gt;
+In the &lt;code&gt;yaml&lt;/code&gt; header of your Rmd file, specific the following:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;-----
 output: 
  blogdown::html_page:
@@ -245,8 +245,8 @@ output:
 &lt;/div&gt;
 &lt;div id=&#34;writing-a-reproducible-rmarkdown-paper&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; &lt;strong&gt;Writing a Reproducible RMarkdown Paper&lt;/strong&gt;&lt;/h1&gt;
-&lt;div id=&#34;a-template&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.1&lt;/span&gt; A Template&lt;/h2&gt;
+&lt;div id=&#34;pauls-template&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.1&lt;/span&gt; Paul’s Template&lt;/h2&gt;
 &lt;p&gt;Paul C. Bauer created a template for &lt;a href=&#34;https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3175518&#34;&gt;writing a reproducible scientific paper&lt;/a&gt;. All the files are downloadable from the &lt;a href=&#34;https://drive.google.com/drive/folders/1zJP3cNPrHN-gj0rcmbHQgg-XA0hqDXdd?usp=sharing&#34;&gt;Shared Google Drive Folder&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I tested his codes and was able to reproduce the article. I ran into a few issues related to TinyTex installization, so just be mindful of the following steps:&lt;/p&gt;
 &lt;ul&gt;
