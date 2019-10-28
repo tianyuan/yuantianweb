@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Academic</title>
+    <title>Yuan Tian</title>
     <link>/</link>
-    <description>Recent content on Academic</description>
+    <description>Recent content on Yuan Tian</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 13 Sep 2019 00:00:00 +0000</lastBuildDate>
@@ -39,7 +39,7 @@
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#why-should-we-care-about-version-control&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; &lt;strong&gt;Why should we care about Version Control? &lt;/strong&gt;&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#why-should-we-care-about-version-control&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; &lt;strong&gt;Why should we care about Version Control?&lt;/strong&gt;&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#git-with-rstudio-and-gitlab&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.1&lt;/span&gt; Git with RStudio and GitLab&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#core-git-commands-and-workflow-in-git-shell&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; &lt;strong&gt;Core Git Commands and Workflow in Git Shell&lt;/strong&gt;&lt;/a&gt;&lt;ul&gt;
@@ -50,11 +50,12 @@
 &lt;/div&gt;
 
 &lt;div id=&#34;why-should-we-care-about-version-control&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; &lt;strong&gt;Why should we care about Version Control? &lt;/strong&gt;&lt;/h1&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; &lt;strong&gt;Why should we care about Version Control?&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;When writing up a paper with multiple collaborators, we want to avoid the following situation:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://vickysteeves.gitlab.io/repro-papers/img/final-doc.jpg&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;git-with-rstudio-and-gitlab&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.1&lt;/span&gt; Git with RStudio and GitLab&lt;/h2&gt;
+&lt;p&gt;The essential video to connect Git with Rstudio can be found &lt;a href=&#34;https://rstudio.com/resources/webinars/rstudio-essentials-webinar-series-managing-part-2/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;core-git-commands-and-workflow-in-git-shell&#34; class=&#34;section level1&#34;&gt;
@@ -129,8 +130,11 @@ git status&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#rmarkdown-package&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.3&lt;/span&gt; RMarkdown Package&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#blogdown-hugo---fix-toc-with-rmd&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.3.1&lt;/span&gt; Blogdown &amp;amp; Hugo - Fix ToC (with Rmd)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#writing-a-reproducible-paper-in-r-markdown&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.3.2&lt;/span&gt; Writing a Reproducible Paper in R Markdown&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#writing-a-reproducible-rmarkdown-paper&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; &lt;strong&gt;Writing a Reproducible RMarkdown Paper&lt;/strong&gt;&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#a-template&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.1&lt;/span&gt; A Template&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#yaml-options&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.2&lt;/span&gt; YAML options&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -237,10 +241,79 @@ output:
     content: &amp;quot;. &amp;quot;
 }&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;writing-a-reproducible-paper-in-r-markdown&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.3.2&lt;/span&gt; Writing a Reproducible Paper in R Markdown&lt;/h3&gt;
-&lt;p&gt;Paul C. Bauer created a template for &lt;a href=&#34;https://drive.google.com/drive/folders/0BzJFjFv2bz2xVFFJLTVtQnp5V0U&#34;&gt;writing a reproducible scientific paper&lt;/a&gt;, the files can be downloaded &lt;a href=&#34;https://drive.google.com/drive/folders/0BzJFjFv2bz2xVFFJLTVtQnp5V0U&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;writing-a-reproducible-rmarkdown-paper&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; &lt;strong&gt;Writing a Reproducible RMarkdown Paper&lt;/strong&gt;&lt;/h1&gt;
+&lt;div id=&#34;a-template&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.1&lt;/span&gt; A Template&lt;/h2&gt;
+&lt;p&gt;Paul C. Bauer created a template for &lt;a href=&#34;https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3175518&#34;&gt;writing a reproducible scientific paper&lt;/a&gt;. All the files are downloadable from the &lt;a href=&#34;https://drive.google.com/drive/folders/1zJP3cNPrHN-gj0rcmbHQgg-XA0hqDXdd?usp=sharing&#34;&gt;Shared Google Drive Folder&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I tested his codes and was able to reproduce the article. I ran into a few issues related to TinyTex installization, so just be mindful of the following steps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Install the &lt;strong&gt;latest&lt;/strong&gt; version of &lt;em&gt;TinyTex&lt;/em&gt; (re-install if necessary).&lt;/li&gt;
+&lt;li&gt;When you &lt;em&gt;knit&lt;/em&gt; your paper the first time, you should expect auto-installization of many &lt;em&gt;tex&lt;/em&gt; packages. This might take a while depending on how many &lt;em&gt;tex&lt;/em&gt; package you use in your document.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;yaml-options&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.2&lt;/span&gt; YAML options&lt;/h2&gt;
+&lt;p&gt;There are a lot of advanced setting in the YAML header. An example is provided below with some highlighted options:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;tex packages: &lt;code&gt;header-includes:&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;documentclass&lt;/code&gt; can be the built-in &lt;code&gt;article&lt;/code&gt; or your own customized &lt;code&gt;cls&lt;/code&gt; file (e.g., &lt;code&gt;uofsthesis-cs.cls&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;page setup: &lt;code&gt;geometry&lt;/code&gt;, &lt;code&gt;fontsize&lt;/code&gt;, and &lt;code&gt;linestretch&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;bibliography&lt;/code&gt;: put your &lt;code&gt;.bib&lt;/code&gt; file in the same directory with your article.&lt;/li&gt;
+&lt;li&gt;citation style: &lt;code&gt;csl&lt;/code&gt;. You can search and download one(e.g., ACM) from &lt;a href=&#34;https://www.zotero.org/styles?q=acm&#34;&gt;here&lt;/a&gt;. Save it in the same directory with your article.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: |
+  | \vspace{1cm}\pagenumbering{gobble}This is my topic
+  | A Literature Review \vspace{0.5cm}
+author:  |
+  | My Name
+  | Department of Computer Science
+date: |
+  | 28 October, 2019
+  |
+abstract: this is my abstract
+colorlinks: true
+output: 
+  bookdown::pdf_document2:
+    toc: no
+    keep_tex: true
+geometry: [top=0.85in,left=1in,right=1in, footskip=0.40in]
+fontsize: [10pt,letterpaper]
+linestretch: 1.1
+documentclass: article
+header-includes:
+   - \usepackage{dcolumn}
+   - \usepackage{color}
+   - \usepackage{floatrow}
+   - \floatsetup[figure]{capposition=top}
+   - \floatsetup[table]{capposition=top}
+   - \floatplacement{figure}{H}
+   - \floatplacement{table}{H}
+   - \usepackage{booktabs}
+   - \usepackage{longtable}
+   - \usepackage{array}
+   - \usepackage{multirow}
+   - \usepackage{wrapfig}
+   - \usepackage{float}
+   - \usepackage{colortbl}
+   - \usepackage{pdflscape}
+   - \usepackage{tabu}
+   - \usepackage{threeparttable}
+   - \usepackage{threeparttablex}
+   - \usepackage[normalem]{ulem}
+   - \usepackage{makecell}
+   - \usepackage[usenames,dvipsnames]{xcolor}
+   - \usepackage[hang]{footmisc}
+   - \renewcommand{\footnotesize}{\normalsize}
+bibliography: references.bib
+csl: transactions-on-management-information-systems.csl
+suppress-bibliography: FALSE
+always_allow_html: yes
+link-citations: true
+---&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>

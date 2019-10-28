@@ -14,7 +14,7 @@ output:
   css: "/css/custom.css"
 ---
 
-# **Why should we care about Version Control? **
+# **Why should we care about Version Control?**
 
 When writing up a paper with multiple collaborators, we want to avoid the following situation: 
 
@@ -22,6 +22,7 @@ When writing up a paper with multiple collaborators, we want to avoid the follow
 
 ## Git with RStudio and GitLab
 
+The essential video to connect Git with Rstudio can be found [here](https://rstudio.com/resources/webinars/rstudio-essentials-webinar-series-managing-part-2/).
 
 
 # **Core Git Commands and Workflow in Git Shell**

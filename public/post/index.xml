@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Academic</title>
+    <title>Posts on Yuan Tian</title>
     <link>/post/</link>
-    <description>Recent content in Posts on Academic</description>
+    <description>Recent content in Posts on Yuan Tian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 13 Sep 2019 00:00:00 +0000</lastBuildDate>
@@ -28,8 +28,8 @@ ChordsG7 chord is a four note chords with G-B-D-F.
       <pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/git-notebook/</guid>
-      <description>1 Why should we care about Version Control? 1.1 Git with RStudio and GitLab2 Core Git Commands and Workflow in Git Shell2.1 Two basic commands: git pull and git push.2.2 4-step common workflow in Git1 Why should we care about Version Control? When writing up a paper with multiple collaborators, we want to avoid the following situation:
-1.1 Git with RStudio and GitLab2 Core Git Commands and Workflow in Git ShellAlthough you can complete most of the git commands via Git Desktop’s GUI without interfering with the Shell, it is often beneficial to know a few key Git commands and core workflow in the Git Shell.</description>
+      <description>1 Why should we care about Version Control?1.1 Git with RStudio and GitLab2 Core Git Commands and Workflow in Git Shell2.1 Two basic commands: git pull and git push.2.2 4-step common workflow in Git1 Why should we care about Version Control?When writing up a paper with multiple collaborators, we want to avoid the following situation:
+1.1 Git with RStudio and GitLabThe essential video to connect Git with Rstudio can be found here.</description>
     </item>
     
     <item>
@@ -38,7 +38,7 @@ ChordsG7 chord is a four note chords with G-B-D-F.
       <pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/r-notebook/</guid>
-      <description>1 R Setup 1011.1 R Packages for Basic R Installation or Update1.2 Read SAS sas7bdat data into R1.2.1 Use library sas7bdat in R1.2.2 Use library haven package in R1.2.3 Load Data files in R Studio1.3 RMarkdown Package1.3.1 Blogdown &amp;amp; Hugo - Fix ToC (with Rmd)1.3.2 Writing a Reproducible Paper in R Markdown1 R Setup 1011.</description>
+      <description>1 R Setup 1011.1 R Packages for Basic R Installation or Update1.2 Read SAS sas7bdat data into R1.2.1 Use library sas7bdat in R1.2.2 Use library haven package in R1.2.3 Load Data files in R Studio1.3 RMarkdown Package1.3.1 Blogdown &amp;amp; Hugo - Fix ToC (with Rmd)2 Writing a Reproducible RMarkdown Paper2.1 A Template2.2 YAML options1 R Setup 1011.</description>
     </item>
     
     <item>

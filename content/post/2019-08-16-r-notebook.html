@@ -30,8 +30,11 @@ output:
 </ul></li>
 <li><a href="#rmarkdown-package"><span class="toc-section-number">1.3</span> RMarkdown Package</a><ul>
 <li><a href="#blogdown-hugo---fix-toc-with-rmd"><span class="toc-section-number">1.3.1</span> Blogdown &amp; Hugo - Fix ToC (with Rmd)</a></li>
-<li><a href="#writing-a-reproducible-paper-in-r-markdown"><span class="toc-section-number">1.3.2</span> Writing a Reproducible Paper in R Markdown</a></li>
 </ul></li>
+</ul></li>
+<li><a href="#writing-a-reproducible-rmarkdown-paper"><span class="toc-section-number">2</span> <strong>Writing a Reproducible RMarkdown Paper</strong></a><ul>
+<li><a href="#a-template"><span class="toc-section-number">2.1</span> A Template</a></li>
+<li><a href="#yaml-options"><span class="toc-section-number">2.2</span> YAML options</a></li>
 </ul></li>
 </ul>
 </div>
@@ -138,9 +141,78 @@ output:
     content: &quot;. &quot;
 }</code></pre>
 </div>
-<div id="writing-a-reproducible-paper-in-r-markdown" class="section level3">
-<h3><span class="header-section-number">1.3.2</span> Writing a Reproducible Paper in R Markdown</h3>
-<p>Paul C. Bauer created a template for <a href="https://drive.google.com/drive/folders/0BzJFjFv2bz2xVFFJLTVtQnp5V0U">writing a reproducible scientific paper</a>, the files can be downloaded <a href="https://drive.google.com/drive/folders/0BzJFjFv2bz2xVFFJLTVtQnp5V0U">here</a>.</p>
 </div>
+</div>
+<div id="writing-a-reproducible-rmarkdown-paper" class="section level1">
+<h1><span class="header-section-number">2</span> <strong>Writing a Reproducible RMarkdown Paper</strong></h1>
+<div id="a-template" class="section level2">
+<h2><span class="header-section-number">2.1</span> A Template</h2>
+<p>Paul C. Bauer created a template for <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3175518">writing a reproducible scientific paper</a>. All the files are downloadable from the <a href="https://drive.google.com/drive/folders/1zJP3cNPrHN-gj0rcmbHQgg-XA0hqDXdd?usp=sharing">Shared Google Drive Folder</a>.</p>
+<p>I tested his codes and was able to reproduce the article. I ran into a few issues related to TinyTex installization, so just be mindful of the following steps:</p>
+<ul>
+<li>Install the <strong>latest</strong> version of <em>TinyTex</em> (re-install if necessary).</li>
+<li>When you <em>knit</em> your paper the first time, you should expect auto-installization of many <em>tex</em> packages. This might take a while depending on how many <em>tex</em> package you use in your document.</li>
+</ul>
+</div>
+<div id="yaml-options" class="section level2">
+<h2><span class="header-section-number">2.2</span> YAML options</h2>
+<p>There are a lot of advanced setting in the YAML header. An example is provided below with some highlighted options:</p>
+<ul>
+<li>tex packages: <code>header-includes:</code></li>
+<li><code>documentclass</code> can be the built-in <code>article</code> or your own customized <code>cls</code> file (e.g., <code>uofsthesis-cs.cls</code>).</li>
+<li>page setup: <code>geometry</code>, <code>fontsize</code>, and <code>linestretch</code></li>
+<li><code>bibliography</code>: put your <code>.bib</code> file in the same directory with your article.</li>
+<li>citation style: <code>csl</code>. You can search and download one(e.g., ACM) from <a href="https://www.zotero.org/styles?q=acm">here</a>. Save it in the same directory with your article.</li>
+</ul>
+<pre><code>---
+title: |
+  | \vspace{1cm}\pagenumbering{gobble}This is my topic
+  | A Literature Review \vspace{0.5cm}
+author:  |
+  | My Name
+  | Department of Computer Science
+date: |
+  | 28 October, 2019
+  |
+abstract: this is my abstract
+colorlinks: true
+output: 
+  bookdown::pdf_document2:
+    toc: no
+    keep_tex: true
+geometry: [top=0.85in,left=1in,right=1in, footskip=0.40in]
+fontsize: [10pt,letterpaper]
+linestretch: 1.1
+documentclass: article
+header-includes:
+   - \usepackage{dcolumn}
+   - \usepackage{color}
+   - \usepackage{floatrow}
+   - \floatsetup[figure]{capposition=top}
+   - \floatsetup[table]{capposition=top}
+   - \floatplacement{figure}{H}
+   - \floatplacement{table}{H}
+   - \usepackage{booktabs}
+   - \usepackage{longtable}
+   - \usepackage{array}
+   - \usepackage{multirow}
+   - \usepackage{wrapfig}
+   - \usepackage{float}
+   - \usepackage{colortbl}
+   - \usepackage{pdflscape}
+   - \usepackage{tabu}
+   - \usepackage{threeparttable}
+   - \usepackage{threeparttablex}
+   - \usepackage[normalem]{ulem}
+   - \usepackage{makecell}
+   - \usepackage[usenames,dvipsnames]{xcolor}
+   - \usepackage[hang]{footmisc}
+   - \renewcommand{\footnotesize}{\normalsize}
+bibliography: references.bib
+csl: transactions-on-management-information-systems.csl
+suppress-bibliography: FALSE
+always_allow_html: yes
+link-citations: true
+---</code></pre>
 </div>
 </div>
