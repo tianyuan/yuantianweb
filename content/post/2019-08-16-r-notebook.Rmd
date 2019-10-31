@@ -103,7 +103,7 @@ math = true
 ### Blogdown & Hugo - Fix ToC (with Rmd)
 
 The solution to fix Table of Contents (TOC) came from both [Create Websites with RMarkdown](https://bookdown.org/yihui/blogdown/default-template.html) and [Fubits@GIT](https://dadascience.design/post/r-some-tricks-when-working-with-blogdown-hugo-working-draft/) .
-In the yaml header of your Rmd file, specific the following: 
+In the `yaml` header of your Rmd file, specific the following: 
 
 ```
 -----
@@ -135,6 +135,77 @@ Create and save the `custom.css` under the `\static\css` in the root directory. 
     content: ". "
 }
 ```
-### Writing a Reproducible Paper in R Markdown
+# **Writing a Reproducible RMarkdown Paper**
 
-Paul C. Bauer created a template for [writing a reproducible scientific paper](https://drive.google.com/drive/folders/0BzJFjFv2bz2xVFFJLTVtQnp5V0U), the files can be downloaded [here](https://drive.google.com/drive/folders/0BzJFjFv2bz2xVFFJLTVtQnp5V0U). 
+## Paul's Template
+
+Paul C. Bauer created a template for [writing a reproducible scientific paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3175518). All the files are downloadable from the [Shared Google Drive Folder](https://drive.google.com/drive/folders/1zJP3cNPrHN-gj0rcmbHQgg-XA0hqDXdd?usp=sharing). 
+
+I tested his codes and was able to reproduce the article. I ran into a few issues related to TinyTex installization, so just be mindful of the following steps: 
+
+* Install the **latest** version of *TinyTex* (re-install if necessary).
+* When you *knit* your paper the first time, you should expect auto-installization of many *tex* packages. This might take a while depending on how many *tex* package you use in your document.  
+
+## YAML options
+
+There are a lot of advanced setting in the YAML header.  An example is provided below with some highlighted options:
+
+* tex packages: `header-includes:`
+* `documentclass` can be the built-in `article` or your own customized `cls` file (e.g., `uofsthesis-cs.cls`).
+* page setup: `geometry`, `fontsize`, and `linestretch`
+* `bibliography`: put your `.bib` file in the same directory with your article.
+* citation style: `csl`. You can search and download one(e.g., ACM) from [here](https://www.zotero.org/styles?q=acm). Save it in the same directory with your article.
+
+
+```
+---
+title: |
+  | \vspace{1cm}\pagenumbering{gobble}This is my topic
+  | A Literature Review \vspace{0.5cm}
+author:  |
+  | My Name
+  | Department of Computer Science
+date: |
+  | `r gsub("^0", "", format(Sys.time(), "%d %B, %Y"))`
+  |
+abstract: this is my abstract
+colorlinks: true
+output: 
+  bookdown::pdf_document2:
+    toc: no
+    keep_tex: true
+geometry: [top=0.85in,left=1in,right=1in, footskip=0.40in]
+fontsize: [10pt,letterpaper]
+linestretch: 1.1
+documentclass: article
+header-includes:
+   - \usepackage{dcolumn}
+   - \usepackage{color}
+   - \usepackage{floatrow}
+   - \floatsetup[figure]{capposition=top}
+   - \floatsetup[table]{capposition=top}
+   - \floatplacement{figure}{H}
+   - \floatplacement{table}{H}
+   - \usepackage{booktabs}
+   - \usepackage{longtable}
+   - \usepackage{array}
+   - \usepackage{multirow}
+   - \usepackage{wrapfig}
+   - \usepackage{float}
+   - \usepackage{colortbl}
+   - \usepackage{pdflscape}
+   - \usepackage{tabu}
+   - \usepackage{threeparttable}
+   - \usepackage{threeparttablex}
+   - \usepackage[normalem]{ulem}
+   - \usepackage{makecell}
+   - \usepackage[usenames,dvipsnames]{xcolor}
+   - \usepackage[hang]{footmisc}
+   - \renewcommand{\footnotesize}{\normalsize}
+bibliography: references.bib
+csl: transactions-on-management-information-systems.csl
+suppress-bibliography: FALSE
+always_allow_html: yes
+link-citations: true
+---
+```
