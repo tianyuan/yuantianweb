@@ -77,7 +77,9 @@ View(data)
 
 You can manually load the data in the R Studio environment, choose `File >Import Dataset > From SAS...`, select the file location and click `import`. 
 
-## RMarkdown Package
+# **Create a Website using RMarkdown**
+
+## RMarkdown, Hugo, Netlify
 
 This website is created and powered by [RMarkdown](https://rmarkdown.rstudio.com/) developed by [Yihui Xie](https://yihui.name/en/), [Hugo](https://gohugo.io/), [Academic theme](https://sourcethemes.com/academic/#hero), and [Netlify](https://www.netlify.com/). 
 
@@ -100,7 +102,7 @@ math = true
 * Yihui Xie, Amber Thomas, Alison Presmanes Hill (2017). [blogdown:  Creating Websites with R Markdown](https://bookdown.org/yihui/blogdown/). Chapman & Hall/CRC. ISBN 9780815363729.
 * Yihui Xie (2016). [bookdown](https://bookdown.org/): [Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/). Chapman and Hall/CRC. ISBN 9781138700109
 
-### Blogdown & Hugo - Fix ToC (with Rmd)
+## Blogdown & Hugo - Fix ToC (with Rmd)
 
 The solution to fix Table of Contents (TOC) came from both [Create Websites with RMarkdown](https://bookdown.org/yihui/blogdown/default-template.html) and [Fubits@GIT](https://dadascience.design/post/r-some-tricks-when-working-with-blogdown-hugo-working-draft/) .
 In the `yaml` header of your Rmd file, specific the following: 
@@ -135,26 +137,31 @@ Create and save the `custom.css` under the `\static\css` in the root directory. 
     content: ". "
 }
 ```
-# **Writing a Reproducible RMarkdown Paper**
+# **Write a Reproducible Paper using RMarkdown**
+
+Unlike creating website using rmarkdown, writing a reproducible paper involves using another set of R packages, primarily those which advance markdown with *latex* features.
 
 ## Paul's Template
 
-Paul C. Bauer created a template for [writing a reproducible scientific paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3175518). All the files are downloadable from the [Shared Google Drive Folder](https://drive.google.com/drive/folders/1zJP3cNPrHN-gj0rcmbHQgg-XA0hqDXdd?usp=sharing). 
+Paul C. Bauer created a template for [writing a reproducible scientific paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3175518). All the files are downloadable from the [Shared Google Drive Folder](https://drive.google.com/drive/folders/1zJP3cNPrHN-gj0rcmbHQgg-XA0hqDXdd?usp=sharing). The [version 2](https://drive.google.com/drive/folders/1rzwN2jX_CW6OJFz5jrkObiUxGuMowR3U) has a simplified version without using the `header.tex`. 
 
-I tested his codes and was able to reproduce the article. I ran into a few issues related to TinyTex installization, so just be mindful of the following steps: 
+I read the article, tested his codes and was able to reproduce the article. I ran into a few issues related to TinyTex installization, so just be mindful of the following steps:
 
-* Install the **latest** version of *TinyTex* (re-install if necessary).
-* When you *knit* your paper the first time, you should expect auto-installization of many *tex* packages. This might take a while depending on how many *tex* package you use in your document.  
+* `install.packages("tinytex")` and `tinytex::install_tinytex()` to get the **latest** version of *TinyTex* (if bugs presents, re-install with the cmd `tinytex::reinstall_tinytex()`).
+* When you *knit* your paper the first time, you should expect auto-installization of many *tex* packages and it could take some time depending on the number of *tex* packages you use in your document.
+* also `install.packages("kableExtra")` for building [common complex tables with customizable styles](https://haozhu233.github.io/kableExtra/awesome_table_in_pdf.pdf).  
 
 ## YAML options
 
-There are a lot of advanced setting in the YAML header.  An example is provided below with some highlighted options:
+There are a lot of advanced setting in the `YAML header`.  An example is provided below with some highlighted options:
 
 * tex packages: `header-includes:`
+* use `bookdown::pdf_document2: keep_tex: true` for pdf output creation.  
 * `documentclass` can be the built-in `article` or your own customized `cls` file (e.g., `uofsthesis-cs.cls`).
 * page setup: `geometry`, `fontsize`, and `linestretch`
 * `bibliography`: put your `.bib` file in the same directory with your article.
-* citation style: `csl`. You can search and download one(e.g., ACM) from [here](https://www.zotero.org/styles?q=acm). Save it in the same directory with your article.
+* citation style: `csl`. You can search and download one(e.g., ACM or IEEE) from [here](https://www.zotero.org/styles?q=acm). Save it in the same directory with your article.
+  - `nocite: |@Lander14` to include references currently not cited in the article. 
 
 
 ```
@@ -209,3 +216,26 @@ always_allow_html: yes
 link-citations: true
 ---
 ```
+## Tricks - citations in a table
+
+Cross-referencing tables or figures in a Rmarkdown article are straightforward and can be found in [Paul's article and template](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3175518).  However, citations within a table is very tricky in the `PDF`/`TEX` environment. It is easy to get it working in the HTML environment, but not with `pdf`, `pandoc`, and `latex`.
+
+* Pandoc Markdown supports a citation extension to the basic markup, like `[@krycho]`. 
+
+* For citation in a table in a `pdf` output file. [Rachael Lappan](https://github.com/rachaellappan) offered a [working solution](https://github.com/haozhu233/kableExtra/issues/214) for it.
+
+>I had success with the bookdown text references - I'm not sure if you need to be making a bookdown book or if it will work with the bookdown package loaded.
+>In my case, I defined the references first outside of a code block, e.g.
+```
+(ref:studies-table-ref1) Bogaert *et al.* (2011) [@BogaertVariabilityDiversityNasopharyngeal2011]
+```
+>then added them to the table
+```
+studies.table$Reference <- c("(ref:studies-table-ref1)", "(ref:studies-table-ref2)", # etc
+```
+>And kable interpreted them correctly.
+
+
+
+
+

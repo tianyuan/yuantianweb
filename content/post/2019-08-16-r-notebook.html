@@ -28,13 +28,15 @@ output:
 <li><a href="#use-library-haven-package-in-r"><span class="toc-section-number">1.2.2</span> Use library <code>haven</code> package in R</a></li>
 <li><a href="#load-data-files-in-r-studio"><span class="toc-section-number">1.2.3</span> Load Data files in R Studio</a></li>
 </ul></li>
-<li><a href="#rmarkdown-package"><span class="toc-section-number">1.3</span> RMarkdown Package</a><ul>
-<li><a href="#blogdown-hugo---fix-toc-with-rmd"><span class="toc-section-number">1.3.1</span> Blogdown &amp; Hugo - Fix ToC (with Rmd)</a></li>
 </ul></li>
+<li><a href="#create-a-website-using-rmarkdown"><span class="toc-section-number">2</span> <strong>Create a Website using RMarkdown</strong></a><ul>
+<li><a href="#rmarkdown-hugo-netlify"><span class="toc-section-number">2.1</span> RMarkdown, Hugo, Netlify</a></li>
+<li><a href="#blogdown-hugo---fix-toc-with-rmd"><span class="toc-section-number">2.2</span> Blogdown &amp; Hugo - Fix ToC (with Rmd)</a></li>
 </ul></li>
-<li><a href="#writing-a-reproducible-rmarkdown-paper"><span class="toc-section-number">2</span> <strong>Writing a Reproducible RMarkdown Paper</strong></a><ul>
-<li><a href="#pauls-template"><span class="toc-section-number">2.1</span> Paul’s Template</a></li>
-<li><a href="#yaml-options"><span class="toc-section-number">2.2</span> YAML options</a></li>
+<li><a href="#write-a-reproducible-paper-using-rmarkdown"><span class="toc-section-number">3</span> <strong>Write a Reproducible Paper using RMarkdown</strong></a><ul>
+<li><a href="#pauls-template"><span class="toc-section-number">3.1</span> Paul’s Template</a></li>
+<li><a href="#yaml-options"><span class="toc-section-number">3.2</span> YAML options</a></li>
+<li><a href="#tricks---citations-in-a-table"><span class="toc-section-number">3.3</span> Tricks - citations in a table</a></li>
 </ul></li>
 </ul>
 </div>
@@ -91,8 +93,11 @@ View(data)</code></pre>
 <p>You can manually load the data in the R Studio environment, choose <code>File &gt;Import Dataset &gt; From SAS...</code>, select the file location and click <code>import</code>.</p>
 </div>
 </div>
-<div id="rmarkdown-package" class="section level2">
-<h2><span class="header-section-number">1.3</span> RMarkdown Package</h2>
+</div>
+<div id="create-a-website-using-rmarkdown" class="section level1">
+<h1><span class="header-section-number">2</span> <strong>Create a Website using RMarkdown</strong></h1>
+<div id="rmarkdown-hugo-netlify" class="section level2">
+<h2><span class="header-section-number">2.1</span> RMarkdown, Hugo, Netlify</h2>
 <p>This website is created and powered by <a href="https://rmarkdown.rstudio.com/">RMarkdown</a> developed by <a href="https://yihui.name/en/">Yihui Xie</a>, <a href="https://gohugo.io/">Hugo</a>, <a href="https://sourcethemes.com/academic/#hero">Academic theme</a>, and <a href="https://www.netlify.com/">Netlify</a>.</p>
 <p>The contents are created using <a href="https://rmarkdown.rstudio.com/">RMarkdown</a> with guidance from the <a href="https://alison.rbind.io/post/up-and-running-with-blogdown/">Step-by-Step Instruction provided by ALISON PRESMANES HILL</a>, <a href="https://bookdown.org/yihui/blogdown/">“Blogdown: Creating Websites with R Markdown”</a> and <a href="https://bookdown.org/yihui/rmarkdown/">R Markdown: The Definitive Guide</a></p>
 <p>The website theme – <a href="https://sourcethemes.com/academic/#hero">Hugo-Academic</a>– is a very good choice for the academics. It has a few advantages including:</p>
@@ -111,8 +116,9 @@ math = true</code></pre></li>
 <li>Yihui Xie, Amber Thomas, Alison Presmanes Hill (2017). <a href="https://bookdown.org/yihui/blogdown/">blogdown: Creating Websites with R Markdown</a>. Chapman &amp; Hall/CRC. ISBN 9780815363729.</li>
 <li>Yihui Xie (2016). <a href="https://bookdown.org/">bookdown</a>: <a href="https://bookdown.org/yihui/bookdown/">Authoring Books and Technical Documents with R Markdown</a>. Chapman and Hall/CRC. ISBN 9781138700109</li>
 </ul>
-<div id="blogdown-hugo---fix-toc-with-rmd" class="section level3">
-<h3><span class="header-section-number">1.3.1</span> Blogdown &amp; Hugo - Fix ToC (with Rmd)</h3>
+</div>
+<div id="blogdown-hugo---fix-toc-with-rmd" class="section level2">
+<h2><span class="header-section-number">2.2</span> Blogdown &amp; Hugo - Fix ToC (with Rmd)</h2>
 <p>The solution to fix Table of Contents (TOC) came from both <a href="https://bookdown.org/yihui/blogdown/default-template.html">Create Websites with RMarkdown</a> and <a href="https://dadascience.design/post/r-some-tricks-when-working-with-blogdown-hugo-working-draft/">Fubits@GIT</a> .
 In the <code>yaml</code> header of your Rmd file, specific the following:</p>
 <pre><code>-----
@@ -142,27 +148,33 @@ output:
 }</code></pre>
 </div>
 </div>
-</div>
-<div id="writing-a-reproducible-rmarkdown-paper" class="section level1">
-<h1><span class="header-section-number">2</span> <strong>Writing a Reproducible RMarkdown Paper</strong></h1>
+<div id="write-a-reproducible-paper-using-rmarkdown" class="section level1">
+<h1><span class="header-section-number">3</span> <strong>Write a Reproducible Paper using RMarkdown</strong></h1>
+<p>Unlike creating website using rmarkdown, writing a reproducible paper involves using another set of R packages, primarily those which advance markdown with <em>latex</em> features.</p>
 <div id="pauls-template" class="section level2">
-<h2><span class="header-section-number">2.1</span> Paul’s Template</h2>
-<p>Paul C. Bauer created a template for <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3175518">writing a reproducible scientific paper</a>. All the files are downloadable from the <a href="https://drive.google.com/drive/folders/1zJP3cNPrHN-gj0rcmbHQgg-XA0hqDXdd?usp=sharing">Shared Google Drive Folder</a>.</p>
-<p>I tested his codes and was able to reproduce the article. I ran into a few issues related to TinyTex installization, so just be mindful of the following steps:</p>
+<h2><span class="header-section-number">3.1</span> Paul’s Template</h2>
+<p>Paul C. Bauer created a template for <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3175518">writing a reproducible scientific paper</a>. All the files are downloadable from the <a href="https://drive.google.com/drive/folders/1zJP3cNPrHN-gj0rcmbHQgg-XA0hqDXdd?usp=sharing">Shared Google Drive Folder</a>. The <a href="https://drive.google.com/drive/folders/1rzwN2jX_CW6OJFz5jrkObiUxGuMowR3U">version 2</a> has a simplified version without using the <code>header.tex</code>.</p>
+<p>I read the article, tested his codes and was able to reproduce the article. I ran into a few issues related to TinyTex installization, so just be mindful of the following steps:</p>
 <ul>
-<li>Install the <strong>latest</strong> version of <em>TinyTex</em> (re-install if necessary).</li>
-<li>When you <em>knit</em> your paper the first time, you should expect auto-installization of many <em>tex</em> packages. This might take a while depending on how many <em>tex</em> package you use in your document.</li>
+<li><code>install.packages("tinytex")</code> and <code>tinytex::install_tinytex()</code> to get the <strong>latest</strong> version of <em>TinyTex</em> (if bugs presents, re-install with the cmd <code>tinytex::reinstall_tinytex()</code>).</li>
+<li>When you <em>knit</em> your paper the first time, you should expect auto-installization of many <em>tex</em> packages and it could take some time depending on the number of <em>tex</em> packages you use in your document.</li>
+<li>also <code>install.packages("kableExtra")</code> for building <a href="https://haozhu233.github.io/kableExtra/awesome_table_in_pdf.pdf">common complex tables with customizable styles</a>.</li>
 </ul>
 </div>
 <div id="yaml-options" class="section level2">
-<h2><span class="header-section-number">2.2</span> YAML options</h2>
-<p>There are a lot of advanced setting in the YAML header. An example is provided below with some highlighted options:</p>
+<h2><span class="header-section-number">3.2</span> YAML options</h2>
+<p>There are a lot of advanced setting in the <code>YAML header</code>. An example is provided below with some highlighted options:</p>
 <ul>
 <li>tex packages: <code>header-includes:</code></li>
+<li>use <code>bookdown::pdf_document2: keep_tex: true</code> for pdf output creation.<br />
+</li>
 <li><code>documentclass</code> can be the built-in <code>article</code> or your own customized <code>cls</code> file (e.g., <code>uofsthesis-cs.cls</code>).</li>
 <li>page setup: <code>geometry</code>, <code>fontsize</code>, and <code>linestretch</code></li>
 <li><code>bibliography</code>: put your <code>.bib</code> file in the same directory with your article.</li>
-<li>citation style: <code>csl</code>. You can search and download one(e.g., ACM) from <a href="https://www.zotero.org/styles?q=acm">here</a>. Save it in the same directory with your article.</li>
+<li>citation style: <code>csl</code>. You can search and download one(e.g., ACM or IEEE) from <a href="https://www.zotero.org/styles?q=acm">here</a>. Save it in the same directory with your article.
+<ul>
+<li><code>nocite: |@Lander14</code> to include references currently not cited in the article.</li>
+</ul></li>
 </ul>
 <pre><code>---
 title: |
@@ -172,7 +184,7 @@ author:  |
   | My Name
   | Department of Computer Science
 date: |
-  | 28 October, 2019
+  | 31 October, 2019
   |
 abstract: this is my abstract
 colorlinks: true
@@ -214,5 +226,25 @@ suppress-bibliography: FALSE
 always_allow_html: yes
 link-citations: true
 ---</code></pre>
+</div>
+<div id="tricks---citations-in-a-table" class="section level2">
+<h2><span class="header-section-number">3.3</span> Tricks - citations in a table</h2>
+<p>Cross-referencing tables or figures in a Rmarkdown article are straightforward and can be found in <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3175518">Paul’s article and template</a>. However, citations within a table is very tricky in the <code>PDF</code>/<code>TEX</code> environment. It is easy to get it working in the HTML environment, but not with <code>pdf</code>, <code>pandoc</code>, and <code>latex</code>.</p>
+<ul>
+<li><p>Pandoc Markdown supports a citation extension to the basic markup, like <code>[@krycho]</code>.</p></li>
+<li><p>For citation in a table in a <code>pdf</code> output file. <a href="https://github.com/rachaellappan">Rachael Lappan</a> offered a <a href="https://github.com/haozhu233/kableExtra/issues/214">working solution</a> for it.</p></li>
+</ul>
+<blockquote>
+<p>I had success with the bookdown text references - I’m not sure if you need to be making a bookdown book or if it will work with the bookdown package loaded.
+In my case, I defined the references first outside of a code block, e.g.</p>
+</blockquote>
+<pre><code>(ref:studies-table-ref1) Bogaert *et al.* (2011) [@BogaertVariabilityDiversityNasopharyngeal2011]</code></pre>
+<blockquote>
+<p>then added them to the table</p>
+</blockquote>
+<pre><code>studies.table$Reference &lt;- c(&quot;(ref:studies-table-ref1)&quot;, &quot;(ref:studies-table-ref2)&quot;, # etc</code></pre>
+<blockquote>
+<p>And kable interpreted them correctly.</p>
+</blockquote>
 </div>
 </div>
