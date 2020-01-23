@@ -6,10 +6,162 @@
     <description>Recent content on Yuan Tian</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Handbook of Statistical Analyses Using R</title>
+      <link>/post/handbook-of-statistical-analyses-using-r/</link>
+      <pubDate>Tue, 12 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/handbook-of-statistical-analyses-using-r/</guid>
+      <description>
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;\css\custom.css&#34; type=&#34;text/css&#34; /&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#chapter-1---introduction-to-r&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; Chapter 1 - Introduction to R&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#import-the-dataset&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.1&lt;/span&gt; Import the Dataset&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#csv-file&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.1.1&lt;/span&gt; &lt;code&gt;.csv&lt;/code&gt; File&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#xlsx-file&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.1.2&lt;/span&gt; &lt;code&gt;.xlsx&lt;/code&gt; File&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#rda-files&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.1.3&lt;/span&gt; &lt;code&gt;.rda&lt;/code&gt; Files&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#export-the-dataset&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.2&lt;/span&gt; Export the Dataset&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#get-the-meta-data-of-the-dataset&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.3&lt;/span&gt; Get the Meta-data of the Dataset&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#simple-summary-statistics&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.4&lt;/span&gt; Simple Summary Statistics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;chapter-1---introduction-to-r&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; Chapter 1 - Introduction to R&lt;/h1&gt;
+&lt;div id=&#34;import-the-dataset&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.1&lt;/span&gt; Import the Dataset&lt;/h2&gt;
+&lt;div id=&#34;csv-file&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.1.1&lt;/span&gt; &lt;code&gt;.csv&lt;/code&gt; File&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Method 1: 
+ data(&amp;quot;Forbes2000&amp;quot;, package = &amp;quot;HSAUR3&amp;quot;)
+# Method 2: 
+#csvForbes2000 &amp;lt;- read.table(&amp;quot;Forbes2000.csv&amp;quot;,header = TRUE, sep = &amp;quot;,&amp;quot;, row.names = 1)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;xlsx-file&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.1.2&lt;/span&gt; &lt;code&gt;.xlsx&lt;/code&gt; File&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(xlsx)
+# Method 1: 
+#df &amp;lt;- read.xlsx(&amp;quot;&amp;lt;name and extension of your file&amp;gt;&amp;quot;, sheetIndex = 1)
+# Method 2: 
+#df &amp;lt;- read.xlsx2(&amp;quot;&amp;lt;name and extension of your file&amp;gt;&amp;quot;,sheetIndex = 1, startRow=2,colIndex = 2)
+#Fun fact: according to the package information, the function achieves a performance of an order of magnitude faster on sheets with 100,000 cells or more.
+# Method 3:
+#R&amp;gt; library(&amp;quot;RODBC&amp;quot;)
+#R&amp;gt; cnct &amp;lt;- odbcConnectExcel(&amp;quot;Forbes2000.xls&amp;quot;)
+#R&amp;gt; sqlQuery(cnct, &amp;quot;select * from \&amp;quot;Forbes2000\\$\&amp;quot;&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;rda-files&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.1.3&lt;/span&gt; &lt;code&gt;.rda&lt;/code&gt; Files&lt;/h3&gt;
+&lt;p&gt;Search .rda files and load it:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#list.files(patterns = &amp;quot;\\.rda&amp;quot;)
+#load(&amp;quot;Forbes2000.rda&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;export-the-dataset&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.2&lt;/span&gt; Export the Dataset&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#write.table(Forbes2000, file = &amp;quot;Forbes2000.csv&amp;quot;, sep = &amp;quot;,&amp;quot;, col.names = NA)
+# Or write.csv; 
+# Or save(Forbes2000, file=&amp;quot;Forbes2000.rda&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;get-the-meta-data-of-the-dataset&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.3&lt;/span&gt; Get the Meta-data of the Dataset&lt;/h2&gt;
+&lt;p&gt;Load the &lt;code&gt;Forbes2000&lt;/code&gt; dataset.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# get help - ?function_name (e.g. ?nrows)
+# basic meta-data
+class(Forbes2000)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;data.frame&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dim(Forbes2000)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 2000    8&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nrow(Forbes2000)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 2000&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ncol(Forbes2000)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 8&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;names(Forbes2000)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;rank&amp;quot;        &amp;quot;name&amp;quot;        &amp;quot;country&amp;quot;     &amp;quot;category&amp;quot;    &amp;quot;sales&amp;quot;      
+## [6] &amp;quot;profits&amp;quot;     &amp;quot;assets&amp;quot;      &amp;quot;marketvalue&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(Forbes2000[,&amp;quot;rank&amp;quot;])&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;integer&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;length(Forbes2000[,&amp;quot;rank&amp;quot;])&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 2000&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Forbes2000[,&amp;quot;name&amp;quot;][1]&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;Citigroup&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;simple-summary-statistics&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.4&lt;/span&gt; Simple Summary Statistics&lt;/h2&gt;
+&lt;p&gt;Factor and numeric variables:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#for factor 
+class(Forbes2000[,&amp;quot;category&amp;quot;])&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;factor&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nlevels(Forbes2000[,&amp;quot;category&amp;quot;])&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 27&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;levels(Forbes2000[,&amp;quot;category&amp;quot;])&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;Aerospace &amp;amp; defense&amp;quot;              &amp;quot;Banking&amp;quot;                         
+##  [3] &amp;quot;Business services &amp;amp; supplies&amp;quot;     &amp;quot;Capital goods&amp;quot;                   
+##  [5] &amp;quot;Chemicals&amp;quot;                        &amp;quot;Conglomerates&amp;quot;                   
+##  [7] &amp;quot;Construction&amp;quot;                     &amp;quot;Consumer durables&amp;quot;               
+##  [9] &amp;quot;Diversified financials&amp;quot;           &amp;quot;Drugs &amp;amp; biotechnology&amp;quot;           
+## [11] &amp;quot;Food drink &amp;amp; tobacco&amp;quot;             &amp;quot;Food markets&amp;quot;                    
+## [13] &amp;quot;Health care equipment &amp;amp; services&amp;quot; &amp;quot;Hotels restaurants &amp;amp; leisure&amp;quot;    
+## [15] &amp;quot;Household &amp;amp; personal products&amp;quot;    &amp;quot;Insurance&amp;quot;                       
+## [17] &amp;quot;Materials&amp;quot;                        &amp;quot;Media&amp;quot;                           
+## [19] &amp;quot;Oil &amp;amp; gas operations&amp;quot;             &amp;quot;Retailing&amp;quot;                       
+## [21] &amp;quot;Semiconductors&amp;quot;                   &amp;quot;Software &amp;amp; services&amp;quot;             
+## [23] &amp;quot;Technology hardware &amp;amp; equipment&amp;quot;  &amp;quot;Telecommunications services&amp;quot;     
+## [25] &amp;quot;Trading companies&amp;quot;                &amp;quot;Transportation&amp;quot;                  
+## [27] &amp;quot;Utilities&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;table(Forbes2000[,&amp;quot;category&amp;quot;])&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+##              Aerospace &amp;amp; defense                          Banking 
+##                               19                              313 
+##     Business services &amp;amp; supplies                    Capital goods 
+##                               70                               53 
+##                        Chemicals                    Conglomerates 
+##                               50                               31 
+##                     Construction                Consumer durables 
+##                               79                               74 
+##           Diversified financials            Drugs &amp;amp; biotechnology 
+##                              158                               45 
+##             Food drink &amp;amp; tobacco                     Food markets 
+##                               83                               33 
+## Health care equipment &amp;amp; services     Hotels restaurants &amp;amp; leisure 
+##                               65                               37 
+##    Household &amp;amp; personal products                        Insurance 
+##                               44                              112 
+##                        Materials                            Media 
+##                               97                               61 
+##             Oil &amp;amp; gas operations                        Retailing 
+##                               90                               88 
+##                   Semiconductors              Software &amp;amp; services 
+##                               26                               31 
+##  Technology hardware &amp;amp; equipment      Telecommunications services 
+##                               59                               67 
+##                Trading companies                   Transportation 
+##                               25                               80 
+##                        Utilities 
+##                              110&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#for numeric variables
+class(Forbes2000[,&amp;quot;sales&amp;quot;])&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;numeric&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;median(Forbes2000[,&amp;quot;sales&amp;quot;])&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 4.365&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;range(Forbes2000[,&amp;quot;sales&amp;quot;])&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1]   0.01 256.33&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(Forbes2000[,&amp;quot;sales&amp;quot;])&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   0.010   2.018   4.365   9.697   9.547 256.330&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Piano Notebook</title>
@@ -134,7 +286,10 @@ git status&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#blogdown-hugo---fix-toc-with-rmd&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.2&lt;/span&gt; Blogdown &amp;amp; Hugo - Fix ToC (with Rmd)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#write-a-reproducible-paper-using-rmarkdown&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3&lt;/span&gt; &lt;strong&gt;Write a Reproducible Paper using RMarkdown&lt;/strong&gt;&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#pauls-template&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.1&lt;/span&gt; Paul’s Template&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#templates&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.1&lt;/span&gt; Templates&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#pauls-template&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.1.1&lt;/span&gt; Paul’s Template&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#reproducible-apa-manuscripts-with-rmarkdown&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.1.2&lt;/span&gt; Reproducible APA manuscripts with RMarkdown&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#yaml-options&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.2&lt;/span&gt; YAML options&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#tricks---citations-in-a-table&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.3&lt;/span&gt; Tricks - citations in a table&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
@@ -146,7 +301,8 @@ git status&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;div id=&#34;r-packages-for-basic-r-installation-or-update&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.1&lt;/span&gt; R Packages for Basic R Installation or Update&lt;/h2&gt;
 &lt;p&gt;For new installation, here is a list of most-used packages to install:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(&amp;#39;rmarkdown&amp;#39;)
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(&amp;#39;xlsx&amp;#39;)
+install.packages(&amp;#39;rmarkdown&amp;#39;)
 install.packages(&amp;quot;tinytex&amp;quot;)
 # install TinyTeX (must-do-this-step)
 tinytex::install_tinytex()  
@@ -251,8 +407,10 @@ output:
 &lt;div id=&#34;write-a-reproducible-paper-using-rmarkdown&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; &lt;strong&gt;Write a Reproducible Paper using RMarkdown&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;Unlike creating website using rmarkdown, writing a reproducible paper involves using another set of R packages, primarily those which advance markdown with &lt;em&gt;latex&lt;/em&gt; features.&lt;/p&gt;
-&lt;div id=&#34;pauls-template&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.1&lt;/span&gt; Paul’s Template&lt;/h2&gt;
+&lt;div id=&#34;templates&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.1&lt;/span&gt; Templates&lt;/h2&gt;
+&lt;div id=&#34;pauls-template&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.1.1&lt;/span&gt; Paul’s Template&lt;/h3&gt;
 &lt;p&gt;Paul C. Bauer created a template for &lt;a href=&#34;https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3175518&#34;&gt;writing a reproducible scientific paper&lt;/a&gt;. All the files are downloadable from the &lt;a href=&#34;https://drive.google.com/drive/folders/1zJP3cNPrHN-gj0rcmbHQgg-XA0hqDXdd?usp=sharing&#34;&gt;Shared Google Drive Folder&lt;/a&gt;. The &lt;a href=&#34;https://drive.google.com/drive/folders/1rzwN2jX_CW6OJFz5jrkObiUxGuMowR3U&#34;&gt;version 2&lt;/a&gt; has a simplified version without using the &lt;code&gt;header.tex&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;I read the article, tested his codes and was able to reproduce the article. I ran into a few issues related to TinyTex installization, so just be mindful of the following steps:&lt;/p&gt;
 &lt;ul&gt;
@@ -260,6 +418,11 @@ output:
 &lt;li&gt;When you &lt;em&gt;knit&lt;/em&gt; your paper the first time, you should expect auto-installization of many &lt;em&gt;tex&lt;/em&gt; packages and it could take some time depending on the number of &lt;em&gt;tex&lt;/em&gt; packages you use in your document.&lt;/li&gt;
 &lt;li&gt;also &lt;code&gt;install.packages(&#34;kableExtra&#34;)&lt;/code&gt; for building &lt;a href=&#34;https://haozhu233.github.io/kableExtra/awesome_table_in_pdf.pdf&#34;&gt;common complex tables with customizable styles&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reproducible-apa-manuscripts-with-rmarkdown&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.1.2&lt;/span&gt; Reproducible APA manuscripts with RMarkdown&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://crsh.github.io/papaja_man/&#34;&gt;Frederik Aust &amp;amp; Marius Barth&lt;/a&gt; wrote this comprehensive book covering lots of useful tricks and tips. This is a must-read if you seriously consider writing papers using Rmarkdown.&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;yaml-options&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.2&lt;/span&gt; YAML options&lt;/h2&gt;
@@ -271,7 +434,7 @@ output:
 &lt;li&gt;&lt;code&gt;documentclass&lt;/code&gt; can be the built-in &lt;code&gt;article&lt;/code&gt; or your own customized &lt;code&gt;cls&lt;/code&gt; file (e.g., &lt;code&gt;uofsthesis-cs.cls&lt;/code&gt;).&lt;/li&gt;
 &lt;li&gt;page setup: &lt;code&gt;geometry&lt;/code&gt;, &lt;code&gt;fontsize&lt;/code&gt;, and &lt;code&gt;linestretch&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;bibliography&lt;/code&gt;: put your &lt;code&gt;.bib&lt;/code&gt; file in the same directory with your article.&lt;/li&gt;
-&lt;li&gt;citation style: &lt;code&gt;csl&lt;/code&gt;. You can search and download one(e.g., ACM or IEEE) from &lt;a href=&#34;https://www.zotero.org/styles?q=acm&#34;&gt;here&lt;/a&gt;. Save it in the same directory with your article.
+&lt;li&gt;citation style: &lt;code&gt;csl&lt;/code&gt;. You can search and download/create one(e.g., ACM or IEEE) from &lt;a href=&#34;https://www.zotero.org/styles?q=acm&#34;&gt;zotero&lt;/a&gt; or &lt;a href=&#34;https://csl.mendeley.com/searchByName/&#34;&gt;Mendeley&lt;/a&gt;. Save it in the same directory with your article.
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;nocite: |@Lander14&lt;/code&gt; to include references currently not cited in the article.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
@@ -284,7 +447,7 @@ author:  |
   | My Name
   | Department of Computer Science
 date: |
-  | 31 October, 2019
+  | 24 November, 2019
   |
 abstract: this is my abstract
 colorlinks: true

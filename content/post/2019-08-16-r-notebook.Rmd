@@ -24,6 +24,7 @@ output:
 For new installation, here is a list of most-used packages to install: 
 
 ```{r eval=FALSE}
+install.packages('xlsx')
 install.packages('rmarkdown')
 install.packages("tinytex")
 # install TinyTeX (must-do-this-step)
@@ -141,7 +142,9 @@ Create and save the `custom.css` under the `\static\css` in the root directory. 
 
 Unlike creating website using rmarkdown, writing a reproducible paper involves using another set of R packages, primarily those which advance markdown with *latex* features.
 
-## Paul's Template
+## Templates
+
+### Paul's Template
 
 Paul C. Bauer created a template for [writing a reproducible scientific paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3175518). All the files are downloadable from the [Shared Google Drive Folder](https://drive.google.com/drive/folders/1zJP3cNPrHN-gj0rcmbHQgg-XA0hqDXdd?usp=sharing). The [version 2](https://drive.google.com/drive/folders/1rzwN2jX_CW6OJFz5jrkObiUxGuMowR3U) has a simplified version without using the `header.tex`. 
 
@@ -150,6 +153,10 @@ I read the article, tested his codes and was able to reproduce the article. I ra
 * `install.packages("tinytex")` and `tinytex::install_tinytex()` to get the **latest** version of *TinyTex* (if bugs presents, re-install with the cmd `tinytex::reinstall_tinytex()`).
 * When you *knit* your paper the first time, you should expect auto-installization of many *tex* packages and it could take some time depending on the number of *tex* packages you use in your document.
 * also `install.packages("kableExtra")` for building [common complex tables with customizable styles](https://haozhu233.github.io/kableExtra/awesome_table_in_pdf.pdf).  
+
+### Reproducible APA manuscripts with RMarkdown
+
+[Frederik Aust & Marius Barth](https://crsh.github.io/papaja_man/) wrote this comprehensive book covering lots of useful tricks and tips. This is a must-read if you seriously consider writing papers using Rmarkdown. 
 
 ## YAML options
 
@@ -160,7 +167,7 @@ There are a lot of advanced setting in the `YAML header`.  An example is provide
 * `documentclass` can be the built-in `article` or your own customized `cls` file (e.g., `uofsthesis-cs.cls`).
 * page setup: `geometry`, `fontsize`, and `linestretch`
 * `bibliography`: put your `.bib` file in the same directory with your article.
-* citation style: `csl`. You can search and download one(e.g., ACM or IEEE) from [here](https://www.zotero.org/styles?q=acm). Save it in the same directory with your article.
+* citation style: `csl`. You can search and download/create one(e.g., ACM or IEEE) from [zotero](https://www.zotero.org/styles?q=acm) or [Mendeley](https://csl.mendeley.com/searchByName/). Save it in the same directory with your article.
   - `nocite: |@Lander14` to include references currently not cited in the article. 
 
 

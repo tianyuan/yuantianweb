@@ -34,7 +34,10 @@ output:
 <li><a href="#blogdown-hugo---fix-toc-with-rmd"><span class="toc-section-number">2.2</span> Blogdown &amp; Hugo - Fix ToC (with Rmd)</a></li>
 </ul></li>
 <li><a href="#write-a-reproducible-paper-using-rmarkdown"><span class="toc-section-number">3</span> <strong>Write a Reproducible Paper using RMarkdown</strong></a><ul>
-<li><a href="#pauls-template"><span class="toc-section-number">3.1</span> Paul’s Template</a></li>
+<li><a href="#templates"><span class="toc-section-number">3.1</span> Templates</a><ul>
+<li><a href="#pauls-template"><span class="toc-section-number">3.1.1</span> Paul’s Template</a></li>
+<li><a href="#reproducible-apa-manuscripts-with-rmarkdown"><span class="toc-section-number">3.1.2</span> Reproducible APA manuscripts with RMarkdown</a></li>
+</ul></li>
 <li><a href="#yaml-options"><span class="toc-section-number">3.2</span> YAML options</a></li>
 <li><a href="#tricks---citations-in-a-table"><span class="toc-section-number">3.3</span> Tricks - citations in a table</a></li>
 </ul></li>
@@ -46,7 +49,8 @@ output:
 <div id="r-packages-for-basic-r-installation-or-update" class="section level2">
 <h2><span class="header-section-number">1.1</span> R Packages for Basic R Installation or Update</h2>
 <p>For new installation, here is a list of most-used packages to install:</p>
-<pre class="r"><code>install.packages(&#39;rmarkdown&#39;)
+<pre class="r"><code>install.packages(&#39;xlsx&#39;)
+install.packages(&#39;rmarkdown&#39;)
 install.packages(&quot;tinytex&quot;)
 # install TinyTeX (must-do-this-step)
 tinytex::install_tinytex()  
@@ -151,8 +155,10 @@ output:
 <div id="write-a-reproducible-paper-using-rmarkdown" class="section level1">
 <h1><span class="header-section-number">3</span> <strong>Write a Reproducible Paper using RMarkdown</strong></h1>
 <p>Unlike creating website using rmarkdown, writing a reproducible paper involves using another set of R packages, primarily those which advance markdown with <em>latex</em> features.</p>
-<div id="pauls-template" class="section level2">
-<h2><span class="header-section-number">3.1</span> Paul’s Template</h2>
+<div id="templates" class="section level2">
+<h2><span class="header-section-number">3.1</span> Templates</h2>
+<div id="pauls-template" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Paul’s Template</h3>
 <p>Paul C. Bauer created a template for <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3175518">writing a reproducible scientific paper</a>. All the files are downloadable from the <a href="https://drive.google.com/drive/folders/1zJP3cNPrHN-gj0rcmbHQgg-XA0hqDXdd?usp=sharing">Shared Google Drive Folder</a>. The <a href="https://drive.google.com/drive/folders/1rzwN2jX_CW6OJFz5jrkObiUxGuMowR3U">version 2</a> has a simplified version without using the <code>header.tex</code>.</p>
 <p>I read the article, tested his codes and was able to reproduce the article. I ran into a few issues related to TinyTex installization, so just be mindful of the following steps:</p>
 <ul>
@@ -160,6 +166,11 @@ output:
 <li>When you <em>knit</em> your paper the first time, you should expect auto-installization of many <em>tex</em> packages and it could take some time depending on the number of <em>tex</em> packages you use in your document.</li>
 <li>also <code>install.packages("kableExtra")</code> for building <a href="https://haozhu233.github.io/kableExtra/awesome_table_in_pdf.pdf">common complex tables with customizable styles</a>.</li>
 </ul>
+</div>
+<div id="reproducible-apa-manuscripts-with-rmarkdown" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> Reproducible APA manuscripts with RMarkdown</h3>
+<p><a href="https://crsh.github.io/papaja_man/">Frederik Aust &amp; Marius Barth</a> wrote this comprehensive book covering lots of useful tricks and tips. This is a must-read if you seriously consider writing papers using Rmarkdown.</p>
+</div>
 </div>
 <div id="yaml-options" class="section level2">
 <h2><span class="header-section-number">3.2</span> YAML options</h2>
@@ -171,7 +182,7 @@ output:
 <li><code>documentclass</code> can be the built-in <code>article</code> or your own customized <code>cls</code> file (e.g., <code>uofsthesis-cs.cls</code>).</li>
 <li>page setup: <code>geometry</code>, <code>fontsize</code>, and <code>linestretch</code></li>
 <li><code>bibliography</code>: put your <code>.bib</code> file in the same directory with your article.</li>
-<li>citation style: <code>csl</code>. You can search and download one(e.g., ACM or IEEE) from <a href="https://www.zotero.org/styles?q=acm">here</a>. Save it in the same directory with your article.
+<li>citation style: <code>csl</code>. You can search and download/create one(e.g., ACM or IEEE) from <a href="https://www.zotero.org/styles?q=acm">zotero</a> or <a href="https://csl.mendeley.com/searchByName/">Mendeley</a>. Save it in the same directory with your article.
 <ul>
 <li><code>nocite: |@Lander14</code> to include references currently not cited in the article.</li>
 </ul></li>
@@ -184,7 +195,7 @@ author:  |
   | My Name
   | Department of Computer Science
 date: |
-  | 31 October, 2019
+  | 24 November, 2019
   |
 abstract: this is my abstract
 colorlinks: true
