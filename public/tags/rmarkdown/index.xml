@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rmarkdown on Yuan Tian</title>
+    <link>/tags/rmarkdown/</link>
+    <description>Recent content in rmarkdown on Yuan Tian</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Copyright notice</copyright>
+    <lastBuildDate>Fri, 16 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/rmarkdown/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>R Notebook</title>
+      <link>/posts/r-notebook/</link>
+      <pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/r-notebook/</guid>
+      <description>1 R Setup 1011.1 R Packages for Basic R Installation or Update1.2 Read SAS sas7bdat data into R1.2.1 Use library sas7bdat in R1.2.2 Use library haven package in R1.2.3 Load Data files in R Studio2 Create a Website using RMarkdown2.1 RMarkdown, Hugo, Netlify2.2 Blogdown &amp;amp; Hugo - Fix ToC (with Rmd)3 Write a Reproducible Paper using RMarkdown3.</description>
+    </item>
+    
+  </channel>
+</rss>

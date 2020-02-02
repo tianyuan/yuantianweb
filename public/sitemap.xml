@@ -3,67 +3,232 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/tags/bookdown/</loc>
-    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+    <loc>/quotes/</loc>
+    <lastmod>2020-01-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/</loc>
-    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/hello/</loc>
-    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/2020/01/30/hello-world/</loc>
-    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+    <loc>/quotes/quotes/</loc>
+    <lastmod>2020-01-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/</loc>
-    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+    <loc>/years/2020/</loc>
+    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-01-30T00:00:00+00:00</lastmod>
+    <loc>/categories/book/</loc>
+    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2019/11/12/handbook-of-statistical-analyses-using-r/</loc>
-    <lastmod>2019-11-12T00:00:00+00:00</lastmod>
+    <loc>/categories/</loc>
+    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/exercise/</loc>
+    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/exercises/</loc>
+    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/r/</loc>
+    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/exercises/statistical-analysis-using-r-3rd-edition/</loc>
+    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/statistics/</loc>
+    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/years/</loc>
+    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/exercises/handbook-of-statistical-analyses-using-r/</loc>
     <lastmod>2019-11-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2019/08/16/r-notebook/</loc>
+    <loc>/years/2019/</loc>
     <lastmod>2019-08-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2019/06/10/statistical-learning/</loc>
+    <loc>/tags/hugo/</loc>
+    <lastmod>2019-08-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2019-08-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/r-notebook/</loc>
+    <lastmod>2019-08-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/rmarkdown/</loc>
+    <lastmod>2019-08-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/statistical-learning/</loc>
     <lastmod>2019-06-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2019/05/15/sas-notebook-101/</loc>
+    <loc>/posts/sas-notebook-101/</loc>
     <lastmod>2019-05-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/note/2017/06/14/another-note/</loc>
+    <loc>/about/</loc>
+    <lastmod>2019-04-19T21:37:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/post-7/</loc>
+    <lastmod>2018-03-18T12:13:38+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/post-5/</loc>
+    <lastmod>2018-03-18T12:13:38+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/post-6/</loc>
+    <lastmod>2018-03-18T12:13:36+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/post-4/</loc>
+    <lastmod>2018-03-18T12:13:35+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/post-3/</loc>
+    <lastmod>2018-03-18T12:13:32+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/procrastinating/</loc>
+    <lastmod>2018-03-18T12:13:32+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/post-2/</loc>
+    <lastmod>2018-03-18T12:13:30+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/space/</loc>
+    <lastmod>2018-03-18T12:13:30+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/years/2018/</loc>
+    <lastmod>2018-03-18T02:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/post-1/</loc>
+    <lastmod>2018-03-18T02:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/primer/</loc>
+    <lastmod>2018-03-18T02:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/todo/</loc>
+    <lastmod>2018-03-18T02:01:58+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/2017/</loc>
+    <lastmod>2018-01-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/exercises/functional-programming-in-scala/</loc>
+    <lastmod>2018-01-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/ilearn/</loc>
+    <lastmod>2018-01-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/notes/</loc>
+    <lastmod>2018-01-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/books/</loc>
+    <lastmod>2017-12-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/plot/</loc>
+    <lastmod>2017-12-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/exercises/r-for-data-science-get-all-the-exercises-done/</loc>
+    <lastmod>2017-12-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/r-markdown/</loc>
+    <lastmod>2017-12-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/how-to-lie-with-statistics/</loc>
+    <lastmod>2017-12-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/iread/</loc>
+    <lastmod>2017-12-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/statistics/</loc>
+    <lastmod>2017-12-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/exercises/another-note/</loc>
     <lastmod>2017-06-14T00:00:00+00:00</lastmod>
   </url>
   
@@ -73,86 +238,23 @@
   </url>
   
   <url>
-    <loc>/note/</loc>
-    <lastmod>2017-06-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/tutorial/</loc>
     <lastmod>2017-06-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/note/2017/06/13/a-quick-note/</loc>
+    <loc>/exercises/a-quick-note/</loc>
     <lastmod>2017-06-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2016/02/14/a-plain-markdown-post/</loc>
-    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/blogdown/</loc>
-    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/hugo/</loc>
-    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/markdown/</loc>
-    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/mathjax/</loc>
-    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/pandoc/</loc>
-    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/rstudio/</loc>
-    <lastmod>2016-02-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/2015/07/23/hello-r-markdown/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/plot/</loc>
-    <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/r-markdown/</loc>
+    <loc>/posts/2015-07-23-r-rmarkdown/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/regression/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/2015/07/23/lorem-ipsum/</loc>
-    <lastmod>2015-07-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/about/</loc>
-  </url>
-  
-  <url>
-    <loc>/post/1/01/01/chapter-1/</loc>
   </url>
   
 </urlset>

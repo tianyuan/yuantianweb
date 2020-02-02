@@ -1,0 +1,99 @@
+---
+title: Handbook of Statistical Analyses Using R
+author: Yuan Tian
+date: '2019-11-12'
+slug: handbook-of-statistical-analyses-using-r
+categories:
+  - r
+tags: []
+image:
+  caption: ''
+  focal_point: ''
+output: 
+ blogdown::html_page:
+  number_sections: true
+  toc: true
+  toc_depth: 3
+  css: "/css/custom.css"
+---
+
+# Chapter 1 - Introduction to R
+
+## Import the Dataset
+
+### `.csv` File
+
+```{r echo=TRUE, include=TRUE}
+library(HSAUR3)
+# Method 1: 
+ data("Forbes2000", package = "HSAUR3")
+# Method 2: 
+#csvForbes2000 <- read.table("Forbes2000.csv",header = TRUE, sep = ",", row.names = 1)
+```
+
+### `.xlsx` File 
+
+````{r echo=TRUE,include=TRUE}
+library(xlsx)
+# Method 1: 
+#df <- read.xlsx("<name and extension of your file>", sheetIndex = 1)
+# Method 2: 
+#df <- read.xlsx2("<name and extension of your file>",sheetIndex = 1, startRow=2,colIndex = 2)
+#Fun fact: according to the package information, the function achieves a performance of an order of magnitude faster on sheets with 100,000 cells or more.
+# Method 3:
+#R> library("RODBC")
+#R> cnct <- odbcConnectExcel("Forbes2000.xls")
+#R> sqlQuery(cnct, "select * from \"Forbes2000\\$\"")
+````
+
+### `.rda` Files
+
+Search .rda files and load it:
+
+```{r echo=TRUE, include=TRUE} 
+#list.files(patterns = "\\.rda")
+#load("Forbes2000.rda")
+```
+
+## Export the Dataset
+
+```{r echo=TRUE,include=TRUE}
+#write.table(Forbes2000, file = "Forbes2000.csv", sep = ",", col.names = NA)
+# Or write.csv; 
+# Or save(Forbes2000, file="Forbes2000.rda")
+```
+
+## Get the Meta-data of the Dataset
+
+Load the `Forbes2000` dataset. 
+
+```{r echo=TRUE,include=TRUE}
+# get help - ?function_name (e.g. ?nrows)
+# basic meta-data
+class(Forbes2000)
+dim(Forbes2000)
+nrow(Forbes2000)
+ncol(Forbes2000)
+names(Forbes2000)
+class(Forbes2000[,"rank"])
+length(Forbes2000[,"rank"])
+Forbes2000[,"name"][1]
+
+```
+
+## Simple Summary Statistics
+
+Factor and numeric variables:
+
+```{r echo=TRUE,include=TRUE}
+#for factor 
+class(Forbes2000[,"category"])
+nlevels(Forbes2000[,"category"])
+levels(Forbes2000[,"category"])
+table(Forbes2000[,"category"])
+#for numeric variables
+class(Forbes2000[,"sales"])
+median(Forbes2000[,"sales"])
+range(Forbes2000[,"sales"])
+summary(Forbes2000[,"sales"])
+```

@@ -1,103 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on A minimal Hugo website</title>
-    <link>/post/</link>
-    <description>Recent content in Posts on A minimal Hugo website</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jan 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Hello World </title>
-      <link>/post/2020/01/30/hello-world/</link>
-      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2020/01/30/hello-world/</guid>
-      <description>This is a testing page</description>
-    </item>
-    
-    <item>
-      <title>Handbook of Statistical Analyses Using R</title>
-      <link>/post/2019/11/12/handbook-of-statistical-analyses-using-r/</link>
-      <pubDate>Tue, 12 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2019/11/12/handbook-of-statistical-analyses-using-r/</guid>
-      <description>1 Chapter 1 - Introduction to R1.1 Import the Dataset1.1.1 .csv File1.1.2 .xlsx File1.1.3 .rda Files1.2 Export the Dataset1.3 Get the Meta-data of the Dataset1.4 Simple Summary Statistics1 Chapter 1 - Introduction to R1.1 Import the Dataset1.1.1 .csv File# Method 1: data(&amp;quot;Forbes2000&amp;quot;, package = &amp;quot;HSAUR3&amp;quot;)# Method 2: #csvForbes2000 &amp;lt;- read.table(&amp;quot;Forbes2000.csv&amp;quot;,header = TRUE, sep = &amp;quot;,&amp;quot;, row.</description>
-    </item>
-    
-    <item>
-      <title>R Notebook</title>
-      <link>/post/2019/08/16/r-notebook/</link>
-      <pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2019/08/16/r-notebook/</guid>
-      <description>1 R Setup 1011.1 R Packages for Basic R Installation or Update1.2 Read SAS sas7bdat data into R1.2.1 Use library sas7bdat in R1.2.2 Use library haven package in R1.2.3 Load Data files in R Studio2 Create a Website using RMarkdown2.1 RMarkdown, Hugo, Netlify2.2 Blogdown &amp;amp; Hugo - Fix ToC (with Rmd)3 Write a Reproducible Paper using RMarkdown3.</description>
-    </item>
-    
-    <item>
-      <title>Statistical Learning</title>
-      <link>/post/2019/06/10/statistical-learning/</link>
-      <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2019/06/10/statistical-learning/</guid>
-      <description>1 Little Statistical Learning Book1.1 Model Representation: a function \(h : X → Y\)1.2 Linear Algebra Review2 ML Resources2.1 Superb Online Courses and Books2.2 Other Resources1 Little Statistical Learning Book1.1 Model Representation: a function \(h : X → Y\)This function \(h\) is called a hypothesis.
-Accuracy of our hypothesis function \(h\) is measured using a cost/loss function.</description>
-    </item>
-    
-    <item>
-      <title>SAS Notebook</title>
-      <link>/post/2019/05/15/sas-notebook-101/</link>
-      <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2019/05/15/sas-notebook-101/</guid>
-      <description>1 My Little SAS Book1.1 Using PROC SORT to remove duplicates1.2 Input() and put() for variable type conversion1.3 Merging/Stacking Datasets – Truncated Values1 My Little SAS BookThe aim is to document code chunks that are likely to be re-used for fast searching and indexing.
-1.1 Using PROC SORT to remove duplicatesThere are three options that might be helpful: DUPOUT=, NODUPRECS, and NODUPKEYS.</description>
-    </item>
-    
-    <item>
-      <title>A Plain Markdown Post</title>
-      <link>/post/2016/02/14/a-plain-markdown-post/</link>
-      <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2016/02/14/a-plain-markdown-post/</guid>
-      <description>This sample post is mainly for blogdown users. If you do not use blogdown, you can skip the first section.
-1. Markdown or R Markdown This is a post written in plain Markdown (*.md) instead of R Markdown (*.Rmd). The major differences are:
- You cannot run any R code in a plain Markdown document, whereas in an R Markdown document, you can embed R code chunks (```{r}); A plain Markdown post is rendered through Blackfriday, and an R Markdown document is compiled by rmarkdown and Pandoc.</description>
-    </item>
-    
-    <item>
-      <title>Hello R Markdown</title>
-      <link>/post/2015/07/23/hello-r-markdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>/post/2015/07/23/hello-r-markdown/</guid>
-      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
-    </item>
-    
-    <item>
-      <title>Lorem Ipsum</title>
-      <link>/post/2015/07/23/lorem-ipsum/</link>
-      <pubDate>Thu, 23 Jul 2015 00:00:00 +0000</pubDate>
-      
-      <guid>/post/2015/07/23/lorem-ipsum/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-Quisque mattis volutpat lorem vitae feugiat.</description>
-    </item>
-    
-    <item>
-      <title>Chapter 1</title>
-      <link>/post/1/01/01/chapter-1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/post/1/01/01/chapter-1/</guid>
-      <description>Chapter 1library(&amp;quot;tools&amp;quot;)library(&amp;quot;HSAUR3&amp;quot;)data(&amp;quot;Forbes2000&amp;quot;)ls()## [1] &amp;quot;Forbes2000&amp;quot;ls(Forbes2000)## [1] &amp;quot;assets&amp;quot; &amp;quot;category&amp;quot; &amp;quot;country&amp;quot; &amp;quot;marketvalue&amp;quot; &amp;quot;name&amp;quot; ## [6] &amp;quot;profits&amp;quot; &amp;quot;rank&amp;quot; &amp;quot;sales&amp;quot;print(Forbes2000)## rank name country## 1 1 Citigroup United States## 2 2 General Electric United States## 3 3 American Intl Group United States## 4 4 ExxonMobil United States## 5 5 BP United Kingdom## 6 6 Bank of America United States## 7 7 HSBC Group United Kingdom## 8 8 Toyota Motor Japan## 9 9 Fannie Mae United States## 10 10 Wal-Mart Stores United States## 11 11 UBS Switzerland## 12 12 ING Group Netherlands## 13 13 Royal Dutch/Shell Group Netherlands/ United Kingdom## 14 14 Berkshire Hathaway United States## 15 15 JP Morgan Chase United States## 16 16 IBM United States## 17 17 Total France## 18 18 BNP Paribas France## 19 19 Royal Bank of Scotland United Kingdom## 20 20 Freddie Mac United States## 21 21 DaimlerChrysler Germany## 22 22 Altria Group United States## 23 23 ChevronTexaco United States## 24 24 Pfizer United States## 25 25 Wells Fargo United States## 26 26 Verizon Commun United States## 27 27 Barclays United Kingdom## 28 28 Morgan Stanley United States## 29 29 General Motors United States## 30 30 Nippon Tel &amp;amp; Tel Japan## 31 31 Microsoft United States## 32 32 Nestle Switzerland## 33 33 SBC Communications United States## 34 34 Deutsche Bank Group Germany## 35 35 Siemens Group Germany## 36 36 HBOS United Kingdom## 37 37 ENI Italy## 38 38 ConocoPhillips United States## 39 39 Banco Santander Central Spain## 40 40 Merrill Lynch United States## 41 41 Wachovia United States## 42 42 Time Warner United States## 43 43 Hewlett-Packard United States## 44 44 Procter &amp;amp; Gamble United States## 45 45 Samsung Electronics South Korea## 46 46 Johnson &amp;amp; Johnson United States## 47 47 Lloyds TSB Group United Kingdom## 48 48 ABN-Amro Holding Netherlands## 49 49 Honda Motor Japan## 50 50 American Express United States## 51 51 Nissan Motor Japan## 52 52 Bank One United States## 53 53 AXA Group France## 54 54 Societe Generale Group France## 55 55 PetroChina China## 56 56 Goldman Sachs Group United States## 57 57 BBVA-Banco Bilbao Vizcaya Spain## 58 58 Intel United States## 59 59 MetLife United States## 60 60 Home Depot United States## 61 61 Viacom United States## 62 62 Allstate United States## 63 63 Merck &amp;amp; Co United States## 64 64 Novartis Group Switzerland## 65 65 ENEL Italy## 66 66 Unilever Netherlands/ United Kingdom## 67 67 Washington Mutual United States## 68 68 Credit Agricole France## 69 69 Deutsche Post Germany## 70 70 Comcast United States## 71 71 Volkswagen Group Germany## 72 72 Tokyo Electric Power Japan## 73 73 Munich Re Germany## 74 74 BMW-Bayerische Motor Germany## 75 75 Ford Motor United States## 76 76 Tyco International Bermuda## 77 77 US Bancorp United States## 78 78 Roche Group Switzerland## 79 79 Royal Bank of Canada Canada## 80 80 GlaxoSmithKline United Kingdom## 81 81 China Petroleum &amp;amp; Chemical China## 82 82 Sony Japan## 83 83 Nokia Finland## 84 84 BellSouth United States## 85 85 Walt Disney United States## 86 86 Natl Australia Bank Australia## 87 87 Gazprom Russia## 88 88 Carrefour Group France## 89 89 Cisco Systems United States## 90 90 FleetBoston Finl United States## 91 91 RWE Group Germany## 92 92 UniCredito Italiano Italy## 93 93 BT Group United Kingdom## 94 94 United Parcel Service United States## 95 95 United Technologies United States## 96 96 Fortis Netherlands## 97 97 Dow Chemical United States## 98 98 Aegon Insurance Group Netherlands## 99 99 Dexia Belgium## 100 100 Renault Group France## 101 101 Target United States## 102 102 Coca-Cola United States## 103 103 Lehman Bros Holdings United States## 104 104 PepsiCo United States## 105 105 Prudential United Kingdom## 106 106 Bank of Nova Scotia Canada## 107 107 Boeing United States## 108 108 Aventis France## 109 109 Repsol-YPF Spain## 110 110 News Corp Australia## 111 111 BASF Group Germany## 112 112 China Mobile (HK) Hong Kong/China## 113 113 Dell United States## 114 114 Peugeot Groupe France## 115 115 Endesa Group Spain## 116 116 AT&amp;amp;T United States## 117 117 Statoil Group Norway## 118 118 Bristol-Myers Squibb United States## 119 119 AstraZeneca United Kingdom## 120 120 Tesco United Kingdom## 121 121 Abbott Laboratories United States## 122 122 BHP Billiton Australia/ United Kingdom## 123 123 Bayer Group Germany## 124 124 Prudential Financial United States## 125 125 MBNA United States## 126 126 Commonwealth Bank Group Australia## 127 127 Petrobras-Petrsleo Brasil Brazil## 128 128 Sanpaolo IMI Italy## 129 129 Wyeth United States## 130 130 Canadian Imperial Bank Canada## 131 131 Motorola United States## 132 132 EI du Pont de Nemours United States## 133 133 Den Danske Bank Denmark## 134 134 Caterpillar United States## 135 135 Honeywell United States## 136 136 Nordea Sweden## 137 137 Anglo American United Kingdom## 138 138 Canon Japan## 139 139 Travelers Property Cas United States## 140 140 Cendant United States## 141 141 Sun Life Financial Canada## 142 142 Saint-Gobain France## 143 143 East Japan Railway Japan## 144 144 Hutchison Whampoa Hong Kong/China## 145 145 Cardinal Health United States## 146 146 Bank of Montreal Canada## 147 147 Alcoa United States## 148 148 National City United States## 149 149 Westpac Banking Group Australia## 150 150 Lowe`s Cos United States## 151 151 Toronto-Dominion Bank Canada## 152 152 Korea Electric Power South Korea## 153 153 Moller-Maersk Denmark## 154 154 Kookmin Bank South Korea## 155 155 British Amer Tobacco United Kingdom## 156 156 Mitsubishi Japan## 157 157 Kansai Electric Power Japan## 158 158 Almanij Belgium## 159 159 Millea Holdings Japan## 160 160 ANZ Banking Australia## 161 161 Countrywide Financial United States## 162 162 Lockheed Martin United States## 163 163 M United States## 164 164 Telstra Australia## 165 165 Eli Lilly and Co United States## 166 166 UnitedHealth Group United States## 167 167 Pinault-Printemps-Redoute France## 168 168 Norsk Hydro Norway## 169 169 Northrop Grumman United States## 170 170 Manulife Financial Canada## 171 171 Chubu Electric Power Japan## 172 172 Sears Roebuck United States## 173 173 Exelon United States## 174 174 McDonald`s United States## 175 175 BCE Canada## 176 176 HCA United States## 177 177 Aflac United States## 178 178 Southern Co United States## 179 179 Fifth Third Bancorp United States## 180 180 Hyundai Motor South Korea## 181 181 Amgen United States## 182 182 National Grid Transco United Kingdom## 183 183 Kroger United States## 184 184 Lukoil Holding Russia## 185 185 SunTrust Banks United States## 186 186 L`Oreal Group France## 187 187 AT&amp;amp;T Wireless United States## 188 188 Rio Tinto United Kingdom/ Australia## 189 189 Iberdrola Spain## 190 190 Capital One Financial United States## 191 191 Dominion Resources United States## 192 192 Union Pacific United States## 193 193 Nextel Commun United States## 194 194 ACE Bermuda## 195 195 Bank of New York United States## 196 196 Volvo Group Sweden## 197 197 Walgreen United States## 198 198 Aetna United States## 199 199 UES of Russia## 200 200 Standard Chartered Group United Kingdom## 201 201 Anheuser-Busch Cos United States## 202 202 China Telecom China## 203 203 CNP Assurances France## 204 204 Kimberly-Clark United States## 205 205 Hitachi Japan## 206 206 ThyssenKrupp Group Germany## 207 207 Sprint FON United States## 208 208 Clear Channel Commun United States## 209 209 Denso Japan## 210 210 John Hancock Financial United States## 211 211 KDDI Japan## 212 212 BB&amp;amp;T United States## 213 213 Yukos Russia## 214 214 Marathon Oil United States## 215 215 Groupe Danone France## 216 216 First Data United States## 217 217 Qwest Communications United States## 218 218 Metro AG Germany## 219 219 Bouygues Group France## 220 220 Emerson Electric United States## 221 221 Allied Irish Banks Ireland## 222 222 Principal Financial United States## 223 223 Svenska Handelsbanken Sweden## 224 224 Costco Wholesale United States## 225 225 Mitsui &amp;amp; Co Japan## 226 226 Takeda Chemical Inds Japan## 227 227 Chubb United States## 228 228 Veolia Environnement France## 229 229 Bear Stearns Cos United States## 230 230 Banca Intesa Italy## 231 231 FedEx United States## 232 232 Central Japan Railway Japan## 233 233 Texas Instruments United States## 234 234 Japan Tobacco Japan## 235 235 Deere &amp;amp; Co United States## 236 236 KT South Korea## 237 237 Sara Lee United States## 238 238 Oracle United States## 239 239 PNC Financial Services United States## 240 240 WellPoint Health United States## 241 241 General Dynamics United States## 242 242 Marsh &amp;amp; McLennan United States## 243 243 Indian Oil India## 244 244 Lafarge France## 245 245 Centrica United Kingdom## 246 246 Coca-Cola Enterprises United States## 247 247 Banco Bradesco Group Brazil## 248 248 Medtronic United States## 249 249 J Sainsbury United Kingdom## 250 250 Fuji Photo Film Japan## 251 251 State Bank of India Group India## 252 252 General Mills United States## 253 253 State Street United States## 254 254 Automatic Data United States## 255 255 Waste Management United States## 256 256 Entergy United States## 257 257 Progressive United States## 258 258 Pub Svc Enterprise United States## 259 259 Carnival Corp Panama/ United Kingdom## 260 260 Bank of Ireland Ireland## 261 261 ConAgra Foods United States## 262 262 KeyCorp United States## 263 263 Monte dei Paschi Italy## 264 264 Schlumberger Netherlands## 265 265 Occidental Petroleum United States## 266 266 Ito-Yokado Japan## 267 267 Cigna United States## 268 268 SEB-Skand Enskilda Sweden## 269 269 FPL Group United States## 270 270 Burlington Santa Fe United States## 271 271 St Paul Cos United States## 272 272 Alcan Canada## 273 273 Oil &amp;amp; Natural Gas India## 274 274 Thomson Corp Canada## 275 275 Posco South Korea## 276 276 Archer Daniels United States## 277 277 Mitsui Sumitomo Ins Japan## 278 278 Sanofi-Synthelabo France## 279 279 McKesson United States## 280 280 CVS United States## 281 281 Tohoku Electric Power Japan## 282 282 Fortum Finland## 283 283 Raytheon United States## 284 284 Weyerhaeuser United States## 285 285 Kyushu Electric Power Japan## 286 286 Akzo Nobel Group Netherlands## 287 287 Johnson Controls United States## 288 288 SLM United States## 289 289 Devon Energy United States## 290 290 Albertsons United States## 291 291 Alltel United States## 292 292 Illinois Tool Works United States## 293 293 Ricoh Japan## 294 294 Surgutneftegas Oil Russia## 295 295 Aeon Japan## 296 296 Gap United States## 297 297 Gillette United States## 298 298 Progress Energy United States## 299 299 Anthem United States## 300 300 CIC Group France## 301 301 Xerox United States## 302 302 Golden West Finl United States## 303 303 Reliance Industries India## 304 304 Edison International United States## 305 305 Sysco United States## 306 306 Gannett United States## 307 307 Baxter International United States## 308 308 Scottish Power United Kingdom## 309 309 Mitsubishi Heavy Inds Japan## 310 310 EnCana Canada## 311 311 Bridgestone Japan## 312 312 Cathay Financial Taiwan## 313 313 Best Buy United States## 314 314 Sumitomo Japan## 315 315 Eurohypo Germany## 316 316 Deutsche Lufthansa Germany## 317 317 Vinci Group France## 318 318 Singapore Telecom Singapore## 319 319 Power Corp of Canada Canada## 320 320 Swisscom Switzerland## 321 321 Banco do Brasil Brazil## 322 322 Nortel Networks Canada## 323 323 Schneider Electric France## 324 324 Forenings Sparbanken Sweden## 325 325 Aire Liquide Group France## 326 326 BOC Hong Kong Hong Kong/China## 327 327 XL Capital Bermuda## 328 328 Masco United States## 329 329 Toshiba Japan## 330 330 Aon United States## 331 331 Cadbury Schweppes United Kingdom## 332 332 Sharp Japan## 333 333 Valero Energy United States## 334 334 Consolidated Edison United States## 335 335 Mellon Finl United States## 336 336 UPM-Kymmene Finland## 337 337 Colgate-Palmolive United States## 338 338 Federated Dept Strs United States## 339 339 Anadarko Petroleum United States## 340 340 Schering-Plough United States## 341 341 Compass Group United Kingdom## 342 342 Petro-Canada Canada## 343 343 JC Penney United States## 344 344 Marks &amp;amp; Spencer United Kingdom## 345 345 Nippon Oil Japan## 346 346 Omnicom Group United States## 347 347 International Paper United States## 348 348 Old Mutual United Kingdom## 349 349 EMC United States## 350 350 Allianz Worldwide Germany## 351 351 CRH Ireland## 352 352 Kingfisher United Kingdom## 353 353 Kellogg United States## 354 354 Vodafone United Kingdom## 355 355 Medco Health Solutions United States## 356 356 NIKE United States## 357 357 Tribune United States## 358 358 Telenor Norway## 359 359 Standard Bank Group South Africa## 360 360 Chunghwa Telecom Taiwan## 361 361 SCA-Svenska Cellulosa Sweden## 362 362 Michelin Group France## 363 363 Erste Bank Austria## 364 364 Deutsche Telekom Germany## 365 365 DBS Group Singapore## 366 366 SAP Germany## 367 367 GUS United Kingdom## 368 368 Holcim Switzerland## 369 369 Tokyo Gas Japan## 370 370 Ingersoll-Rand Bermuda## 371 371 AmerisourceBergen United States## 372 372 Credit Suisse Group Switzerland## 373 373 FirstEnergy United States## 374 374 France Telecom France## 375 375 Cemex Mexico## 376 376 May Dept Stores United States## 377 377 Firstrand South Africa## 378 378 Accenture Bermuda## 379 379 Banco Popular Espaqol Spain## 380 380 George Weston Canada## 381 381 Sberbank of Russia Russia## 382 382 Generali Group Italy## 383 383 China Unicom Hong Kong/China## 384 384 JFE Holdings Japan## 385 385 Christian Dior France## 386 386 Henkel Group Germany## 387 387 Lincoln National United States## 388 388 Kyocera Japan## 389 389 Shin-Etsu Chemical Japan## 390 390 Woori Finance Holdings South Korea## 391 391 Mitsubishi Estate Japan## 392 392 Georgia-Pacific United States## 393 393 Centex United States## 394 394 Areva Group France## 395 395 TPG Netherlands## 396 396 Sumitomo Mitsui Financial Japan## 397 397 E.</description>
-    </item>
-    
-  </channel>
-</rss>

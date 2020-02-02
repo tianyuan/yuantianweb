@@ -1,31 +1,59 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on A minimal Hugo website</title>
+    <title>Categories on Yuan Tian</title>
     <link>/categories/</link>
-    <description>Recent content in Categories on A minimal Hugo website</description>
+    <description>Recent content in Categories on Yuan Tian</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <copyright>© Copyright notice</copyright>
+    <lastBuildDate>Fri, 24 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>hello</title>
-      <link>/categories/hello/</link>
-      <pubDate>Thu, 30 Jan 2020 00:00:00 +0000</pubDate>
+      <title>book</title>
+      <link>/categories/book/</link>
+      <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/categories/hello/</guid>
+      <guid>/categories/book/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>r</title>
+      <title>R</title>
       <link>/categories/r/</link>
-      <pubDate>Tue, 12 Nov 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>/categories/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Statistics</title>
+      <link>/categories/statistics/</link>
+      <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/statistics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iLearn</title>
+      <link>/categories/ilearn/</link>
+      <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/ilearn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iRead</title>
+      <link>/categories/iread/</link>
+      <pubDate>Mon, 18 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/iread/</guid>
       <description></description>
     </item>
     
@@ -35,15 +63,6 @@
       <pubDate>Wed, 14 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>/categories/example/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>/categories/hugo/</link>
-      <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/hugo/</guid>
       <description></description>
     </item>
     

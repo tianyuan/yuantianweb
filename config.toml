@@ -1,45 +1,88 @@
-baseurl = "/"
+baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "A minimal Hugo website"
-theme = "hugo-xmin"
-googleAnalytics = ""
-disqusShortname = ""
+title = "Yuan Tian"
+theme = "ezhil"
+paginate = 5
+
+copyright = "© Copyright notice"
+
+pygmentsstyle = "solarized-dark"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+
+googleAnalytics = "UA-123-45"
+disqusShortname = "ezhil-demo"
+
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
-footnotereturnlinkcontents = "↩"
-	
-
-[permalinks]
-    post = "/post/:year/:month/:day/:slug/"
-    note = "/note/:year/:month/:day/:slug/"
-
-[[menu.main]]
-    name = "Home"
-    url = "/"
-    weight = 1
-[[menu.main]]
-    name = "About"
-    url = "/about/"
-    weight = 2
-[[menu.main]]
-    name = "Posts"
-    url = "/post/"
-    weight = 3
-[[menu.main]]
-    name = "Notes"
-    url = "/note/"
-    weight = 4    
-[[menu.main]]
-    name = "Categories"
-    url = "/categories/"
-    weight = 5
-[[menu.main]]
-    name = "Tags"
-    url = "/tags/"
-    weight = 6
-[[menu.main]]
-    name = "Subscribe"
-    url = "/index.xml"
 
 [params]
-    description = "A website built through Hugo and blogdown."
-    footer = "&copy; [Yihui Xie](https://yihui.name) 2017 -- 2019 | [Github](https://github.com/yihui) | [Twitter](https://twitter.com/xieyihui)"
+	subtitle = "PhD life | Computer & Health Science | Music and Dance | Views Are My Own  "
+	disableDisqusTypes = ["page"]
+	featherIconsCDN = true
+	mode = "auto" # "dark", "auto", "light"
+	customCSS = "css/custom.css"  # Custom CSS applied to default styles.
+	# customDarkCSS = "css/custom-dark.css"  # Custom styles applied to dark mode css.
+	customJS = ["https://code.jquery.com/jquery-3.4.1.js", "js/custom1.js"]  # Custom JS scripts.
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "All posts"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "All exercises"
+url = "/exercises"
+weight = 3
+
+[[menu.main]]
+name = "Categories"
+url = "/categories/"
+weight = 4
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 5
+
+[[menu.main]]
+name = "Years"
+url = "/years"
+weight = 6
+
+[[menu.main]]
+name = "Quotes"
+url = "/quotes"
+weight = 6
+
+
+[[menu.main]]
+name = "About Yuan"
+url = "/about"
+weight = 7
+
+[[params.social]]
+name = "Github"
+icon = "github"
+url = "https://github.com/tianyuan/yuantianweb"
+
+[[params.social]]
+name = "Google Scholar"
+icon = "book"
+url = "https://scholar.google.com/citations?user=8x0i6jAAAAAJ&hl=en"
+
+[[params.social]]
+name = "GoodReads"
+icon = "star"
+url = "https://www.goodreads.com/yuantian09"
+
+
+[taxonomies]
+   tag = "tags"
+   category = "categories"
+   year ="years"
