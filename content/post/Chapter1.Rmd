@@ -1,0 +1,26 @@
+---
+title: "Chapter 1"
+author: "Yuan and Shan"
+date: "24/01/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Chapter 1
+
+```{r echo=TRUE}
+library("tools")
+library("HSAUR3")
+data("Forbes2000")
+ls()
+ls(Forbes2000)
+print(Forbes2000)
+```
+
+
+
+```{r echo=TRUE}
+```

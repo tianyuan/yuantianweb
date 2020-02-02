@@ -1,305 +1,0 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
-
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Handbook of Statistical Analyses Using R - Yuan Tian</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta property="og:title" content="Handbook of Statistical Analyses Using R" />
-<meta property="og:description" content="1 Chapter 1 - Introduction to R1.1 Import the Dataset1.1.1 .csv File1.1.2 .xlsx File1.1.3 .rda Files1.2 Export the Dataset1.3 Get the Meta-data of the Dataset1.4 Simple Summary Statistics1 Chapter 1 - Introduction to R1.1 Import the Dataset1.1.1 .csv Filelibrary(HSAUR3)## Loading required package: tools# Method 1: data(&quot;Forbes2000&quot;, package = &quot;HSAUR3&quot;)# Method 2: #csvForbes2000 &lt;- read." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="/exercises/handbook-of-statistical-analyses-using-r/" />
-<meta property="article:published_time" content="2019-11-12T00:00:00+00:00" />
-<meta property="article:modified_time" content="2019-11-12T00:00:00+00:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Handbook of Statistical Analyses Using R"/>
-<meta name="twitter:description" content="1 Chapter 1 - Introduction to R1.1 Import the Dataset1.1.1 .csv File1.1.2 .xlsx File1.1.3 .rda Files1.2 Export the Dataset1.3 Get the Meta-data of the Dataset1.4 Simple Summary Statistics1 Chapter 1 - Introduction to R1.1 Import the Dataset1.1.1 .csv Filelibrary(HSAUR3)## Loading required package: tools# Method 1: data(&quot;Forbes2000&quot;, package = &quot;HSAUR3&quot;)# Method 2: #csvForbes2000 &lt;- read."/>
-<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
-	<link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
-	<link rel="stylesheet" type="text/css" href="/css/custom.css" />
-	<link rel="stylesheet" type="text/css" href="/css/dark.css" media="(prefers-color-scheme: dark)" />
-
-	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-	<script src="/js/main.js"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-	<script src="/js/custom1.js"></script>
-</head>
-
-
-<body>
-	<div class="container wrapper post">
-		<div class="header">
-	<h1 class="site-title"><a href="/">Yuan Tian</a></h1>
-	<div class="site-description"><h2>PhD life | Computer &amp; Health Science | Music and Dance | Views Are My Own</h2><nav class="nav social">
-			<ul class="flat"><a href="https://github.com/tianyuan/yuantianweb" title="Github"><i data-feather="github"></i></a><a href="https://scholar.google.com/citations?user=8x0i6jAAAAAJ&amp;hl=en" title="Google Scholar"><i data-feather="book"></i></a><a href="https://www.goodreads.com/yuantian09" title="GoodReads"><i data-feather="star"></i></a></ul>
-		</nav>
-	</div>
-
-	<nav class="nav">
-		<ul class="flat">
-			
-			<li>
-				<a href="/">Home</a>
-			</li>
-			
-			<li>
-				<a href="/posts">All posts</a>
-			</li>
-			
-			<li>
-				<a href="/exercises">All exercises</a>
-			</li>
-			
-			<li>
-				<a href="/categories/">Categories</a>
-			</li>
-			
-			<li>
-				<a href="/tags">Tags</a>
-			</li>
-			
-			<li>
-				<a href="/quotes">Quotes</a>
-			</li>
-			
-			<li>
-				<a href="/years">Years</a>
-			</li>
-			
-			<li>
-				<a href="/about">About Yuan</a>
-			</li>
-			
-		</ul>
-	</nav>
-</div>
-
-
-		<div class="post-header">
-			<h1 class="title">Handbook of Statistical Analyses Using R</h1>
-			<p class="meta">
-			
-			
-			Categories:
-			
-			<a href='/categories/r'>r</a>  &nbsp;&nbsp;
-			
-			
-			
-			
-			
-			
-			
-			</p>
-			<div class="meta">Yuan Tian Posted at &mdash; Nov 12, 2019</div>
-			
-		</div>
-
-		<div class="markdown">
-			
-  <link rel="stylesheet" href="\css\custom.css" type="text/css" />
-
-<div id="TOC">
-<ul>
-<li><a href="#chapter-1---introduction-to-r"><span class="toc-section-number">1</span> Chapter 1 - Introduction to R</a><ul>
-<li><a href="#import-the-dataset"><span class="toc-section-number">1.1</span> Import the Dataset</a><ul>
-<li><a href="#csv-file"><span class="toc-section-number">1.1.1</span> <code>.csv</code> File</a></li>
-<li><a href="#xlsx-file"><span class="toc-section-number">1.1.2</span> <code>.xlsx</code> File</a></li>
-<li><a href="#rda-files"><span class="toc-section-number">1.1.3</span> <code>.rda</code> Files</a></li>
-</ul></li>
-<li><a href="#export-the-dataset"><span class="toc-section-number">1.2</span> Export the Dataset</a></li>
-<li><a href="#get-the-meta-data-of-the-dataset"><span class="toc-section-number">1.3</span> Get the Meta-data of the Dataset</a></li>
-<li><a href="#simple-summary-statistics"><span class="toc-section-number">1.4</span> Simple Summary Statistics</a></li>
-</ul></li>
-</ul>
-</div>
-
-<div id="chapter-1---introduction-to-r" class="section level1">
-<h1><span class="header-section-number">1</span> Chapter 1 - Introduction to R</h1>
-<div id="import-the-dataset" class="section level2">
-<h2><span class="header-section-number">1.1</span> Import the Dataset</h2>
-<div id="csv-file" class="section level3">
-<h3><span class="header-section-number">1.1.1</span> <code>.csv</code> File</h3>
-<pre class="r"><code>library(HSAUR3)</code></pre>
-<pre><code>## Loading required package: tools</code></pre>
-<pre class="r"><code># Method 1: 
- data(&quot;Forbes2000&quot;, package = &quot;HSAUR3&quot;)
-# Method 2: 
-#csvForbes2000 &lt;- read.table(&quot;Forbes2000.csv&quot;,header = TRUE, sep = &quot;,&quot;, row.names = 1)</code></pre>
-</div>
-<div id="xlsx-file" class="section level3">
-<h3><span class="header-section-number">1.1.2</span> <code>.xlsx</code> File</h3>
-<pre class="r"><code>library(xlsx)
-# Method 1: 
-#df &lt;- read.xlsx(&quot;&lt;name and extension of your file&gt;&quot;, sheetIndex = 1)
-# Method 2: 
-#df &lt;- read.xlsx2(&quot;&lt;name and extension of your file&gt;&quot;,sheetIndex = 1, startRow=2,colIndex = 2)
-#Fun fact: according to the package information, the function achieves a performance of an order of magnitude faster on sheets with 100,000 cells or more.
-# Method 3:
-#R&gt; library(&quot;RODBC&quot;)
-#R&gt; cnct &lt;- odbcConnectExcel(&quot;Forbes2000.xls&quot;)
-#R&gt; sqlQuery(cnct, &quot;select * from \&quot;Forbes2000\\$\&quot;&quot;)</code></pre>
-</div>
-<div id="rda-files" class="section level3">
-<h3><span class="header-section-number">1.1.3</span> <code>.rda</code> Files</h3>
-<p>Search .rda files and load it:</p>
-<pre class="r"><code>#list.files(patterns = &quot;\\.rda&quot;)
-#load(&quot;Forbes2000.rda&quot;)</code></pre>
-</div>
-</div>
-<div id="export-the-dataset" class="section level2">
-<h2><span class="header-section-number">1.2</span> Export the Dataset</h2>
-<pre class="r"><code>#write.table(Forbes2000, file = &quot;Forbes2000.csv&quot;, sep = &quot;,&quot;, col.names = NA)
-# Or write.csv; 
-# Or save(Forbes2000, file=&quot;Forbes2000.rda&quot;)</code></pre>
-</div>
-<div id="get-the-meta-data-of-the-dataset" class="section level2">
-<h2><span class="header-section-number">1.3</span> Get the Meta-data of the Dataset</h2>
-<p>Load the <code>Forbes2000</code> dataset.</p>
-<pre class="r"><code># get help - ?function_name (e.g. ?nrows)
-# basic meta-data
-class(Forbes2000)</code></pre>
-<pre><code>## [1] &quot;data.frame&quot;</code></pre>
-<pre class="r"><code>dim(Forbes2000)</code></pre>
-<pre><code>## [1] 2000    8</code></pre>
-<pre class="r"><code>nrow(Forbes2000)</code></pre>
-<pre><code>## [1] 2000</code></pre>
-<pre class="r"><code>ncol(Forbes2000)</code></pre>
-<pre><code>## [1] 8</code></pre>
-<pre class="r"><code>names(Forbes2000)</code></pre>
-<pre><code>## [1] &quot;rank&quot;        &quot;name&quot;        &quot;country&quot;     &quot;category&quot;    &quot;sales&quot;      
-## [6] &quot;profits&quot;     &quot;assets&quot;      &quot;marketvalue&quot;</code></pre>
-<pre class="r"><code>class(Forbes2000[,&quot;rank&quot;])</code></pre>
-<pre><code>## [1] &quot;integer&quot;</code></pre>
-<pre class="r"><code>length(Forbes2000[,&quot;rank&quot;])</code></pre>
-<pre><code>## [1] 2000</code></pre>
-<pre class="r"><code>Forbes2000[,&quot;name&quot;][1]</code></pre>
-<pre><code>## [1] &quot;Citigroup&quot;</code></pre>
-</div>
-<div id="simple-summary-statistics" class="section level2">
-<h2><span class="header-section-number">1.4</span> Simple Summary Statistics</h2>
-<p>Factor and numeric variables:</p>
-<pre class="r"><code>#for factor 
-class(Forbes2000[,&quot;category&quot;])</code></pre>
-<pre><code>## [1] &quot;factor&quot;</code></pre>
-<pre class="r"><code>nlevels(Forbes2000[,&quot;category&quot;])</code></pre>
-<pre><code>## [1] 27</code></pre>
-<pre class="r"><code>levels(Forbes2000[,&quot;category&quot;])</code></pre>
-<pre><code>##  [1] &quot;Aerospace &amp; defense&quot;              &quot;Banking&quot;                         
-##  [3] &quot;Business services &amp; supplies&quot;     &quot;Capital goods&quot;                   
-##  [5] &quot;Chemicals&quot;                        &quot;Conglomerates&quot;                   
-##  [7] &quot;Construction&quot;                     &quot;Consumer durables&quot;               
-##  [9] &quot;Diversified financials&quot;           &quot;Drugs &amp; biotechnology&quot;           
-## [11] &quot;Food drink &amp; tobacco&quot;             &quot;Food markets&quot;                    
-## [13] &quot;Health care equipment &amp; services&quot; &quot;Hotels restaurants &amp; leisure&quot;    
-## [15] &quot;Household &amp; personal products&quot;    &quot;Insurance&quot;                       
-## [17] &quot;Materials&quot;                        &quot;Media&quot;                           
-## [19] &quot;Oil &amp; gas operations&quot;             &quot;Retailing&quot;                       
-## [21] &quot;Semiconductors&quot;                   &quot;Software &amp; services&quot;             
-## [23] &quot;Technology hardware &amp; equipment&quot;  &quot;Telecommunications services&quot;     
-## [25] &quot;Trading companies&quot;                &quot;Transportation&quot;                  
-## [27] &quot;Utilities&quot;</code></pre>
-<pre class="r"><code>table(Forbes2000[,&quot;category&quot;])</code></pre>
-<pre><code>## 
-##              Aerospace &amp; defense                          Banking 
-##                               19                              313 
-##     Business services &amp; supplies                    Capital goods 
-##                               70                               53 
-##                        Chemicals                    Conglomerates 
-##                               50                               31 
-##                     Construction                Consumer durables 
-##                               79                               74 
-##           Diversified financials            Drugs &amp; biotechnology 
-##                              158                               45 
-##             Food drink &amp; tobacco                     Food markets 
-##                               83                               33 
-## Health care equipment &amp; services     Hotels restaurants &amp; leisure 
-##                               65                               37 
-##    Household &amp; personal products                        Insurance 
-##                               44                              112 
-##                        Materials                            Media 
-##                               97                               61 
-##             Oil &amp; gas operations                        Retailing 
-##                               90                               88 
-##                   Semiconductors              Software &amp; services 
-##                               26                               31 
-##  Technology hardware &amp; equipment      Telecommunications services 
-##                               59                               67 
-##                Trading companies                   Transportation 
-##                               25                               80 
-##                        Utilities 
-##                              110</code></pre>
-<pre class="r"><code>#for numeric variables
-class(Forbes2000[,&quot;sales&quot;])</code></pre>
-<pre><code>## [1] &quot;numeric&quot;</code></pre>
-<pre class="r"><code>median(Forbes2000[,&quot;sales&quot;])</code></pre>
-<pre><code>## [1] 4.365</code></pre>
-<pre class="r"><code>range(Forbes2000[,&quot;sales&quot;])</code></pre>
-<pre><code>## [1]   0.01 256.33</code></pre>
-<pre class="r"><code>summary(Forbes2000[,&quot;sales&quot;])</code></pre>
-<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##   0.010   2.018   4.365   9.697   9.547 256.330</code></pre>
-</div>
-</div>
-
-		</div>
-
-		<div class="post-tags">
-			
-				
-			
-		</div>
-		<div id="disqus_thread"></div>
-<script type="text/javascript">
-	(function () {
-		
-		
-		if (window.location.hostname == "localhost")
-			return;
-
-		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		var disqus_shortname = 'ezhil-demo';
-		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
-		Disqus.</a></noscript>
-<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-	<div class="footer wrapper">
-	<nav class="nav">
-		<div> © Copyright notice |  <a href="https://github.com/vividvilla/ezhil">Ezhil theme</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
-	</nav>
-</div>
-<script src="//yihui.name/js/math-code.js"></script>
-<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-<script async src="//yihui.name/js/center-img.js"></script>
-
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
-
-<script>
-hljs.configure({languages: ["r","yaml","tex"]});
-hljs.initHighlightingOnLoad();
-</script>
-
-
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-123-45', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-
-<script>feather.replace()</script>
-</body>
-</html>

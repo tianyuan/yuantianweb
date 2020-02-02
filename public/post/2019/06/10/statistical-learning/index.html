@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Statistical Learning | A minimal Hugo website</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/post/">Posts</a></li>
+      
+      <li><a href="/note/">Notes</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+
+<div class="article-meta">
+
+<h1><span class="title">Statistical Learning</span></h1>
+<h2 class="author">Yuan Tian</h2>
+<h2 class="date">2019/06/10</h2>
+<p class="terms">
+
+
+
+
+
+</p>
+</div>
+
+<main>
+
+  <link rel="stylesheet" href="\css\custom.css" type="text/css" />
+
+<div id="TOC">
+<ul>
+<li><a href="#little-statistical-learning-book"><span class="toc-section-number">1</span> Little Statistical Learning Book</a><ul>
+<li><a href="#model-representation-a-function-h-x-y"><span class="toc-section-number">1.1</span> Model Representation: a function <span class="math inline">\(h : X → Y\)</span></a></li>
+<li><a href="#linear-algebra-review"><span class="toc-section-number">1.2</span> Linear Algebra Review</a></li>
+</ul></li>
+<li><a href="#ml-resources"><span class="toc-section-number">2</span> ML Resources</a><ul>
+<li><a href="#superb-online-courses-and-books"><span class="toc-section-number">2.1</span> <strong>Superb</strong> Online Courses and Books</a></li>
+<li><a href="#other-resources"><span class="toc-section-number">2.2</span> Other Resources</a></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="little-statistical-learning-book" class="section level1">
+<h1><span class="header-section-number">1</span> Little Statistical Learning Book</h1>
+<div id="model-representation-a-function-h-x-y" class="section level2">
+<h2><span class="header-section-number">1.1</span> Model Representation: a function <span class="math inline">\(h : X → Y\)</span></h2>
+<p>This function <span class="math inline">\(h\)</span> is called a <strong><em>hypothesis</em></strong>.</p>
+<p>Accuracy of our hypothesis function <span class="math inline">\(h\)</span> is measured using a <strong><em>cost/loss function</em></strong>. One particular choice of the loss function for <strong>linear regression</strong> is called “Squared error function” (or “Mean squared error”).</p>
+<p><span class="math display">\[J(\theta_0, \theta_1) = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left ( \hat{y}_{i}- y_{i} \right)^2 = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left (h_\theta (x_{i}) - y_{i} \right)^2\]</span></p>
+<p>The mean is halved (1/2) to simplify the computation of the gradient descent, as the derivative term of the square function will cancel out the (1/2) term.</p>
+<p>Why squared loss (but not absolute loss)?</p>
+<blockquote>
+<p>The absolute value is not convenient, because it doesn’t have a continuous derivative, which makes the function not smooth. Functions that are not smooth create unnecessary difficulties when employing linear algebra to find closed form solutions to optimization problems. Closed form solutions to finding an optimum of a function are simple algebraic expressions and are often preferable to using complex numerical optimization methods, such as gradient descent (used, among others, to train neural networks). –<a href="http://themlbook.com/">The 100-page ML Book</a></p>
+</blockquote>
+<p><img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/R2YF5Lj3EeajLxLfjQiSjg_110c901f58043f995a35b31431935290_Screen-Shot-2016-12-02-at-5.23.31-PM.png?expiry=1560643200000&amp;hmac=s6t6cOn9_Fsy21OWELBBua4X19cicFE0OWO2RO1nhVE" /></p>
+</div>
+<div id="linear-algebra-review" class="section level2">
+<h2><span class="header-section-number">1.2</span> Linear Algebra Review</h2>
+<div id="what-is-the-inverse-of-a-matrix" class="section level3">
+<h3><span class="header-section-number">1.2.1</span> What is the <a href="https://www.mathsisfun.com/algebra/matrix-inverse.html"><em>Inverse</em> of a Matrix</a>?</h3>
+<p>To have an inverse, the matrix must be “square” (<span class="math inline">\(N_{row} = N_{col}\)</span>).</p>
+<p>Inverse of a value.
+<img src="https://www.mathsisfun.com/numbers/images/reciprocal-reciprocal.svg" alt="Inverse of a value" />
+Inverse of a matrix.
+<img src="https://www.mathsisfun.com/algebra/images/matrix-inverse-both.svg" alt="Inverse of a Matrix" />
+* When we multiply a number by its reciprocal we get 1.
+* When we multiply a matrix by its inverse we get the Identity Matrix. <span class="math inline">\(A \times A^{-1}=A^{-1} \times A = I\)</span></p>
+<p>for a <span class="math inline">\(2 \times 2\)</span> matrix, the inverse is:</p>
+<p><img src="https://www.mathsisfun.com/algebra/images/matrix-inverse-2x2.svg" /></p>
+<p>According to the <a href="http://mathworld.wolfram.com/MatrixInverse.html">invertible matrix theorem</a>, The inverse might not exsit, if the <a href="https://www.mathsisfun.com/algebra/matrix-determinant.html">determinant</a> is zero, such a matrix is called “Singular”.</p>
+</div>
+</div>
+</div>
+<div id="ml-resources" class="section level1">
+<h1><span class="header-section-number">2</span> ML Resources</h1>
+<div id="superb-online-courses-and-books" class="section level2">
+<h2><span class="header-section-number">2.1</span> <strong>Superb</strong> Online Courses and Books</h2>
+<ul>
+<li><strong>Best FREE Book</strong>: An Introduction to Statistical Learning in R
+<ul>
+<li>G. James et al., <a href="http://www-bcf.usc.edu/~gareth/ISL/">An Introduction to Statistical Learning: with Applications in R</a>, Springer Texts in Statistics, DOI 10.1007/978-1-4614-7138-71.</li>
+<li><a href="https://www.r-bloggers.com/in-depth-introduction-to-machine-learning-in-15-hours-of-expert-videos/">Slides and videos</a> for Statistical Learning MOOC by Hastie and Tibshirani</li>
+<li><a href="https://www.alsharif.info/#!iom530/c21o7">Slides and video</a> tutorials related to this book by Abass Al Sharif</li>
+</ul></li>
+<li><strong>Best Coursera Course</strong>: Machine Learning (Stanford University)
+<ul>
+<li>Approx. 55 hours to complete, course can be found <a href="https://www.coursera.org/learn/machine-learning/home/welcome">here</a>.</li>
+</ul></li>
+<li><strong>Best LITTLE Book</strong>: The hundred-page Machine Learning Book.
+<ul>
+<li>On average, people spend a week of after-work reading.</li>
+<li><a href="http://themlbook.com/wiki/doku.php">Book Wiki</a></li>
+</ul></li>
+</ul>
+</div>
+<div id="other-resources" class="section level2">
+<h2><span class="header-section-number">2.2</span> Other Resources</h2>
+<div id="data-science-bootcamp-june-10-21-2019" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Data Science Bootcamp June 10-21, 2019</h3>
+<div id="r-packages-installations" class="section level4">
+<h4><span class="header-section-number">2.2.1.1</span> R Packages Installations</h4>
+<pre class="r"><code>#Packages for data science: Statistical analysis for high dimensional data
+install.packages(&#39;e1071&#39;)
+# Multiclass Logistic Regression
+install.packages(&quot;glmnet&quot;)
+install.packages(c(&quot;lar&quot;,&quot;RandomForest&quot;,&quot;rpart&quot;,&quot;SIS&quot;,&quot;tilting&quot;))
+#Packages for data science: survival analysis case study
+install.packages(c(&quot;survival&quot;,&quot;mstate&quot;,&quot;p3state.msm&quot;,&quot;msm&quot;))</code></pre>
+</div>
+<div id="day-1-2-and-4-5-machine-learning-statistical-learning" class="section level4">
+<h4><span class="header-section-number">2.2.1.2</span> Day 1-2 and 4-5: Machine Learning Statistical Learning</h4>
+<p>Slides and Resources are <a href="https://drive.google.com/drive/folders/1u8N6ISovKj680Yr3Sv5nUeIUFVaZKBK2?usp=sharing">here</a>.</p>
+</div>
+<div id="day-3-case-study-mgus-data-survival-analyses" class="section level4">
+<h4><span class="header-section-number">2.2.1.3</span> Day 3: Case Study: MGUS Data (Survival Analyses)</h4>
+<p>Slides and Resouces are <a href="https://drive.google.com/drive/folders/1kBWPsQ-fQJ1KbQw1OtOtlC69DEj_PuCm?usp=sharing">here</a></p>
+<ul>
+<li><strong>Outcome/Response variable</strong>: time to occurance of an event.</li>
+<li><strong>Covariates</strong>: age, sex, pstat and mspike.
+<ul>
+<li>mspike: size of the monoclonal serum spike</li>
+<li>ptime: time until progression to a plasma cell malignancy (PCM) or last contact (months)</li>
+<li>pstat: occurrence of PCM: 0 = no, 1 = yes</li>
+<li>futime: time until death or last contact (months)</li>
+<li>death: occurrence of death: 0 = no, 1 = yes</li>
+</ul></li>
+<li><strong>Model</strong>: A multi-state model to describe the path to death.
+<ul>
+<li>T: survival time</li>
+<li>C: censoring time</li>
+<li><em>t = min(T,C)</em></li>
+<li><span class="math inline">\(\delta\)</span> = 1 (T <span class="math inline">\(\le\)</span> C)
+<ul>
+<li>t is an observed lifetime (full information) if T<span class="math inline">\(\le\)</span> C</li>
+<li>t is an sensoring time (incomplete information, e.g., withdraw, alive when the study ends) if T<span class="math inline">\(\ge\)</span> C</li>
+</ul></li>
+<li>If <span class="math inline">\(h_0(t)\)</span> is left unspecified, then it is called the Cox PH (Proportionality Assumption and Hazard Ratio) Model.</li>
+</ul></li>
+<li><strong>How to Interpret HR?</strong> (Example 1):
+<ul>
+<li>Event: Death</li>
+<li>Covariates: age, sex, pstat, mspike</li>
+<li>𝒙 = (age = 75, sex, pstat, mspike)′</li>
+<li>𝒙∗= (age = 70, sex, pstat, mspike)′</li>
+<li>HR = ?</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[HR=e^{\beta_1(75-70) + \beta_2(Sex-Sex) +\beta_3(pstat-pstat) + \beta_4(mspike-mspike) }\]</span></p>
+<p>Given <span class="math inline">\(\beta_1 = 0.05\)</span>, <span class="math inline">\(HR=exp(5*0.06)=1.35\)</span>. The event relative risk will increase 35% for 5 units (year) controlling for other factors.</p>
+<p>Even though <span class="math inline">\(h_0(t)\)</span> is unspecified, we estimate the <span class="math inline">\(\beta\)</span>s. We can estimate <span class="math inline">\(S(t,x)\)</span> using a minimum of assumptions. There are two techniques to adjust the partical likelihood for tied lifetimes: Brceslow and Efron.</p>
+<p>The code can be found in the <a href="https://drive.google.com/drive/folders/1u8N6ISovKj680Yr3Sv5nUeIUFVaZKBK2?usp=sharing">Google Drive folder</a>.</p>
+<pre class="r"><code>library(survival)
+mgus.data&lt;-read.csv(&quot;C:/Users/ytian/Google Drive/PhD/Data Science Bootcamp June 10-21 2019/D3 Code/mgus.data.csv&quot;,header = TRUE)</code></pre>
+</div>
+<div id="day-6-7-case-study-diabetes-readmission" class="section level4">
+<h4><span class="header-section-number">2.2.1.4</span> Day 6-7 Case Study: Diabetes Readmission</h4>
+<p>Slides and RMarkdown Code can be found <a href="https://drive.google.com/drive/folders/1x1UdOzKMrVC4GRqkHeglJhjAwlMDKDk0?usp=sharing">here</a>.</p>
+<pre class="r"><code>install.packages(c(&quot;here&quot;,&quot;olsrr&quot;,&quot;modelr&quot;,&quot;broom&quot;,&quot;caret&quot;,&quot;neuralnet&quot;,&quot;DescTools&quot;,&quot;PredictABEL&quot;))</code></pre>
+<pre class="r"><code>library(magrittr)
+library(here)
+library(olsrr)
+library(modelr)
+library(neuralnet)
+library(dplyr)
+library(PredictABEL)
+library(ggplot2)
+library(caret)
+library(ggplot2)
+library(ROCR)
+library(broom)
+library(DescTools)</code></pre>
+<pre class="r"><code>diabetes&lt;-read.csv(&quot;C:/Users/ytian/Google Drive/PhD/Data Science Bootcamp June 10-21 2019/C3 Case Study_Diabetes/diabetes_data_full.csv&quot;)
+
+diabetes_data &lt;- read.csv(&quot;C:/Users/ytian/Google Drive/PhD/Data Science Bootcamp June 10-21 2019/C3 Case Study_Diabetes/diabetes_analytic_data.csv&quot;)</code></pre>
+</div>
+</div>
+</div>
+</div>
+
+</main>
+
+  <footer>
+  <script src="//yihui.name/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<script async src="//yihui.name/js/center-img.js"></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+
+<script>
+hljs.configure({languages: ["r","yaml","tex"]});
+hljs.initHighlightingOnLoad();
+</script>
+
+  
+  <hr/>
+  © <a href="https://yihui.name">Yihui Xie</a> 2017 &ndash; 2019 | <a href="https://github.com/yihui">Github</a> | <a href="https://twitter.com/xieyihui">Twitter</a>
+  
+  </footer>
+  </body>
+</html>
+
