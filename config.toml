@@ -1,7 +1,7 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "Yuan Tian"
-theme = "ezhil"
+#theme = "ezhil"
 paginate = 5
 
 copyright = "© Copyright notice"
