@@ -1,749 +1,216 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Yuan Tian</title>
     <link>/</link>
     <description>Recent content on Yuan Tian</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <copyright>© Copyright notice</copyright>
+    <lastBuildDate>Fri, 31 Jan 2020 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Quotes</title>
+      <link>/quotes/quotes/</link>
+      <pubDate>Fri, 31 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/quotes/quotes/</guid>
+      <description>HUGO XMIN Keep it simple, but not simpler XMin is a Hugo theme written by Yihui Xie in about four hours: half an hour was spent on the Hugo templates, and 3.5 hours were spent on styling. The main motivation for writing this theme was to provide a really minimal example to beginners of Hugo templates. This XMin theme contains about 130 lines of code in total, including the code in HTML templates and CSS (also counting empty lines).</description>
+    </item>
+    
+    <item>
+      <title>Statistical Analysis Using R 3rd Edition (Chpt1)</title>
+      <link>/exercises/statistical-analysis-using-r-3rd-edition/</link>
+      <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/exercises/statistical-analysis-using-r-3rd-edition/</guid>
+      <description>1 Chapter 11 Chapter 1library(&amp;quot;tools&amp;quot;)library(&amp;quot;HSAUR3&amp;quot;)data(&amp;quot;Forbes2000&amp;quot;)ls()ls(Forbes2000)print(Forbes2000)</description>
+    </item>
     
     <item>
       <title>Handbook of Statistical Analyses Using R</title>
-      <link>/post/handbook-of-statistical-analyses-using-r/</link>
+      <link>/exercises/handbook-of-statistical-analyses-using-r/</link>
       <pubDate>Tue, 12 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/handbook-of-statistical-analyses-using-r/</guid>
-      <description>
-  &lt;link rel=&#34;stylesheet&#34; href=&#34;\css\custom.css&#34; type=&#34;text/css&#34; /&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#chapter-1---introduction-to-r&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; Chapter 1 - Introduction to R&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#import-the-dataset&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.1&lt;/span&gt; Import the Dataset&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#csv-file&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.1.1&lt;/span&gt; &lt;code&gt;.csv&lt;/code&gt; File&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#xlsx-file&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.1.2&lt;/span&gt; &lt;code&gt;.xlsx&lt;/code&gt; File&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#rda-files&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.1.3&lt;/span&gt; &lt;code&gt;.rda&lt;/code&gt; Files&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#export-the-dataset&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.2&lt;/span&gt; Export the Dataset&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#get-the-meta-data-of-the-dataset&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.3&lt;/span&gt; Get the Meta-data of the Dataset&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#simple-summary-statistics&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.4&lt;/span&gt; Simple Summary Statistics&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;chapter-1---introduction-to-r&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; Chapter 1 - Introduction to R&lt;/h1&gt;
-&lt;div id=&#34;import-the-dataset&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.1&lt;/span&gt; Import the Dataset&lt;/h2&gt;
-&lt;div id=&#34;csv-file&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.1.1&lt;/span&gt; &lt;code&gt;.csv&lt;/code&gt; File&lt;/h3&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Method 1: 
- data(&amp;quot;Forbes2000&amp;quot;, package = &amp;quot;HSAUR3&amp;quot;)
-# Method 2: 
-#csvForbes2000 &amp;lt;- read.table(&amp;quot;Forbes2000.csv&amp;quot;,header = TRUE, sep = &amp;quot;,&amp;quot;, row.names = 1)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;xlsx-file&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.1.2&lt;/span&gt; &lt;code&gt;.xlsx&lt;/code&gt; File&lt;/h3&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(xlsx)
-# Method 1: 
-#df &amp;lt;- read.xlsx(&amp;quot;&amp;lt;name and extension of your file&amp;gt;&amp;quot;, sheetIndex = 1)
-# Method 2: 
-#df &amp;lt;- read.xlsx2(&amp;quot;&amp;lt;name and extension of your file&amp;gt;&amp;quot;,sheetIndex = 1, startRow=2,colIndex = 2)
-#Fun fact: according to the package information, the function achieves a performance of an order of magnitude faster on sheets with 100,000 cells or more.
-# Method 3:
-#R&amp;gt; library(&amp;quot;RODBC&amp;quot;)
-#R&amp;gt; cnct &amp;lt;- odbcConnectExcel(&amp;quot;Forbes2000.xls&amp;quot;)
-#R&amp;gt; sqlQuery(cnct, &amp;quot;select * from \&amp;quot;Forbes2000\\$\&amp;quot;&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;rda-files&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.1.3&lt;/span&gt; &lt;code&gt;.rda&lt;/code&gt; Files&lt;/h3&gt;
-&lt;p&gt;Search .rda files and load it:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#list.files(patterns = &amp;quot;\\.rda&amp;quot;)
-#load(&amp;quot;Forbes2000.rda&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;export-the-dataset&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.2&lt;/span&gt; Export the Dataset&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#write.table(Forbes2000, file = &amp;quot;Forbes2000.csv&amp;quot;, sep = &amp;quot;,&amp;quot;, col.names = NA)
-# Or write.csv; 
-# Or save(Forbes2000, file=&amp;quot;Forbes2000.rda&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;get-the-meta-data-of-the-dataset&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.3&lt;/span&gt; Get the Meta-data of the Dataset&lt;/h2&gt;
-&lt;p&gt;Load the &lt;code&gt;Forbes2000&lt;/code&gt; dataset.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# get help - ?function_name (e.g. ?nrows)
-# basic meta-data
-class(Forbes2000)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;data.frame&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dim(Forbes2000)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 2000    8&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nrow(Forbes2000)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 2000&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ncol(Forbes2000)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 8&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;names(Forbes2000)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;rank&amp;quot;        &amp;quot;name&amp;quot;        &amp;quot;country&amp;quot;     &amp;quot;category&amp;quot;    &amp;quot;sales&amp;quot;      
-## [6] &amp;quot;profits&amp;quot;     &amp;quot;assets&amp;quot;      &amp;quot;marketvalue&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(Forbes2000[,&amp;quot;rank&amp;quot;])&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;integer&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;length(Forbes2000[,&amp;quot;rank&amp;quot;])&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 2000&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Forbes2000[,&amp;quot;name&amp;quot;][1]&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;Citigroup&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;simple-summary-statistics&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.4&lt;/span&gt; Simple Summary Statistics&lt;/h2&gt;
-&lt;p&gt;Factor and numeric variables:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#for factor 
-class(Forbes2000[,&amp;quot;category&amp;quot;])&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;factor&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;nlevels(Forbes2000[,&amp;quot;category&amp;quot;])&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 27&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;levels(Forbes2000[,&amp;quot;category&amp;quot;])&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;Aerospace &amp;amp; defense&amp;quot;              &amp;quot;Banking&amp;quot;                         
-##  [3] &amp;quot;Business services &amp;amp; supplies&amp;quot;     &amp;quot;Capital goods&amp;quot;                   
-##  [5] &amp;quot;Chemicals&amp;quot;                        &amp;quot;Conglomerates&amp;quot;                   
-##  [7] &amp;quot;Construction&amp;quot;                     &amp;quot;Consumer durables&amp;quot;               
-##  [9] &amp;quot;Diversified financials&amp;quot;           &amp;quot;Drugs &amp;amp; biotechnology&amp;quot;           
-## [11] &amp;quot;Food drink &amp;amp; tobacco&amp;quot;             &amp;quot;Food markets&amp;quot;                    
-## [13] &amp;quot;Health care equipment &amp;amp; services&amp;quot; &amp;quot;Hotels restaurants &amp;amp; leisure&amp;quot;    
-## [15] &amp;quot;Household &amp;amp; personal products&amp;quot;    &amp;quot;Insurance&amp;quot;                       
-## [17] &amp;quot;Materials&amp;quot;                        &amp;quot;Media&amp;quot;                           
-## [19] &amp;quot;Oil &amp;amp; gas operations&amp;quot;             &amp;quot;Retailing&amp;quot;                       
-## [21] &amp;quot;Semiconductors&amp;quot;                   &amp;quot;Software &amp;amp; services&amp;quot;             
-## [23] &amp;quot;Technology hardware &amp;amp; equipment&amp;quot;  &amp;quot;Telecommunications services&amp;quot;     
-## [25] &amp;quot;Trading companies&amp;quot;                &amp;quot;Transportation&amp;quot;                  
-## [27] &amp;quot;Utilities&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;table(Forbes2000[,&amp;quot;category&amp;quot;])&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## 
-##              Aerospace &amp;amp; defense                          Banking 
-##                               19                              313 
-##     Business services &amp;amp; supplies                    Capital goods 
-##                               70                               53 
-##                        Chemicals                    Conglomerates 
-##                               50                               31 
-##                     Construction                Consumer durables 
-##                               79                               74 
-##           Diversified financials            Drugs &amp;amp; biotechnology 
-##                              158                               45 
-##             Food drink &amp;amp; tobacco                     Food markets 
-##                               83                               33 
-## Health care equipment &amp;amp; services     Hotels restaurants &amp;amp; leisure 
-##                               65                               37 
-##    Household &amp;amp; personal products                        Insurance 
-##                               44                              112 
-##                        Materials                            Media 
-##                               97                               61 
-##             Oil &amp;amp; gas operations                        Retailing 
-##                               90                               88 
-##                   Semiconductors              Software &amp;amp; services 
-##                               26                               31 
-##  Technology hardware &amp;amp; equipment      Telecommunications services 
-##                               59                               67 
-##                Trading companies                   Transportation 
-##                               25                               80 
-##                        Utilities 
-##                              110&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#for numeric variables
-class(Forbes2000[,&amp;quot;sales&amp;quot;])&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;numeric&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;median(Forbes2000[,&amp;quot;sales&amp;quot;])&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1] 4.365&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;range(Forbes2000[,&amp;quot;sales&amp;quot;])&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## [1]   0.01 256.33&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(Forbes2000[,&amp;quot;sales&amp;quot;])&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##   0.010   2.018   4.365   9.697   9.547 256.330&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Piano Notebook</title>
-      <link>/post/piano-notebook/</link>
-      <pubDate>Fri, 13 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/piano-notebook/</guid>
-      <description>
-
-
-&lt;p&gt;This is a running notebook about piano.&lt;/p&gt;
-&lt;div id=&#34;chords&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Chords&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.pianochord.org/g7.html#hide1&#34;&gt;G7 chord&lt;/a&gt; is a four note chords with G-B-D-F.&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Git Notebook</title>
-      <link>/post/git-notebook/</link>
-      <pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/git-notebook/</guid>
-      <description>
-  &lt;link rel=&#34;stylesheet&#34; href=&#34;\css\custom.css&#34; type=&#34;text/css&#34; /&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#why-should-we-care-about-version-control&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; &lt;strong&gt;Why should we care about Version Control?&lt;/strong&gt;&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#git-with-rstudio-and-gitlab&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.1&lt;/span&gt; Git with RStudio and GitLab&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#core-git-commands-and-workflow-in-git-shell&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; &lt;strong&gt;Core Git Commands and Workflow in Git Shell&lt;/strong&gt;&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#two-basic-commands-git-pull-and-git-push.&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.1&lt;/span&gt; Two &lt;em&gt;basic&lt;/em&gt; commands: &lt;code&gt;git pull&lt;/code&gt; and &lt;code&gt;git push&lt;/code&gt;.&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#step-common-workflow-in-git&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.2&lt;/span&gt; 4-step common workflow in Git&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;why-should-we-care-about-version-control&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; &lt;strong&gt;Why should we care about Version Control?&lt;/strong&gt;&lt;/h1&gt;
-&lt;p&gt;When writing up a paper with multiple collaborators, we want to avoid the following situation:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://vickysteeves.gitlab.io/repro-papers/img/final-doc.jpg&#34; /&gt;&lt;/p&gt;
-&lt;div id=&#34;git-with-rstudio-and-gitlab&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.1&lt;/span&gt; Git with RStudio and GitLab&lt;/h2&gt;
-&lt;p&gt;The essential video to connect Git with Rstudio can be found &lt;a href=&#34;https://rstudio.com/resources/webinars/rstudio-essentials-webinar-series-managing-part-2/&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;core-git-commands-and-workflow-in-git-shell&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; &lt;strong&gt;Core Git Commands and Workflow in Git Shell&lt;/strong&gt;&lt;/h1&gt;
-&lt;p&gt;Although you can complete most of the git commands via Git Desktop’s GUI without interfering with the Shell, it is often beneficial to know a few key Git commands and core workflow in the Git Shell.&lt;/p&gt;
-&lt;div id=&#34;two-basic-commands-git-pull-and-git-push.&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.1&lt;/span&gt; Two &lt;em&gt;basic&lt;/em&gt; commands: &lt;code&gt;git pull&lt;/code&gt; and &lt;code&gt;git push&lt;/code&gt;.&lt;/h2&gt;
-&lt;p&gt;The &lt;strong&gt;&lt;code&gt;git pull&lt;/code&gt;&lt;/strong&gt; can be divided into &lt;strong&gt;&lt;code&gt;git fetch&lt;/code&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;code&gt;git merge&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;step-common-workflow-in-git&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.2&lt;/span&gt; 4-step common workflow in Git&lt;/h2&gt;
-&lt;p&gt;Assuming you already have the repo on your local machine, then &lt;strong&gt;a common workflow&lt;/strong&gt; will have 4 steps:&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;You &lt;strong&gt;&lt;code&gt;ALWAYS&lt;/code&gt;&lt;/strong&gt; need to be sure your local repo is up-to-date with the remote repo.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Make sure there are no untracked files.
-git status 
-
-#Pull in all the files changed on the remote
-git fetch
-
-#Comfirm that all the files are ready to merge
-git status
-
-#A final step in pulling the remote changes into local machine
-git merge
-
-#A final &amp;quot;git status&amp;quot; to confirm everything is good to go
-git status&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;With some modifications/changes in your working directory, it is time to inform Git about your new changes using &lt;strong&gt;&lt;code&gt;git add -A&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Stage all the changed or newly added files in the working directory
-git add -A
-
-#Confirm again.
-git status&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://vickysteeves.gitlab.io/repro-papers/img/git-stages.png&#34; /&gt;&lt;/p&gt;
-&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;p&gt;It’s time to &lt;strong&gt;&lt;code&gt;git commit -m&lt;/code&gt;&lt;/strong&gt;!&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;git commit -m &amp;quot;this is my commit&amp;quot;
-
-#Confirm again
-git status&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;The final &lt;strong&gt;&lt;code&gt;git push&lt;/code&gt;&lt;/strong&gt; to the remote repository.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;git push
-
-# Confirm everything is up-to-date
-git status&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Other commands that might be useful include: &lt;strong&gt;&lt;code&gt;git branch --list&lt;/code&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;code&gt;git help&lt;/code&gt;&lt;/strong&gt;, etc. More can be found in the &lt;a href=&#34;http://dh.newtfire.org/explainGitShell.html&#34;&gt;Guide to Git Shell&lt;/a&gt; with illustrative figures and tutorials.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
+      <guid>/exercises/handbook-of-statistical-analyses-using-r/</guid>
+      <description>1 Chapter 1 - Introduction to R1.1 Import the Dataset1.1.1 .csv File1.1.2 .xlsx File1.1.3 .rda Files1.2 Export the Dataset1.3 Get the Meta-data of the Dataset1.4 Simple Summary Statistics1 Chapter 1 - Introduction to R1.1 Import the Dataset1.1.1 .csv Filelibrary(HSAUR3)## Loading required package: tools# Method 1: data(&amp;quot;Forbes2000&amp;quot;, package = &amp;quot;HSAUR3&amp;quot;)# Method 2: #csvForbes2000 &amp;lt;- read.</description>
     </item>
     
     <item>
       <title>R Notebook</title>
-      <link>/post/r-notebook/</link>
+      <link>/posts/r-notebook/</link>
       <pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/r-notebook/</guid>
-      <description>
-  &lt;link rel=&#34;stylesheet&#34; href=&#34;\css\custom.css&#34; type=&#34;text/css&#34; /&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#r-setup-101&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; &lt;strong&gt;R Setup 101&lt;/strong&gt;&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#r-packages-for-basic-r-installation-or-update&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.1&lt;/span&gt; R Packages for Basic R Installation or Update&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#read-sas-sas7bdat-data-into-r&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.2&lt;/span&gt; Read SAS &lt;code&gt;sas7bdat&lt;/code&gt; data into R&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#use-library-sas7bdat-in-r&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.2.1&lt;/span&gt; Use library &lt;code&gt;sas7bdat&lt;/code&gt; in R&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#use-library-haven-package-in-r&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.2.2&lt;/span&gt; Use library &lt;code&gt;haven&lt;/code&gt; package in R&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#load-data-files-in-r-studio&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.2.3&lt;/span&gt; Load Data files in R Studio&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#create-a-website-using-rmarkdown&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; &lt;strong&gt;Create a Website using RMarkdown&lt;/strong&gt;&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#rmarkdown-hugo-netlify&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.1&lt;/span&gt; RMarkdown, Hugo, Netlify&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#blogdown-hugo---fix-toc-with-rmd&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.2&lt;/span&gt; Blogdown &amp;amp; Hugo - Fix ToC (with Rmd)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#write-a-reproducible-paper-using-rmarkdown&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3&lt;/span&gt; &lt;strong&gt;Write a Reproducible Paper using RMarkdown&lt;/strong&gt;&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#templates&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.1&lt;/span&gt; Templates&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#pauls-template&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.1.1&lt;/span&gt; Paul’s Template&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#reproducible-apa-manuscripts-with-rmarkdown&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.1.2&lt;/span&gt; Reproducible APA manuscripts with RMarkdown&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#yaml-options&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.2&lt;/span&gt; YAML options&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#tricks---citations-in-a-table&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.3&lt;/span&gt; Tricks - citations in a table&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;r-setup-101&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; &lt;strong&gt;R Setup 101&lt;/strong&gt;&lt;/h1&gt;
-&lt;div id=&#34;r-packages-for-basic-r-installation-or-update&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.1&lt;/span&gt; R Packages for Basic R Installation or Update&lt;/h2&gt;
-&lt;p&gt;For new installation, here is a list of most-used packages to install:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(&amp;#39;xlsx&amp;#39;)
-install.packages(&amp;#39;rmarkdown&amp;#39;)
-install.packages(&amp;quot;tinytex&amp;quot;)
-# install TinyTeX (must-do-this-step)
-tinytex::install_tinytex()  
-install.packages(&amp;#39;tidyverse&amp;#39;)
-install.packages(&amp;#39;ggplot2&amp;#39;)
-#table creation with specific formatting
-install.packages(&amp;#39;kableExtra&amp;#39;)
-#for writing reproducible research paper in R Markdown
-install.packages(c(&amp;quot;stargazer&amp;quot;,&amp;quot;plotly&amp;quot;,&amp;quot;knitr&amp;quot;,&amp;quot;bookdown&amp;quot;))
-#To import the SAS files
-install.packages(&amp;#39;haven&amp;#39;)
-install.packages(&amp;#39;sas7bdat&amp;#39;)
-# Activate the `sas7bdat` library
-library(sas7bdat)
-library(haven)
-# Read in the SAS data
-#mySASData &amp;lt;- read.sas7bdat(&amp;quot;example.sas7bdat&amp;quot;)
-#data &amp;lt;- read_sas(&amp;quot;C:/temp/yoursasdataset.sas7bdat&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Once in a while, update all the packages by calling &lt;code&gt;update.packages()&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;read-sas-sas7bdat-data-into-r&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.2&lt;/span&gt; Read SAS &lt;code&gt;sas7bdat&lt;/code&gt; data into R&lt;/h2&gt;
-&lt;div id=&#34;use-library-sas7bdat-in-r&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.2.1&lt;/span&gt; Use library &lt;code&gt;sas7bdat&lt;/code&gt; in R&lt;/h3&gt;
-&lt;p&gt;The &lt;a href=&#34;https://www.rdocumentation.org/packages/sas7bdat/versions/0.5&#34;&gt;&lt;code&gt;sas7bdat&lt;/code&gt;&lt;/a&gt; library , developed by Matt Shotwell, works.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(sas7bdat)
-data &amp;lt;-read.sas7bdat(&amp;quot;psu97ai.sas7bdat&amp;quot;)
-view(data)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/questions/30006822/read-sas-sas7bdat-data-into-r&#34;&gt;Two issues&lt;/a&gt; with the method:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;It’s slow&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;sas7bdat&lt;/code&gt; package is currently considered experimental.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;use-library-haven-package-in-r&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.2.2&lt;/span&gt; Use library &lt;code&gt;haven&lt;/code&gt; package in R&lt;/h3&gt;
-&lt;p&gt;The &lt;code&gt;haven::read_sas&lt;/code&gt; method in &lt;code&gt;haven&lt;/code&gt; package also works, and it is &lt;strong&gt;faster&lt;/strong&gt; than the &lt;code&gt;read.sas7bdat&lt;/code&gt; method (&lt;em&gt;&lt;a href=&#34;https://stackoverflow.com/questions/30006822/read-sas-sas7bdat-data-into-r&#34;&gt;99.5% less time&lt;/a&gt; than &lt;code&gt;sas7bdat::read.sas7bdat&lt;/code&gt;)&lt;/em&gt;. The difference is caused by saving a massive list of attributes for the files.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(haven)
-data &amp;lt;- read_sas(&amp;quot;C:/temp/yoursasdataset.sas7bdat&amp;quot;)
-View(data)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;load-data-files-in-r-studio&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.2.3&lt;/span&gt; Load Data files in R Studio&lt;/h3&gt;
-&lt;p&gt;You can manually load the data in the R Studio environment, choose &lt;code&gt;File &amp;gt;Import Dataset &amp;gt; From SAS...&lt;/code&gt;, select the file location and click &lt;code&gt;import&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;create-a-website-using-rmarkdown&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; &lt;strong&gt;Create a Website using RMarkdown&lt;/strong&gt;&lt;/h1&gt;
-&lt;div id=&#34;rmarkdown-hugo-netlify&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.1&lt;/span&gt; RMarkdown, Hugo, Netlify&lt;/h2&gt;
-&lt;p&gt;This website is created and powered by &lt;a href=&#34;https://rmarkdown.rstudio.com/&#34;&gt;RMarkdown&lt;/a&gt; developed by &lt;a href=&#34;https://yihui.name/en/&#34;&gt;Yihui Xie&lt;/a&gt;, &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;, &lt;a href=&#34;https://sourcethemes.com/academic/#hero&#34;&gt;Academic theme&lt;/a&gt;, and &lt;a href=&#34;https://www.netlify.com/&#34;&gt;Netlify&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The contents are created using &lt;a href=&#34;https://rmarkdown.rstudio.com/&#34;&gt;RMarkdown&lt;/a&gt; with guidance from the &lt;a href=&#34;https://alison.rbind.io/post/up-and-running-with-blogdown/&#34;&gt;Step-by-Step Instruction provided by ALISON PRESMANES HILL&lt;/a&gt;, &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;“Blogdown: Creating Websites with R Markdown”&lt;/a&gt; and &lt;a href=&#34;https://bookdown.org/yihui/rmarkdown/&#34;&gt;R Markdown: The Definitive Guide&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The website theme – &lt;a href=&#34;https://sourcethemes.com/academic/#hero&#34;&gt;Hugo-Academic&lt;/a&gt;– is a very good choice for the academics. It has a few advantages including:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Latex math rendering via simply enabling it in &lt;code&gt;config&lt;/code&gt; toml file.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# In config\_default\param.toml
-# Enable global LaTeX math rendering?
-#   If false, you can enable it locally on a per page basis.
-math = true&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;rich widget system for customization.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Reference&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Yihui Xie, J. J. Allaire, Garrett Grolemund (2018). &lt;a href=&#34;https://bookdown.org/yihui/rmarkdown/&#34;&gt;R Markdown: The Definitive Guide&lt;/a&gt;. Chapman &amp;amp; Hall/CRC. ISBN 9781138359338.&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;Yihui Xie, Amber Thomas, Alison Presmanes Hill (2017). &lt;a href=&#34;https://bookdown.org/yihui/blogdown/&#34;&gt;blogdown: Creating Websites with R Markdown&lt;/a&gt;. Chapman &amp;amp; Hall/CRC. ISBN 9780815363729.&lt;/li&gt;
-&lt;li&gt;Yihui Xie (2016). &lt;a href=&#34;https://bookdown.org/&#34;&gt;bookdown&lt;/a&gt;: &lt;a href=&#34;https://bookdown.org/yihui/bookdown/&#34;&gt;Authoring Books and Technical Documents with R Markdown&lt;/a&gt;. Chapman and Hall/CRC. ISBN 9781138700109&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;blogdown-hugo---fix-toc-with-rmd&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.2&lt;/span&gt; Blogdown &amp;amp; Hugo - Fix ToC (with Rmd)&lt;/h2&gt;
-&lt;p&gt;The solution to fix Table of Contents (TOC) came from both &lt;a href=&#34;https://bookdown.org/yihui/blogdown/default-template.html&#34;&gt;Create Websites with RMarkdown&lt;/a&gt; and &lt;a href=&#34;https://dadascience.design/post/r-some-tricks-when-working-with-blogdown-hugo-working-draft/&#34;&gt;Fubits@GIT&lt;/a&gt; .
-In the &lt;code&gt;yaml&lt;/code&gt; header of your Rmd file, specific the following:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;-----
-output: 
- blogdown::html_page:
-  number_sections: true
-  toc: true
-  toc_depth: 3
-  css: &amp;quot;/css/custom.css&amp;quot;
------&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Create and save the &lt;code&gt;custom.css&lt;/code&gt; under the &lt;code&gt;\static\css&lt;/code&gt; in the root directory. Using the css formating in &lt;a href=&#34;https://dadascience.design/post/r-some-tricks-when-working-with-blogdown-hugo-working-draft/&#34;&gt;link&lt;/a&gt;, Your &lt;code&gt;custom.css&lt;/code&gt; should look like:&lt;/p&gt;
-&lt;pre class=&#34;css&#34;&gt;&lt;code&gt;/* Add some Heading / Title before the TOC */
-#TOC:before{
-    content: &amp;quot;Table of Content&amp;quot;;
-    font-family: &amp;#39;Lato&amp;#39;, sans-serif!important;
-    font-weight:400;
-    font-size: 26px;
-}
-
-/* Numbering suffix in TOC */
-.toc-section-number:after{
-    content: &amp;quot;. &amp;quot;
-}
-/* Numbering suffix in Body/Content */
-.header-section-number:after{
-    content: &amp;quot;. &amp;quot;
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;write-a-reproducible-paper-using-rmarkdown&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; &lt;strong&gt;Write a Reproducible Paper using RMarkdown&lt;/strong&gt;&lt;/h1&gt;
-&lt;p&gt;Unlike creating website using rmarkdown, writing a reproducible paper involves using another set of R packages, primarily those which advance markdown with &lt;em&gt;latex&lt;/em&gt; features.&lt;/p&gt;
-&lt;div id=&#34;templates&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.1&lt;/span&gt; Templates&lt;/h2&gt;
-&lt;div id=&#34;pauls-template&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.1.1&lt;/span&gt; Paul’s Template&lt;/h3&gt;
-&lt;p&gt;Paul C. Bauer created a template for &lt;a href=&#34;https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3175518&#34;&gt;writing a reproducible scientific paper&lt;/a&gt;. All the files are downloadable from the &lt;a href=&#34;https://drive.google.com/drive/folders/1zJP3cNPrHN-gj0rcmbHQgg-XA0hqDXdd?usp=sharing&#34;&gt;Shared Google Drive Folder&lt;/a&gt;. The &lt;a href=&#34;https://drive.google.com/drive/folders/1rzwN2jX_CW6OJFz5jrkObiUxGuMowR3U&#34;&gt;version 2&lt;/a&gt; has a simplified version without using the &lt;code&gt;header.tex&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;I read the article, tested his codes and was able to reproduce the article. I ran into a few issues related to TinyTex installization, so just be mindful of the following steps:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;install.packages(&#34;tinytex&#34;)&lt;/code&gt; and &lt;code&gt;tinytex::install_tinytex()&lt;/code&gt; to get the &lt;strong&gt;latest&lt;/strong&gt; version of &lt;em&gt;TinyTex&lt;/em&gt; (if bugs presents, re-install with the cmd &lt;code&gt;tinytex::reinstall_tinytex()&lt;/code&gt;).&lt;/li&gt;
-&lt;li&gt;When you &lt;em&gt;knit&lt;/em&gt; your paper the first time, you should expect auto-installization of many &lt;em&gt;tex&lt;/em&gt; packages and it could take some time depending on the number of &lt;em&gt;tex&lt;/em&gt; packages you use in your document.&lt;/li&gt;
-&lt;li&gt;also &lt;code&gt;install.packages(&#34;kableExtra&#34;)&lt;/code&gt; for building &lt;a href=&#34;https://haozhu233.github.io/kableExtra/awesome_table_in_pdf.pdf&#34;&gt;common complex tables with customizable styles&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;reproducible-apa-manuscripts-with-rmarkdown&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.1.2&lt;/span&gt; Reproducible APA manuscripts with RMarkdown&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://crsh.github.io/papaja_man/&#34;&gt;Frederik Aust &amp;amp; Marius Barth&lt;/a&gt; wrote this comprehensive book covering lots of useful tricks and tips. This is a must-read if you seriously consider writing papers using Rmarkdown.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;yaml-options&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.2&lt;/span&gt; YAML options&lt;/h2&gt;
-&lt;p&gt;There are a lot of advanced setting in the &lt;code&gt;YAML header&lt;/code&gt;. An example is provided below with some highlighted options:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;tex packages: &lt;code&gt;header-includes:&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;use &lt;code&gt;bookdown::pdf_document2: keep_tex: true&lt;/code&gt; for pdf output creation.&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;documentclass&lt;/code&gt; can be the built-in &lt;code&gt;article&lt;/code&gt; or your own customized &lt;code&gt;cls&lt;/code&gt; file (e.g., &lt;code&gt;uofsthesis-cs.cls&lt;/code&gt;).&lt;/li&gt;
-&lt;li&gt;page setup: &lt;code&gt;geometry&lt;/code&gt;, &lt;code&gt;fontsize&lt;/code&gt;, and &lt;code&gt;linestretch&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;bibliography&lt;/code&gt;: put your &lt;code&gt;.bib&lt;/code&gt; file in the same directory with your article.&lt;/li&gt;
-&lt;li&gt;citation style: &lt;code&gt;csl&lt;/code&gt;. You can search and download/create one(e.g., ACM or IEEE) from &lt;a href=&#34;https://www.zotero.org/styles?q=acm&#34;&gt;zotero&lt;/a&gt; or &lt;a href=&#34;https://csl.mendeley.com/searchByName/&#34;&gt;Mendeley&lt;/a&gt;. Save it in the same directory with your article.
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;nocite: |@Lander14&lt;/code&gt; to include references currently not cited in the article.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;---
-title: |
-  | \vspace{1cm}\pagenumbering{gobble}This is my topic
-  | A Literature Review \vspace{0.5cm}
-author:  |
-  | My Name
-  | Department of Computer Science
-date: |
-  | 24 November, 2019
-  |
-abstract: this is my abstract
-colorlinks: true
-output: 
-  bookdown::pdf_document2:
-    toc: no
-    keep_tex: true
-geometry: [top=0.85in,left=1in,right=1in, footskip=0.40in]
-fontsize: [10pt,letterpaper]
-linestretch: 1.1
-documentclass: article
-header-includes:
-   - \usepackage{dcolumn}
-   - \usepackage{color}
-   - \usepackage{floatrow}
-   - \floatsetup[figure]{capposition=top}
-   - \floatsetup[table]{capposition=top}
-   - \floatplacement{figure}{H}
-   - \floatplacement{table}{H}
-   - \usepackage{booktabs}
-   - \usepackage{longtable}
-   - \usepackage{array}
-   - \usepackage{multirow}
-   - \usepackage{wrapfig}
-   - \usepackage{float}
-   - \usepackage{colortbl}
-   - \usepackage{pdflscape}
-   - \usepackage{tabu}
-   - \usepackage{threeparttable}
-   - \usepackage{threeparttablex}
-   - \usepackage[normalem]{ulem}
-   - \usepackage{makecell}
-   - \usepackage[usenames,dvipsnames]{xcolor}
-   - \usepackage[hang]{footmisc}
-   - \renewcommand{\footnotesize}{\normalsize}
-bibliography: references.bib
-csl: transactions-on-management-information-systems.csl
-suppress-bibliography: FALSE
-always_allow_html: yes
-link-citations: true
----&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;tricks---citations-in-a-table&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.3&lt;/span&gt; Tricks - citations in a table&lt;/h2&gt;
-&lt;p&gt;Cross-referencing tables or figures in a Rmarkdown article are straightforward and can be found in &lt;a href=&#34;https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3175518&#34;&gt;Paul’s article and template&lt;/a&gt;. However, citations within a table is very tricky in the &lt;code&gt;PDF&lt;/code&gt;/&lt;code&gt;TEX&lt;/code&gt; environment. It is easy to get it working in the HTML environment, but not with &lt;code&gt;pdf&lt;/code&gt;, &lt;code&gt;pandoc&lt;/code&gt;, and &lt;code&gt;latex&lt;/code&gt;.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Pandoc Markdown supports a citation extension to the basic markup, like &lt;code&gt;[@krycho]&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;For citation in a table in a &lt;code&gt;pdf&lt;/code&gt; output file. &lt;a href=&#34;https://github.com/rachaellappan&#34;&gt;Rachael Lappan&lt;/a&gt; offered a &lt;a href=&#34;https://github.com/haozhu233/kableExtra/issues/214&#34;&gt;working solution&lt;/a&gt; for it.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;I had success with the bookdown text references - I’m not sure if you need to be making a bookdown book or if it will work with the bookdown package loaded.
-In my case, I defined the references first outside of a code block, e.g.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;pre&gt;&lt;code&gt;(ref:studies-table-ref1) Bogaert *et al.* (2011) [@BogaertVariabilityDiversityNasopharyngeal2011]&lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
-&lt;p&gt;then added them to the table&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;pre&gt;&lt;code&gt;studies.table$Reference &amp;lt;- c(&amp;quot;(ref:studies-table-ref1)&amp;quot;, &amp;quot;(ref:studies-table-ref2)&amp;quot;, # etc&lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
-&lt;p&gt;And kable interpreted them correctly.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
+      <guid>/posts/r-notebook/</guid>
+      <description>1 R Setup 1011.1 R Packages for Basic R Installation or Update1.2 Read SAS sas7bdat data into R1.2.1 Use library sas7bdat in R1.2.2 Use library haven package in R1.2.3 Load Data files in R Studio2 Create a Website using RMarkdown2.1 RMarkdown, Hugo, Netlify2.2 Blogdown &amp;amp; Hugo - Fix ToC (with Rmd)3 Write a Reproducible Paper using RMarkdown3.</description>
     </item>
     
     <item>
       <title>Statistical Learning</title>
-      <link>/post/statistical-learning/</link>
+      <link>/posts/statistical-learning/</link>
       <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/statistical-learning/</guid>
-      <description>
-  &lt;link rel=&#34;stylesheet&#34; href=&#34;\css\custom.css&#34; type=&#34;text/css&#34; /&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#little-statistical-learning-book&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; Little Statistical Learning Book&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#model-representation-a-function-h-x-y&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.1&lt;/span&gt; Model Representation: a function &lt;span class=&#34;math inline&#34;&gt;\(h : X → Y\)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#linear-algebra-review&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.2&lt;/span&gt; Linear Algebra Review&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#ml-resources&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; ML Resources&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#superb-online-courses-and-books&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.1&lt;/span&gt; &lt;strong&gt;Superb&lt;/strong&gt; Online Courses and Books&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#other-resources&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.2&lt;/span&gt; Other Resources&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;little-statistical-learning-book&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; Little Statistical Learning Book&lt;/h1&gt;
-&lt;div id=&#34;model-representation-a-function-h-x-y&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.1&lt;/span&gt; Model Representation: a function &lt;span class=&#34;math inline&#34;&gt;\(h : X → Y\)&lt;/span&gt;&lt;/h2&gt;
-&lt;p&gt;This function &lt;span class=&#34;math inline&#34;&gt;\(h\)&lt;/span&gt; is called a &lt;strong&gt;&lt;em&gt;hypothesis&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Accuracy of our hypothesis function &lt;span class=&#34;math inline&#34;&gt;\(h\)&lt;/span&gt; is measured using a &lt;strong&gt;&lt;em&gt;cost/loss function&lt;/em&gt;&lt;/strong&gt;. One particular choice of the loss function for &lt;strong&gt;linear regression&lt;/strong&gt; is called “Squared error function” (or “Mean squared error”).&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[J(\theta_0, \theta_1) = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left ( \hat{y}_{i}- y_{i} \right)^2 = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left (h_\theta (x_{i}) - y_{i} \right)^2\]&lt;/span&gt;
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    The mean is halved (&lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt;) to simplify the computation of the gradient descent, as the derivative term of the square function will cancel out the (&lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt;) term.
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;/p&gt;
-&lt;p&gt;Why squared loss (but not absolute loss)?&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The absolute value is not convenient, because it doesn’t have a continuous derivative, which makes the function not smooth. Functions that are not smooth create unnecessary difficulties when employing linear algebra to find closed form solutions to optimization problems. Closed form solutions to finding an optimum of a function are simple algebraic expressions and are often preferable to using complex numerical optimization methods, such as gradient descent (used, among others, to train neural networks). –&lt;a href=&#34;http://themlbook.com/&#34;&gt;The 100-page ML Book&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/R2YF5Lj3EeajLxLfjQiSjg_110c901f58043f995a35b31431935290_Screen-Shot-2016-12-02-at-5.23.31-PM.png?expiry=1560643200000&amp;amp;hmac=s6t6cOn9_Fsy21OWELBBua4X19cicFE0OWO2RO1nhVE&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;linear-algebra-review&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.2&lt;/span&gt; Linear Algebra Review&lt;/h2&gt;
-&lt;div id=&#34;what-is-the-inverse-of-a-matrix&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.2.1&lt;/span&gt; What is the &lt;a href=&#34;https://www.mathsisfun.com/algebra/matrix-inverse.html&#34;&gt;&lt;em&gt;Inverse&lt;/em&gt; of a Matrix&lt;/a&gt;?&lt;/h3&gt;
-&lt;p&gt;To have an inverse, the matrix must be “square” (&lt;span class=&#34;math inline&#34;&gt;\(N_{row} = N_{col}\)&lt;/span&gt;).&lt;/p&gt;
-&lt;p&gt;Inverse of a value.
-&lt;img src=&#34;https://www.mathsisfun.com/numbers/images/reciprocal-reciprocal.svg&#34; alt=&#34;Inverse of a value&#34; /&gt;
-Inverse of a matrix.
-&lt;img src=&#34;https://www.mathsisfun.com/algebra/images/matrix-inverse-both.svg&#34; alt=&#34;Inverse of a Matrix&#34; /&gt;
-* When we multiply a number by its reciprocal we get 1.
-* When we multiply a matrix by its inverse we get the Identity Matrix. &lt;span class=&#34;math inline&#34;&gt;\(A \times A^{-1}=A^{-1} \times A = I\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;for a &lt;span class=&#34;math inline&#34;&gt;\(2 \times 2\)&lt;/span&gt; matrix, the inverse is:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.mathsisfun.com/algebra/images/matrix-inverse-2x2.svg&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;According to the &lt;a href=&#34;http://mathworld.wolfram.com/MatrixInverse.html&#34;&gt;invertible matrix theorem&lt;/a&gt;, The inverse might not exsit, if the &lt;a href=&#34;https://www.mathsisfun.com/algebra/matrix-determinant.html&#34;&gt;determinant&lt;/a&gt; is zero, such a matrix is called “Singular”.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ml-resources&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; ML Resources&lt;/h1&gt;
-&lt;div id=&#34;superb-online-courses-and-books&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.1&lt;/span&gt; &lt;strong&gt;Superb&lt;/strong&gt; Online Courses and Books&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Best FREE Book&lt;/strong&gt;: An Introduction to Statistical Learning in R
-&lt;ul&gt;
-&lt;li&gt;G. James et al., &lt;a href=&#34;http://www-bcf.usc.edu/~gareth/ISL/&#34;&gt;An Introduction to Statistical Learning: with Applications in R&lt;/a&gt;, Springer Texts in Statistics, DOI 10.1007/978-1-4614-7138-71.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.r-bloggers.com/in-depth-introduction-to-machine-learning-in-15-hours-of-expert-videos/&#34;&gt;Slides and videos&lt;/a&gt; for Statistical Learning MOOC by Hastie and Tibshirani&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.alsharif.info/#!iom530/c21o7&#34;&gt;Slides and video&lt;/a&gt; tutorials related to this book by Abass Al Sharif&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Best Coursera Course&lt;/strong&gt;: Machine Learning (Stanford University)
-&lt;ul&gt;
-&lt;li&gt;Approx. 55 hours to complete, course can be found &lt;a href=&#34;https://www.coursera.org/learn/machine-learning/home/welcome&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Best LITTLE Book&lt;/strong&gt;: The hundred-page Machine Learning Book.
-&lt;ul&gt;
-&lt;li&gt;On average, people spend a week of after-work reading.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://themlbook.com/wiki/doku.php&#34;&gt;Book Wiki&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;other-resources&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.2&lt;/span&gt; Other Resources&lt;/h2&gt;
-&lt;div id=&#34;data-science-bootcamp-june-10-21-2019&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.2.1&lt;/span&gt; Data Science Bootcamp June 10-21, 2019&lt;/h3&gt;
-&lt;div id=&#34;r-packages-installations&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.2.1.1&lt;/span&gt; R Packages Installations&lt;/h4&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#Packages for data science: Statistical analysis for high dimensional data
-install.packages(&amp;#39;e1071&amp;#39;)
-# Multiclass Logistic Regression
-install.packages(&amp;quot;glmnet&amp;quot;)
-install.packages(c(&amp;quot;lar&amp;quot;,&amp;quot;RandomForest&amp;quot;,&amp;quot;rpart&amp;quot;,&amp;quot;SIS&amp;quot;,&amp;quot;tilting&amp;quot;))
-#Packages for data science: survival analysis case study
-install.packages(c(&amp;quot;survival&amp;quot;,&amp;quot;mstate&amp;quot;,&amp;quot;p3state.msm&amp;quot;,&amp;quot;msm&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;day-1-2-and-4-5-machine-learning-statistical-learning&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.2.1.2&lt;/span&gt; Day 1-2 and 4-5: Machine Learning Statistical Learning&lt;/h4&gt;
-&lt;p&gt;Slides and Resources are &lt;a href=&#34;https://drive.google.com/drive/folders/1u8N6ISovKj680Yr3Sv5nUeIUFVaZKBK2?usp=sharing&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;day-3-case-study-mgus-data-survival-analyses&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.2.1.3&lt;/span&gt; Day 3: Case Study: MGUS Data (Survival Analyses)&lt;/h4&gt;
-&lt;p&gt;Slides and Resouces are &lt;a href=&#34;https://drive.google.com/drive/folders/1kBWPsQ-fQJ1KbQw1OtOtlC69DEj_PuCm?usp=sharing&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Outcome/Response variable&lt;/strong&gt;: time to occurance of an event.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Covariates&lt;/strong&gt;: age, sex, pstat and mspike.
-&lt;ul&gt;
-&lt;li&gt;mspike: size of the monoclonal serum spike&lt;/li&gt;
-&lt;li&gt;ptime: time until progression to a plasma cell malignancy (PCM) or last contact (months)&lt;/li&gt;
-&lt;li&gt;pstat: occurrence of PCM: 0 = no, 1 = yes&lt;/li&gt;
-&lt;li&gt;futime: time until death or last contact (months)&lt;/li&gt;
-&lt;li&gt;death: occurrence of death: 0 = no, 1 = yes&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Model&lt;/strong&gt;: A multi-state model to describe the path to death.
-&lt;ul&gt;
-&lt;li&gt;T: survival time&lt;/li&gt;
-&lt;li&gt;C: censoring time&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;t = min(T,C)&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;math inline&#34;&gt;\(\delta\)&lt;/span&gt; = 1 (T &lt;span class=&#34;math inline&#34;&gt;\(\le\)&lt;/span&gt; C)
-&lt;ul&gt;
-&lt;li&gt;t is an observed lifetime (full information) if T&lt;span class=&#34;math inline&#34;&gt;\(\le\)&lt;/span&gt; C&lt;/li&gt;
-&lt;li&gt;t is an sensoring time (incomplete information, e.g., withdraw, alive when the study ends) if T&lt;span class=&#34;math inline&#34;&gt;\(\ge\)&lt;/span&gt; C&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;If &lt;span class=&#34;math inline&#34;&gt;\(h_0(t)\)&lt;/span&gt; is left unspecified, then it is called the Cox PH (Proportionality Assumption and Hazard Ratio) Model.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;How to Interpret HR?&lt;/strong&gt; (Example 1):
-&lt;ul&gt;
-&lt;li&gt;Event: Death&lt;/li&gt;
-&lt;li&gt;Covariates: age, sex, pstat, mspike&lt;/li&gt;
-&lt;li&gt;𝒙 = (age = 75, sex, pstat, mspike)′&lt;/li&gt;
-&lt;li&gt;𝒙∗= (age = 70, sex, pstat, mspike)′&lt;/li&gt;
-&lt;li&gt;HR = ?&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[HR=e^{\beta_1(75-70) + \beta_2(Sex-Sex) +\beta_3(pstat-pstat) + \beta_4(mspike-mspike) }\]&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Given &lt;span class=&#34;math inline&#34;&gt;\(\beta_1 = 0.05\)&lt;/span&gt;, &lt;span class=&#34;math inline&#34;&gt;\(HR=exp(5*0.06)=1.35\)&lt;/span&gt;. The event relative risk will increase 35% for 5 units (year) controlling for other factors.&lt;/p&gt;
-&lt;p&gt;Even though &lt;span class=&#34;math inline&#34;&gt;\(h_0(t)\)&lt;/span&gt; is unspecified, we estimate the &lt;span class=&#34;math inline&#34;&gt;\(\beta\)&lt;/span&gt;s. We can estimate &lt;span class=&#34;math inline&#34;&gt;\(S(t,x)\)&lt;/span&gt; using a minimum of assumptions. There are two techniques to adjust the partical likelihood for tied lifetimes: Brceslow and Efron.&lt;/p&gt;
-&lt;p&gt;The code can be found in the &lt;a href=&#34;https://drive.google.com/drive/folders/1u8N6ISovKj680Yr3Sv5nUeIUFVaZKBK2?usp=sharing&#34;&gt;Google Drive folder&lt;/a&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(survival)
-mgus.data&amp;lt;-read.csv(&amp;quot;C:/Users/ytian/Google Drive/PhD/Data Science Bootcamp June 10-21 2019/D3 Code/mgus.data.csv&amp;quot;,header = TRUE)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;day-6-7-case-study-diabetes-readmission&#34; class=&#34;section level4&#34;&gt;
-&lt;h4&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.2.1.4&lt;/span&gt; Day 6-7 Case Study: Diabetes Readmission&lt;/h4&gt;
-&lt;p&gt;Slides and RMarkdown Code can be found &lt;a href=&#34;https://drive.google.com/drive/folders/1x1UdOzKMrVC4GRqkHeglJhjAwlMDKDk0?usp=sharing&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;install.packages(c(&amp;quot;here&amp;quot;,&amp;quot;olsrr&amp;quot;,&amp;quot;modelr&amp;quot;,&amp;quot;broom&amp;quot;,&amp;quot;caret&amp;quot;,&amp;quot;neuralnet&amp;quot;,&amp;quot;DescTools&amp;quot;,&amp;quot;PredictABEL&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(magrittr)
-library(here)
-library(olsrr)
-library(modelr)
-library(neuralnet)
-library(dplyr)
-library(PredictABEL)
-library(ggplot2)
-library(caret)
-library(ggplot2)
-library(ROCR)
-library(broom)
-library(DescTools)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;diabetes&amp;lt;-read.csv(&amp;quot;C:/Users/ytian/Google Drive/PhD/Data Science Bootcamp June 10-21 2019/C3 Case Study_Diabetes/diabetes_data_full.csv&amp;quot;)
-
-diabetes_data &amp;lt;- read.csv(&amp;quot;C:/Users/ytian/Google Drive/PhD/Data Science Bootcamp June 10-21 2019/C3 Case Study_Diabetes/diabetes_analytic_data.csv&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
+      <guid>/posts/statistical-learning/</guid>
+      <description>1 Little Statistical Learning Book1.1 Model Representation: a function \(h : X → Y\)1.2 Linear Algebra Review2 ML Resources2.1 Superb Online Courses and Books2.2 Other Resources1 Little Statistical Learning Book1.1 Model Representation: a function \(h : X → Y\)This function \(h\) is called a hypothesis.
+Accuracy of our hypothesis function \(h\) is measured using a cost/loss function.</description>
     </item>
     
     <item>
       <title>SAS Notebook</title>
-      <link>/post/sas-notebook-101/</link>
+      <link>/posts/sas-notebook-101/</link>
       <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/sas-notebook-101/</guid>
-      <description>
-  &lt;link rel=&#34;stylesheet&#34; href=&#34;\css\custom.css&#34; type=&#34;text/css&#34; /&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#my-little-sas-book&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; &lt;strong&gt;My Little SAS Book&lt;/strong&gt;&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#using-proc-sort-to-remove-duplicates&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.1&lt;/span&gt; Using &lt;code&gt;PROC SORT&lt;/code&gt; to remove duplicates&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#input-and-put-for-variable-type-conversion&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.2&lt;/span&gt; &lt;code&gt;Input()&lt;/code&gt; and &lt;code&gt;put()&lt;/code&gt; for variable type conversion&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#mergingstacking-datasets-truncated-values&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.3&lt;/span&gt; Merging/Stacking Datasets – Truncated Values&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;my-little-sas-book&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; &lt;strong&gt;My Little SAS Book&lt;/strong&gt;&lt;/h1&gt;
-&lt;p&gt;The aim is to document code chunks that are likely to be re-used for fast searching and indexing.&lt;/p&gt;
-&lt;div id=&#34;using-proc-sort-to-remove-duplicates&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.1&lt;/span&gt; Using &lt;code&gt;PROC SORT&lt;/code&gt; to remove duplicates&lt;/h2&gt;
-&lt;p&gt;There are three options that might be helpful: &lt;code&gt;DUPOUT=&lt;/code&gt;, &lt;code&gt;NODUPRECS&lt;/code&gt;, and &lt;code&gt;NODUPKEYS&lt;/code&gt;.Code example are from &lt;a href=&#34;https://support.sas.com/resources/papers/proceedings17/0188-2017.pdf&#34;&gt;this article&lt;/a&gt;:&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;[&lt;strong&gt;Recommended&lt;/strong&gt;] &lt;code&gt;NODUPKEYS&lt;/code&gt; (or &lt;code&gt;NODUPKEY&lt;/code&gt;) option with &lt;code&gt;PROC SORT&lt;/code&gt; removes observations with &lt;strong&gt;duplicate keys&lt;/strong&gt;. Specify the keys, that &lt;strong&gt;uniquely identify a observation&lt;/strong&gt;, in the &lt;code&gt;by&lt;/code&gt; statement. In the example below, variable &lt;code&gt;title&lt;/code&gt; uniquely identifies a movie.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;PROC SORT DATA=Movies
- DUPOUT=Movies_Sorted_Dupout_NoDupkey
- NODUPKEY;
- BY Title;
-RUN ;&lt;/code&gt;&lt;/pre&gt;
-&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;&lt;code&gt;NODUPRECS&lt;/code&gt; option identifies observations with identical values for &lt;strong&gt;all&lt;/strong&gt; columns.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;PROC SORT DATA=Movies
- OUT=Movies_Sorted_without_DupRecs
- NODUPRECS ;
- BY Title ;
-RUN ;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;input-and-put-for-variable-type-conversion&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.2&lt;/span&gt; &lt;code&gt;Input()&lt;/code&gt; and &lt;code&gt;put()&lt;/code&gt; for variable type conversion&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;input(char,4.)&lt;/code&gt; or &lt;code&gt;input(char,datatime20.12)&lt;/code&gt; : Char -&amp;gt; Numeric(/Char)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;put(numeric,$4.)&lt;/code&gt; or &lt;code&gt;put(numeric, datetime19.)&lt;/code&gt; : Numeric(/Char) -&amp;gt; Char&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;mergingstacking-datasets-truncated-values&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.3&lt;/span&gt; Merging/Stacking Datasets – Truncated Values&lt;/h2&gt;
-&lt;p&gt;Stacking multiple datasets into 1 dataset with variables in different length can be tricky. Here is the solution to resolve it. You need to:&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;define the &lt;code&gt;length&lt;/code&gt; before &lt;code&gt;set&lt;/code&gt; statement;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;add&lt;/strong&gt; &lt;code&gt;format _character_&lt;/code&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;data stacked_ds;
-   length id $20 age 8 comment $200 ;
-   set ds1-ds5;
-   format _character_ ;
-run;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
+      <guid>/posts/sas-notebook-101/</guid>
+      <description>1 My Little SAS Book1.1 Using PROC SORT to remove duplicates1.2 Input() and put() for variable type conversion1.3 Merging/Stacking Datasets – Truncated Values1 My Little SAS BookThe aim is to document code chunks that are likely to be re-used for fast searching and indexing.
+1.1 Using PROC SORT to remove duplicatesThere are three options that might be helpful: DUPOUT=, NODUPRECS, and NODUPKEYS.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Fri, 19 Apr 2019 21:37:58 +0530</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Aha, you are curious about me! ::smile::</description>
+    </item>
+    
+    <item>
+      <title>Ezhil - How to test dark mode?</title>
+      <link>/posts/post-7/</link>
+      <pubDate>Sun, 18 Mar 2018 12:13:38 +0530</pubDate>
+      
+      <guid>/posts/post-7/</guid>
+      <description>You can set dark mode as default by setting params.mode to dark in config.toml or set it to auto which will detect based on your OS and switch to dark mode. For more details refer documentation
+Here is how you can switch based on your OS
+ iOS Android macOS Windows 10  </description>
+    </item>
+    
+    <item>
+      <title>Ezhil - Typography</title>
+      <link>/posts/post-5/</link>
+      <pubDate>Sun, 18 Mar 2018 12:13:38 +0530</pubDate>
+      
+      <guid>/posts/post-5/</guid>
+      <description>Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut perspser iciatis unde omnis iste natus error sit voluptatem accusantium doloremque laste. Dolores sadips ipsums sits.
+Heading 1 Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio.</description>
+    </item>
+    
+    <item>
+      <title>Ezhil - Hugo shortcodes</title>
+      <link>/posts/post-6/</link>
+      <pubDate>Sun, 18 Mar 2018 12:13:36 +0530</pubDate>
+      
+      <guid>/posts/post-6/</guid>
+      <description>Images   Dave Herring     Dave Herring   Github Gist  Youtube video   Tweet Hugo 0.24 Released: Big archetype update + @Netlify _redirects etc. file supporthttps://t.co/X94FmYDEZJ #gohugo #golang @spf13 @bepsays
+&amp;mdash; GoHugo.io (@GoHugoIO) June 21, 2017  Vimeo   Instagram    View this post on Instagram        #Talitha #Getty #yacht in #fjærland #fjærlandsfjorden #sognefjorden #mundal #norway #landscape #panorama #travel #instagoodmyphoto #justgoshoot #peoplescreatives #visualsoflife #photography #photoshoot #photodaily #photogram #instagood #picoftheday #fjærland #photooftheday #pentax #nrksf #sognavis</description>
+    </item>
+    
+    <item>
+      <title>Ezhil - Getting Started with Traveling Ultralight</title>
+      <link>/posts/post-4/</link>
+      <pubDate>Sun, 18 Mar 2018 12:13:35 +0530</pubDate>
+      
+      <guid>/posts/post-4/</guid>
+      <description>I’m on a trip at the moment, and a friend who generously let me sleep on his couch looked at my small travel backpack and commented on how little I travel with: “That’s impressive,” he said.
+I was a little surprised, because though I’ve gotten that comment before, it’s become normal for me to travel with just a small bag (10 lbs. or less, usually), and I have friends who travel with even less.</description>
+    </item>
+    
+    <item>
+      <title>Ezhil - How I Learned to Stop Procrastinating, &amp; Love Letting Go</title>
+      <link>/posts/post-3/</link>
+      <pubDate>Sun, 18 Mar 2018 12:13:32 +0530</pubDate>
+      
+      <guid>/posts/post-3/</guid>
+      <description>The end of procrastination is the art of letting go.
+I’ve been a lifelong procrastinator, at least until recent years. I would put things off until deadline, because I knew I could come through. I came through on tests after cramming last minute, I turned articles in at the deadline after waiting until the last hour, I got things done.
+Until I didn’t. It turns out procrastinating caused me to miss deadlines, over and over.</description>
+    </item>
+    
+    <item>
+      <title>Ezhil - Fearlessness: How to Stop Running from Space</title>
+      <link>/posts/post-2/</link>
+      <pubDate>Sun, 18 Mar 2018 12:13:30 +0530</pubDate>
+      
+      <guid>/posts/post-2/</guid>
+      <description>We spend our days filling in every available space, cramming in more tasks, responding to messages, checking social media and online sites, watching videos.
+We are afraid of empty space in our lives.
+The result is often a continual busyness, constant distraction and avoidance, lack of focus, lack of satisfaction with our lives.
+We run from silence. We run from the spaces between tasks and appointments. We run from solitude and stillness.</description>
+    </item>
+    
+    <item>
+      <title>Ezhil - Primer: When You Have Too Much to Do</title>
+      <link>/posts/post-1/</link>
+      <pubDate>Sun, 18 Mar 2018 02:01:58 +0530</pubDate>
+      
+      <guid>/posts/post-1/</guid>
+      <description>You have a to-do list that scrolls on for days. You are managing multiple projects, getting lots of email and messages on different messaging systems, managing finances and personal health habits and so much more.
+It all keeps piling up, and it can feel overwhelming.
+How do you keep up with it all? How do you find focus and peace and get stuff accomplished when you have too much on your plate?</description>
+    </item>
+    
+    <item>
+      <title>Functional Programming in Scala </title>
+      <link>/exercises/functional-programming-in-scala/</link>
+      <pubDate>Sat, 06 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/exercises/functional-programming-in-scala/</guid>
+      <description>Functional programming (FP) finally goes mainstream. It is not a new concept, but it is absolutely a complex one for beginners including me. I got exposed to a large set of references, online courses and books, and I will try to organize them in a useful way.
+Why Functional Programming (FP)? Why Scala? I enjoyed the talk given by Martin Odersky, which answer the two key questions with very simple code examples.</description>
+    </item>
+    
+    <item>
+      <title>R for Data Science: Get ALL the Exercises Done! </title>
+      <link>/exercises/r-for-data-science-get-all-the-exercises-done/</link>
+      <pubDate>Fri, 22 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/exercises/r-for-data-science-get-all-the-exercises-done/</guid>
+      <description>1. Data Visulization with ggplot2The mpg dataset examplesThe diamonds dataset examplesPosition Adjustment and Coordinate Systems2. Workflow:Basics &amp;amp; Shortcuts (print,&amp;lt;-,Alt+Shift+K,tab)3. Data Transformation with dplyrWorkflow scripts and Exploratory Data AnalysisReference: R for Data Science: Import, Tidy, Transform, Visualize, and Model Data
+Using R Markdown together with exercises in each chapter of this book, I am trying to document my learning path on R.</description>
+    </item>
+    
+    <item>
+      <title>How to Lie with Statistics</title>
+      <link>/posts/how-to-lie-with-statistics/</link>
+      <pubDate>Mon, 18 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/how-to-lie-with-statistics/</guid>
+      <description>This little book stands the test of time for over half a century. It has numerous hilarious examples regarding the ways that statistics might be biased. I love the author’s comments in the introduction:
+The crooks already know these tricks,honest men must learn them in self-dense.
+1. Is it a trully representative sample of the studied population?We encountered a key question when interpreting the sample data in the real world:Is the sample a representative sample of the studied population?</description>
+    </item>
+    
+    <item>
+      <title>Another Note on A blogdown Tutorial</title>
+      <link>/exercises/another-note/</link>
+      <pubDate>Wed, 14 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/exercises/another-note/</guid>
+      <description>I just discovered an awesome tutorial on blogdown written by Alison. I have to admit this is the best blogdown tutorial I have seen so far.</description>
+    </item>
+    
+    <item>
+      <title>A Quick Note on Two Beautiful Websites</title>
+      <link>/exercises/a-quick-note/</link>
+      <pubDate>Tue, 13 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/exercises/a-quick-note/</guid>
+      <description>To me, the two most impressive websites based on blogdown are:
+ Rob J Hyndman&amp;lsquo;s personal website. Live Free or Dichotomize by Lucy and Nick et al.  I&#39;m sure there will be more.</description>
+    </item>
+    
+    <item>
+      <title>Hello R Markdown</title>
+      <link>/posts/2015-07-23-r-rmarkdown/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      
+      <guid>/posts/2015-07-23-r-rmarkdown/</guid>
+      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+You can embed an R code chunk like this:
+summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
     </item>
     
   </channel>

@@ -1,66 +1,88 @@
-# Configuration of Academic
-# Documentation: https://sourcethemes.com/academic/
-#
-# This file is formatted using TOML syntax - learn more at https://learnxinyminutes.com/docs/toml/
-# Each configuration section is defined by a name in square brackets (e.g. `[outputs]`).
-
-# Title of your site
+baseURL = "http://example.org/"
+languageCode = "en-us"
 title = "Yuan Tian"
+theme = "ezhil"
+paginate = 5
 
-# The URL of your site.
-# End your URL with a `/` trailing slash, e.g. `https://example.com/`.
-baseurl = "/"
+copyright = "© Copyright notice"
 
-# Enter a copyright notice to display in the site footer.
-# To display a copyright symbol, type `&copy;`. For current year, type `{year}`.
-copyright = ""
+pygmentsstyle = "solarized-dark"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
 
-# Enable analytics by entering your Google Analytics tracking ID
-googleAnalytics = ""
 
-# Enable comments by entering your Disqus shortname
-disqusShortname = ""
+googleAnalytics = "UA-123-45"
+disqusShortname = "ezhil-demo"
 
-############################
-## Advanced options below ##
-############################
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
-# Name of Academic theme folder in `themes/`.
-theme = "academic"
+[params]
+	subtitle = "PhD life | Computer & Health Science | Music and Dance | Views Are My Own  "
+	disableDisqusTypes = ["page"]
+	featherIconsCDN = true
+	mode = "auto" # "dark", "auto", "light"
+	customCSS = "css/custom.css"  # Custom CSS applied to default styles.
+	# customDarkCSS = "css/custom-dark.css"  # Custom styles applied to dark mode css.
+	customJS = ["https://code.jquery.com/jquery-3.4.1.js", "js/custom1.js"]  # Custom JS scripts.
 
-# Get last modified date for content from Git?
-enableGitInfo = false
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
 
-# Default language to use (if you setup multilingual support)
-defaultContentLanguage = "en"
-hasCJKLanguage = true  # Set `true` for Chinese/Japanese/Korean languages.
-defaultContentLanguageInSubdir = false
+[[menu.main]]
+name = "All posts"
+url = "/posts"
+weight = 2
 
-paginate = 10  # Number of items per page in paginated lists.
-enableEmoji = true
-footnotereturnlinkcontents = "<sup>^</sup>"
-ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+[[menu.main]]
+name = "All exercises"
+url = "/exercises"
+weight = 3
 
-[outputs]
-  home = [ "HTML", "RSS", "JSON" ]
-  section = [ "HTML", "RSS" ]
+[[menu.main]]
+name = "Categories"
+url = "/categories/"
+weight = 4
 
-# Configure BlackFriday Markdown rendering.
-#   See: https://gohugo.io/getting-started/configuration/#configure-blackfriday
-[blackfriday]
-  hrefTargetBlank = true  # `true` opens external links in a new tab. See https://github.com/gohugoio/hugo/issues/2424
-	angledQuotes = false
-	latexDashes = true
-  extensions = ["backslashLineBreak"]
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 5
 
-[imaging]
-  resampleFilter = "lanczos"
-  quality = 90
-  anchor = "smart"  # Anchor for cropping. Options include Smart and Center.
+[[menu.main]]
+name = "Years"
+url = "/years"
+weight = 6
 
-# Taxonomies.
+[[menu.main]]
+name = "Quotes"
+url = "/quotes"
+weight = 6
+
+
+[[menu.main]]
+name = "About Yuan"
+url = "/about"
+weight = 7
+
+[[params.social]]
+name = "Github"
+icon = "github"
+url = "https://github.com/tianyuan/yuantianweb"
+
+[[params.social]]
+name = "Google Scholar"
+icon = "book"
+url = "https://scholar.google.com/citations?user=8x0i6jAAAAAJ&hl=en"
+
+[[params.social]]
+name = "GoodReads"
+icon = "star"
+url = "https://www.goodreads.com/yuantian09"
+
+
 [taxonomies]
-  tag = "tags"
-  category = "categories"
-  publication_type = "publication_types"
-  author = "authors"
+   tag = "tags"
+   category = "categories"
+   year ="years"

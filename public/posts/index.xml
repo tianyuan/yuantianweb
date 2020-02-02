@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Yuan Tian</title>
+    <link>/posts/</link>
+    <description>Recent content in Posts on Yuan Tian</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Copyright notice</copyright>
+    <lastBuildDate>Fri, 16 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>R Notebook</title>
+      <link>/posts/r-notebook/</link>
+      <pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/r-notebook/</guid>
+      <description>1 R Setup 1011.1 R Packages for Basic R Installation or Update1.2 Read SAS sas7bdat data into R1.2.1 Use library sas7bdat in R1.2.2 Use library haven package in R1.2.3 Load Data files in R Studio2 Create a Website using RMarkdown2.1 RMarkdown, Hugo, Netlify2.2 Blogdown &amp;amp; Hugo - Fix ToC (with Rmd)3 Write a Reproducible Paper using RMarkdown3.</description>
+    </item>
+    
+    <item>
+      <title>Statistical Learning</title>
+      <link>/posts/statistical-learning/</link>
+      <pubDate>Mon, 10 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/statistical-learning/</guid>
+      <description>1 Little Statistical Learning Book1.1 Model Representation: a function \(h : X → Y\)1.2 Linear Algebra Review2 ML Resources2.1 Superb Online Courses and Books2.2 Other Resources1 Little Statistical Learning Book1.1 Model Representation: a function \(h : X → Y\)This function \(h\) is called a hypothesis.
+Accuracy of our hypothesis function \(h\) is measured using a cost/loss function.</description>
+    </item>
+    
+    <item>
+      <title>SAS Notebook</title>
+      <link>/posts/sas-notebook-101/</link>
+      <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/sas-notebook-101/</guid>
+      <description>1 My Little SAS Book1.1 Using PROC SORT to remove duplicates1.2 Input() and put() for variable type conversion1.3 Merging/Stacking Datasets – Truncated Values1 My Little SAS BookThe aim is to document code chunks that are likely to be re-used for fast searching and indexing.
+1.1 Using PROC SORT to remove duplicatesThere are three options that might be helpful: DUPOUT=, NODUPRECS, and NODUPKEYS.</description>
+    </item>
+    
+    <item>
+      <title>Ezhil - How to test dark mode?</title>
+      <link>/posts/post-7/</link>
+      <pubDate>Sun, 18 Mar 2018 12:13:38 +0530</pubDate>
+      
+      <guid>/posts/post-7/</guid>
+      <description>You can set dark mode as default by setting params.mode to dark in config.toml or set it to auto which will detect based on your OS and switch to dark mode. For more details refer documentation
+Here is how you can switch based on your OS
+ iOS Android macOS Windows 10  </description>
+    </item>
+    
+    <item>
+      <title>Ezhil - Typography</title>
+      <link>/posts/post-5/</link>
+      <pubDate>Sun, 18 Mar 2018 12:13:38 +0530</pubDate>
+      
+      <guid>/posts/post-5/</guid>
+      <description>Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihilse impedit quo minus id quod amets untra dolor amet sad. Sed ut perspser iciatis unde omnis iste natus error sit voluptatem accusantium doloremque laste. Dolores sadips ipsums sits.
+Heading 1 Lid est laborum et dolorum fuga. Et harum quidem rerum facilis est et expeditasi distinctio.</description>
+    </item>
+    
+    <item>
+      <title>Ezhil - Hugo shortcodes</title>
+      <link>/posts/post-6/</link>
+      <pubDate>Sun, 18 Mar 2018 12:13:36 +0530</pubDate>
+      
+      <guid>/posts/post-6/</guid>
+      <description>Images   Dave Herring     Dave Herring   Github Gist  Youtube video   Tweet Hugo 0.24 Released: Big archetype update + @Netlify _redirects etc. file supporthttps://t.co/X94FmYDEZJ #gohugo #golang @spf13 @bepsays
+&amp;mdash; GoHugo.io (@GoHugoIO) June 21, 2017  Vimeo   Instagram    View this post on Instagram        #Talitha #Getty #yacht in #fjærland #fjærlandsfjorden #sognefjorden #mundal #norway #landscape #panorama #travel #instagoodmyphoto #justgoshoot #peoplescreatives #visualsoflife #photography #photoshoot #photodaily #photogram #instagood #picoftheday #fjærland #photooftheday #pentax #nrksf #sognavis</description>
+    </item>
+    
+    <item>
+      <title>Ezhil - Getting Started with Traveling Ultralight</title>
+      <link>/posts/post-4/</link>
+      <pubDate>Sun, 18 Mar 2018 12:13:35 +0530</pubDate>
+      
+      <guid>/posts/post-4/</guid>
+      <description>I’m on a trip at the moment, and a friend who generously let me sleep on his couch looked at my small travel backpack and commented on how little I travel with: “That’s impressive,” he said.
+I was a little surprised, because though I’ve gotten that comment before, it’s become normal for me to travel with just a small bag (10 lbs. or less, usually), and I have friends who travel with even less.</description>
+    </item>
+    
+    <item>
+      <title>Ezhil - How I Learned to Stop Procrastinating, &amp; Love Letting Go</title>
+      <link>/posts/post-3/</link>
+      <pubDate>Sun, 18 Mar 2018 12:13:32 +0530</pubDate>
+      
+      <guid>/posts/post-3/</guid>
+      <description>The end of procrastination is the art of letting go.
+I’ve been a lifelong procrastinator, at least until recent years. I would put things off until deadline, because I knew I could come through. I came through on tests after cramming last minute, I turned articles in at the deadline after waiting until the last hour, I got things done.
+Until I didn’t. It turns out procrastinating caused me to miss deadlines, over and over.</description>
+    </item>
+    
+    <item>
+      <title>Ezhil - Fearlessness: How to Stop Running from Space</title>
+      <link>/posts/post-2/</link>
+      <pubDate>Sun, 18 Mar 2018 12:13:30 +0530</pubDate>
+      
+      <guid>/posts/post-2/</guid>
+      <description>We spend our days filling in every available space, cramming in more tasks, responding to messages, checking social media and online sites, watching videos.
+We are afraid of empty space in our lives.
+The result is often a continual busyness, constant distraction and avoidance, lack of focus, lack of satisfaction with our lives.
+We run from silence. We run from the spaces between tasks and appointments. We run from solitude and stillness.</description>
+    </item>
+    
+    <item>
+      <title>Ezhil - Primer: When You Have Too Much to Do</title>
+      <link>/posts/post-1/</link>
+      <pubDate>Sun, 18 Mar 2018 02:01:58 +0530</pubDate>
+      
+      <guid>/posts/post-1/</guid>
+      <description>You have a to-do list that scrolls on for days. You are managing multiple projects, getting lots of email and messages on different messaging systems, managing finances and personal health habits and so much more.
+It all keeps piling up, and it can feel overwhelming.
+How do you keep up with it all? How do you find focus and peace and get stuff accomplished when you have too much on your plate?</description>
+    </item>
+    
+    <item>
+      <title>How to Lie with Statistics</title>
+      <link>/posts/how-to-lie-with-statistics/</link>
+      <pubDate>Mon, 18 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/how-to-lie-with-statistics/</guid>
+      <description>This little book stands the test of time for over half a century. It has numerous hilarious examples regarding the ways that statistics might be biased. I love the author’s comments in the introduction:
+The crooks already know these tricks,honest men must learn them in self-dense.
+1. Is it a trully representative sample of the studied population?We encountered a key question when interpreting the sample data in the real world:Is the sample a representative sample of the studied population?</description>
+    </item>
+    
+    <item>
+      <title>Hello R Markdown</title>
+      <link>/posts/2015-07-23-r-rmarkdown/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      
+      <guid>/posts/2015-07-23-r-rmarkdown/</guid>
+      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+You can embed an R code chunk like this:
+summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
+    </item>
+    
+  </channel>
+</rss>

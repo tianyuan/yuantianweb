@@ -1,0 +1,67 @@
+---
+title: SAS Notebook
+author: Yuan Tian
+date: '2019-05-15'
+description: "SAS code chunks with high probability of re-use"
+slug: sas-notebook-101
+image:
+  caption: ''
+  focal_point: ''
+output:
+  blogdown::html_page:
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+    css: /css/custom.css
+---
+
+
+# **My Little SAS Book**
+
+The aim is to document code chunks that are likely to be re-used for fast searching and indexing.
+
+## Using `PROC SORT` to remove duplicates 
+
+
+There are three options that might be helpful: `DUPOUT=`, `NODUPRECS`, and `NODUPKEYS`.Code example are from [this article](https://support.sas.com/resources/papers/proceedings17/0188-2017.pdf): 
+
+1. [**Recommended**] `NODUPKEYS` (or `NODUPKEY`) option with `PROC SORT` removes observations with **duplicate keys**. Specify the keys, that **uniquely identify a observation**, in the `by` statement. In the example below, variable `title` uniquely identifies a movie. 
+
+~~~~
+PROC SORT DATA=Movies
+ DUPOUT=Movies_Sorted_Dupout_NoDupkey
+ NODUPKEY;
+ BY Title;
+RUN ;
+~~~~
+
+2. `NODUPRECS` option identifies observations with identical values for **all** columns. 
+
+~~~~
+PROC SORT DATA=Movies
+ OUT=Movies_Sorted_without_DupRecs
+ NODUPRECS ;
+ BY Title ;
+RUN ;
+~~~~
+
+##  `Input()` and `put()` for variable type conversion
+
+* `input(char,4.)` or `input(char,datatime20.12)` : Char -> Numeric(/Char)
+* `put(numeric,$4.)` or `put(numeric, datetime19.)` : Numeric(/Char) -> Char
+
+## Merging/Stacking Datasets -- Truncated Values
+
+Stacking multiple datasets into 1 dataset with variables in different length can be tricky. Here is the solution to resolve it. You need to:
+
+1. define the `length` before `set` statement;
+2. **add** `format _character_`. 
+
+~~~~
+data stacked_ds;
+   length id $20 age 8 comment $200 ;
+   set ds1-ds5;
+   format _character_ ;
+run;
+~~~~
+

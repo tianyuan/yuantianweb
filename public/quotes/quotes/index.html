@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Quotes - Yuan Tian</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:title" content="Quotes" />
+<meta property="og:description" content="HUGO XMIN Keep it simple, but not simpler XMin is a Hugo theme written by Yihui Xie in about four hours: half an hour was spent on the Hugo templates, and 3.5 hours were spent on styling. The main motivation for writing this theme was to provide a really minimal example to beginners of Hugo templates. This XMin theme contains about 130 lines of code in total, including the code in HTML templates and CSS (also counting empty lines)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/quotes/quotes/" />
+<meta property="article:published_time" content="2020-01-31T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-01-31T00:00:00+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Quotes"/>
+<meta name="twitter:description" content="HUGO XMIN Keep it simple, but not simpler XMin is a Hugo theme written by Yihui Xie in about four hours: half an hour was spent on the Hugo templates, and 3.5 hours were spent on styling. The main motivation for writing this theme was to provide a really minimal example to beginners of Hugo templates. This XMin theme contains about 130 lines of code in total, including the code in HTML templates and CSS (also counting empty lines)."/>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
+	<link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="/css/custom.css" />
+	<link rel="stylesheet" type="text/css" href="/css/dark.css" media="(prefers-color-scheme: dark)" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+	<script src="/js/main.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<script src="/js/custom1.js"></script>
+</head>
+
+
+<body>
+	<div class="container wrapper post">
+		<div class="header">
+	<h1 class="site-title"><a href="/">Yuan Tian</a></h1>
+	<div class="site-description"><h2>PhD life | Computer &amp; Health Science | Music and Dance | Views Are My Own</h2><nav class="nav social">
+			<ul class="flat"><a href="https://github.com/tianyuan/yuantianweb" title="Github"><i data-feather="github"></i></a><a href="https://scholar.google.com/citations?user=8x0i6jAAAAAJ&amp;hl=en" title="Google Scholar"><i data-feather="book"></i></a><a href="https://www.goodreads.com/yuantian09" title="GoodReads"><i data-feather="star"></i></a></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">Home</a>
+			</li>
+			
+			<li>
+				<a href="/posts">All posts</a>
+			</li>
+			
+			<li>
+				<a href="/exercises">All exercises</a>
+			</li>
+			
+			<li>
+				<a href="/categories/">Categories</a>
+			</li>
+			
+			<li>
+				<a href="/tags">Tags</a>
+			</li>
+			
+			<li>
+				<a href="/quotes">Quotes</a>
+			</li>
+			
+			<li>
+				<a href="/years">Years</a>
+			</li>
+			
+			<li>
+				<a href="/about">About Yuan</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post-header">
+			<h1 class="title">Quotes</h1>
+			<p class="meta">
+			
+			
+			
+			
+			
+			
+			
+			</p>
+			<div class="meta">Blank Posted at &mdash; Jan 31, 2020 <span class="draft-label">DRAFT</span> </div>
+			
+		</div>
+
+		<div class="markdown">
+			<p><a href="https://github.com/yihui/hugo-xmin"><!-- raw HTML omitted --></a></p>
+<h1 id="hugo-xmin">HUGO XMIN</h1>
+<h2 id="keep-it-simple-but-not-simpler"><em>Keep it simple, but not simpler</em></h2>
+<p><strong>XMin</strong> is a Hugo theme written by <a href="https://yihui.name">Yihui Xie</a> in about four hours: half an hour was spent on the Hugo templates, and 3.5 hours were spent on styling. The main motivation for writing this theme was to provide a really minimal example to beginners of Hugo templates. This XMin theme contains about 130 lines of code in total, including the code in HTML templates and CSS (also counting empty lines).</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">find . -not -path <span style="color:#2aa198">&#39;*/exampleSite/*&#39;</span> <span style="color:#cb4b16">\(</span> -name <span style="color:#2aa198">&#39;*.html&#39;</span> -o -name <span style="color:#2aa198">&#39;*.css&#39;</span> <span style="color:#cb4b16">\)</span> | xargs wc -l
+</code></pre></div><pre><code>       5 ./layouts/404.html
+      12 ./layouts/_default/single.html
+      20 ./layouts/_default/list.html
+      13 ./layouts/_default/terms.html
+       0 ./layouts/partials/foot_custom.html
+       0 ./layouts/partials/head_custom.html
+       9 ./layouts/partials/footer.html
+      20 ./layouts/partials/header.html
+      51 ./static/css/style.css
+       7 ./static/css/fonts.css
+     137 total
+</code></pre><p>I can certainly further reduce the code, for example, by eliminating the CSS, but I believe a tiny bit of CSS can greatly improve readability. You cannot really find many CSS frameworks that only contain 50 lines of code.</p>
+<p>Although it is a minimal theme, it is actually fully functional. It supports pages (including the home page), blog posts, a navigation menu, categories, tags, and RSS. With <a href="https://github.com/yihui/hugo-xmin/blob/master/exampleSite/layouts/partials/foot_custom.html">a little bit customization</a>, it can easily support LaTeX math expressions, e.g.,</p>
+<p><code>$${\sqrt {n}}\left(\left({\frac {1}{n}}\sum _{i=1}^{n}X_{i}\right)-\mu \right)\ {\xrightarrow {d}}\ N\left(0,\sigma ^{2}\right)$$</code></p>
+<p>All pages not under the root directory of the website are listed below. You can also visit the list page of a single section, e.g., <a href="/posts/">posts</a>, or <a href="/exercises/">exercises</a>. See the <a href="/about/">About</a> page for the usage of this theme.</p>
+
+		</div>
+
+		<div class="post-tags">
+			
+				
+			
+		</div>
+		<div id="disqus_thread"></div>
+<script type="text/javascript">
+	(function () {
+		
+		
+		if (window.location.hostname == "localhost")
+			return;
+
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		var disqus_shortname = 'ezhil-demo';
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+		Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div> © Copyright notice |  <a href="https://github.com/vividvilla/ezhil">Ezhil theme</a> | Built with <a href="https://gohugo.io">Hugo</a></div>
+	</nav>
+</div>
+<script src="//yihui.name/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<script async src="//yihui.name/js/center-img.js"></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/languages/r.min.js"></script>
+
+<script>
+hljs.configure({languages: ["r","yaml","tex"]});
+hljs.initHighlightingOnLoad();
+</script>
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+<script>feather.replace()</script>
+</body>
+</html>
