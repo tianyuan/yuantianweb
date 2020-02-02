@@ -5,6 +5,8 @@
 [build.environment]
   HUGO_VERSION = "0.51"
   HUGO_ENABLEGITINFO = "true"
+  HUGO_THEME = "repo"
+  HUGO_BASEURL = "/"
 
 [context.production.environment]
   HUGO_ENV = "production"
