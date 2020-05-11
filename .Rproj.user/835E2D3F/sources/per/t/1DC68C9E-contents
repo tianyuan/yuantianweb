@@ -1,0 +1,271 @@
+---
+title: R Notebook
+author: Yuan Tian
+date: '2019-08-16'
+description: "Getting started with R, website creation and writing reproducible papers. "
+slug: r-notebook
+categories:
+  - r
+tags: [hugo,rmarkdown]
+years: [2019]
+image:
+  caption: ''
+  focal_point: ''
+output: 
+ blogdown::html_page:
+  number_sections: true
+  toc: true
+  toc_depth: 3
+  css: "/css/custom.css"
+---
+
+# **R Setup 101**
+
+## R Packages for Basic R Installation or Update
+
+For new installation, here is a list of most-used packages to install: 
+
+```{r eval=FALSE}
+install.packages('xlsx')
+install.packages('rmarkdown')
+install.packages("tinytex")
+# install TinyTeX (must-do-this-step)
+tinytex::install_tinytex()  
+install.packages('tidyverse')
+install.packages('ggplot2')
+#table creation with specific formatting
+install.packages('kableExtra')
+#for writing reproducible research paper in R Markdown
+install.packages(c("stargazer","plotly","knitr","bookdown"))
+#To import the SAS files
+install.packages('haven')
+install.packages('sas7bdat')
+# Activate the `sas7bdat` library
+library(sas7bdat)
+library(haven)
+# Read in the SAS data
+#mySASData <- read.sas7bdat("example.sas7bdat")
+#data <- read_sas("C:/temp/yoursasdataset.sas7bdat")
+
+```
+Once in a while, update all the packages by calling `update.packages()`.
+
+## Read SAS `sas7bdat` data into R
+
+### Use library `sas7bdat` in R
+
+The [`sas7bdat`](https://www.rdocumentation.org/packages/sas7bdat/versions/0.5) library , developed by Matt Shotwell, works.
+
+```{r eval=FALSE}
+library(sas7bdat)
+data <-read.sas7bdat("psu97ai.sas7bdat")
+view(data)
+``` 
+
+[Two issues](https://stackoverflow.com/questions/30006822/read-sas-sas7bdat-data-into-r) with the method:         
+
+  * It's slow
+  * `sas7bdat` package is currently considered experimental.
+  
+### Use library `haven` package in R
+
+The `haven::read_sas` method in `haven` package also works, and it is **faster** than the `read.sas7bdat` method (*[99.5% less time](https://stackoverflow.com/questions/30006822/read-sas-sas7bdat-data-into-r) than `sas7bdat::read.sas7bdat`)*. The difference is caused by saving a massive list of attributes for the files. 
+
+```{r eval=FALSE}
+library(haven)
+data <- read_sas("C:/temp/yoursasdataset.sas7bdat")
+View(data)
+```
+### Load Data files in R Studio 
+
+You can manually load the data in the R Studio environment, choose `File >Import Dataset > From SAS...`, select the file location and click `import`. 
+
+# **Create a Website using RMarkdown**
+
+## RMarkdown, Hugo, Netlify
+
+You can easily create beautiful static website powered by [RMarkdown](https://rmarkdown.rstudio.com/) developed by [Yihui Xie](https://yihui.name/en/), [Hugo](https://gohugo.io/), [Academic theme](https://sourcethemes.com/academic/#hero), and [Netlify](https://www.netlify.com/). 
+
+The first step is to install blogdown and Hugo. Open RStudio , installing the Blogdown and Hugo dependencies:
+
+```{r eval=FALSE,echo=TRUE}
+ install.packages("blogdown")
+ blogdown::install_hugo(version = "0.60.1", force = TRUE)
+```
+
+The contents are created using [RMarkdown](https://rmarkdown.rstudio.com/) with guidance from the [Step-by-Step Instruction provided by ALISON PRESMANES HILL](https://alison.rbind.io/post/up-and-running-with-blogdown/),  ["Blogdown: Creating Websites with R Markdown"](https://bookdown.org/yihui/blogdown/) and [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+
+Hugo has a variety of theme that you can choose from. For instance, [Hugo-Academic](https://sourcethemes.com/academic/#hero) is a very rich theme for the academics. A few advantages include: 
+
+* Latex math rendering via simply enabling it in `config` toml file.
+```{r eval=FALSE, indent="   "}
+# In config\_default\param.toml
+# Enable global LaTeX math rendering?
+#   If false, you can enable it locally on a per page basis.
+math = true
+```
+* rich widget system for customization. 
+
+If you prefer a simple/minimal style, you can choose from the [minimalist](https://themes.gohugo.io/tags/minimalist/) themes. This website is created and powered by [Ezhil theme](https://themes.gohugo.io/ezhil/) and [hugo-xmin theme](https://themes.gohugo.io/hugo-xmin/), both themes were minimal/simple styles. 
+
+Yihui Xie provided a step-by-step guide for the [hugo-xmin theme](https://themes.gohugo.io/hugo-xmin/) in the book [blogdown: Creating Websites with R Markdown](https://bookdown.org/yihui/blogdown/blogdown.pdf). It is very useful to finish the Hugo chapter to get a better understanding of its structure, rules of overriding, tips to add functionalities to your website (e.g., add math, add highlight.js, add custom.css for codes). 
+
+Two most important folders related to website design are 
+
+* *layouts*
+  + partials: header.html, footer.html
+  + _default: list.html,single.html,terms.html
+* *static*
+  + css:custom.css, fonts.css, styles.css
+
+Modify the folders above in your own website folder but not the *exampleSite*, as they will override the same folder/files in the *theme* folder. This also will make it easy to maintain, migrate, and upgrade.
+
+
+**Reference**
+
+* Yihui Xie, J. J. Allaire, Garrett Grolemund (2018). [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/). Chapman & Hall/CRC. ISBN 9781138359338.  
+* Yihui Xie, Amber Thomas, Alison Presmanes Hill (2017). [blogdown:  Creating Websites with R Markdown](https://bookdown.org/yihui/blogdown/). Chapman & Hall/CRC. ISBN 9780815363729.
+* Yihui Xie (2016). [bookdown](https://bookdown.org/): [Authoring Books and Technical Documents with R Markdown](https://bookdown.org/yihui/bookdown/). Chapman and Hall/CRC. ISBN 9781138700109
+
+## Blogdown & Hugo - Fix ToC (with Rmd)
+
+The solution to fix Table of Contents (TOC) came from both [Create Websites with RMarkdown](https://bookdown.org/yihui/blogdown/default-template.html) and [Fubits@GIT](https://dadascience.design/post/r-some-tricks-when-working-with-blogdown-hugo-working-draft/) .
+In the `yaml` header of your Rmd file, specific the following: 
+
+```
+-----
+output: 
+ blogdown::html_page:
+  number_sections: true
+  toc: true
+  toc_depth: 3
+  css: "/css/custom.css"
+-----
+```
+Create and save the `custom.css` under the `\static\css` in the root directory. Using the css formating in [link](https://dadascience.design/post/r-some-tricks-when-working-with-blogdown-hugo-working-draft/), Your `custom.css` should look like: 
+
+```css
+/* Add some Heading / Title before the TOC */
+#TOC:before{
+    content: "Table of Content";
+    font-family: 'Lato', sans-serif!important;
+    font-weight:400;
+    font-size: 26px;
+}
+
+/* Numbering suffix in TOC */
+.toc-section-number:after{
+    content: ". "
+}
+/* Numbering suffix in Body/Content */
+.header-section-number:after{
+    content: ". "
+}
+```
+# **Write a Reproducible Paper using RMarkdown**
+
+Unlike creating website using rmarkdown, writing a reproducible paper involves using another set of R packages, primarily those which advance markdown with *latex* features.
+
+## Templates
+
+### Paul's Template
+
+Paul C. Bauer created a template for [writing a reproducible scientific paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3175518). All the files are downloadable from the [Shared Google Drive Folder](https://drive.google.com/drive/folders/1zJP3cNPrHN-gj0rcmbHQgg-XA0hqDXdd?usp=sharing). The [version 2](https://drive.google.com/drive/folders/1rzwN2jX_CW6OJFz5jrkObiUxGuMowR3U) has a simplified version without using the `header.tex`. 
+
+I read the article, tested his codes and was able to reproduce the article. I ran into a few issues related to TinyTex installization, so just be mindful of the following steps:
+
+* `install.packages("tinytex")` and `tinytex::install_tinytex()` to get the **latest** version of *TinyTex* (if bugs presents, re-install with the cmd `tinytex::reinstall_tinytex()`).
+* When you *knit* your paper the first time, you should expect auto-installization of many *tex* packages and it could take some time depending on the number of *tex* packages you use in your document.
+* also `install.packages("kableExtra")` for building [common complex tables with customizable styles](https://haozhu233.github.io/kableExtra/awesome_table_in_pdf.pdf).  
+
+### Reproducible APA manuscripts with RMarkdown
+
+[Frederik Aust & Marius Barth](https://crsh.github.io/papaja_man/) wrote this comprehensive book covering lots of useful tricks and tips. This is a must-read if you seriously consider writing papers using Rmarkdown. 
+
+## YAML options
+
+There are a lot of advanced setting in the `YAML header`.  An example is provided below with some highlighted options:
+
+* tex packages: `header-includes:`
+* use `bookdown::pdf_document2: keep_tex: true` for pdf output creation.  
+* `documentclass` can be the built-in `article` or your own customized `cls` file (e.g., `uofsthesis-cs.cls`).
+* page setup: `geometry`, `fontsize`, and `linestretch`
+* `bibliography`: put your `.bib` file in the same directory with your article.
+* citation style: `csl`. You can search and download/create one(e.g., ACM or IEEE) from [zotero](https://www.zotero.org/styles?q=acm) or [Mendeley](https://csl.mendeley.com/searchByName/). Save it in the same directory with your article.
+  - `nocite: |@Lander14` to include references currently not cited in the article. 
+
+```
+---
+title: |
+  | \vspace{1cm}\pagenumbering{gobble}This is my topic
+  | A Literature Review \vspace{0.5cm}
+author:  |
+  | My Name
+  | Department of Computer Science
+date: |
+  | `r gsub("^0", "", format(Sys.time(), "%d %B, %Y"))`
+  |
+abstract: this is my abstract
+colorlinks: true
+output: 
+  bookdown::pdf_document2:
+    toc: no
+    keep_tex: true
+geometry: [top=0.85in,left=1in,right=1in, footskip=0.40in]
+fontsize: [10pt,letterpaper]
+linestretch: 1.1
+documentclass: article
+header-includes:
+   - \usepackage{dcolumn}
+   - \usepackage{color}
+   - \usepackage{floatrow}
+   - \floatsetup[figure]{capposition=top}
+   - \floatsetup[table]{capposition=top}
+   - \floatplacement{figure}{H}
+   - \floatplacement{table}{H}
+   - \usepackage{booktabs}
+   - \usepackage{longtable}
+   - \usepackage{array}
+   - \usepackage{multirow}
+   - \usepackage{wrapfig}
+   - \usepackage{float}
+   - \usepackage{colortbl}
+   - \usepackage{pdflscape}
+   - \usepackage{tabu}
+   - \usepackage{threeparttable}
+   - \usepackage{threeparttablex}
+   - \usepackage[normalem]{ulem}
+   - \usepackage{makecell}
+   - \usepackage[usenames,dvipsnames]{xcolor}
+   - \usepackage[hang]{footmisc}
+   - \renewcommand{\footnotesize}{\normalsize}
+bibliography: references.bib
+csl: transactions-on-management-information-systems.csl
+suppress-bibliography: FALSE
+always_allow_html: yes
+link-citations: true
+---
+```
+## Tricks - citations in a table
+
+Cross-referencing tables or figures in a Rmarkdown article are straightforward and can be found in [Paul's article and template](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3175518).  However, citations within a table is very tricky in the `PDF`/`TEX` environment. It is easy to get it working in the HTML environment, but not with `pdf`, `pandoc`, and `latex`.
+
+* Pandoc Markdown supports a citation extension to the basic markup, like `[@krycho]`. 
+
+* For citation in a table in a `pdf` output file. [Rachael Lappan](https://github.com/rachaellappan) offered a [working solution](https://github.com/haozhu233/kableExtra/issues/214) for it.
+
+>I had success with the bookdown text references - I'm not sure if you need to be making a bookdown book or if it will work with the bookdown package loaded.
+>In my case, I defined the references first outside of a code block, e.g.
+```
+(ref:studies-table-ref1) Bogaert *et al.* (2011) [@BogaertVariabilityDiversityNasopharyngeal2011]
+```
+>then added them to the table
+```
+studies.table$Reference <- c("(ref:studies-table-ref1)", "(ref:studies-table-ref2)", # etc
+```
+>And kable interpreted them correctly.
+
+
+
+
+
