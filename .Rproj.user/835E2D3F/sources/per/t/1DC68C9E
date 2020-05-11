@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1580450739493.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1196867026",
+    "id" : "1DC68C9E",
+    "lastKnownWriteTime" : 1589239848,
+    "last_content_update" : 1589239848,
+    "path" : "C:/Users/tiany/Google Drive/Git/yuantianweb/content/posts/2019-08-16-r-notebook.Rmd",
+    "project_path" : "content/posts/2019-08-16-r-notebook.Rmd",
+    "properties" : {
+        "cursorPosition" : "17,14",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
