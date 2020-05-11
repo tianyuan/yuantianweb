@@ -1,0 +1,30 @@
+---
+title: 'COVID-19 Modelling - Parameterization '
+author: Yuan Tian
+date: '2020-05-05'
+slug: covid-19-modelling-parameterization
+categories:
+  - research
+tags:
+  - covid-19
+years: [2020]
+draft: yes
+link-citations: true
+colorlinks: true
+bibliography: APaperpile - May 05 BibTeX Export.bib
+csl: BMJ.csl
+---
+
+This is a reference [@Emami2020-nt;@Schiffrin2020-vv].
+
+-@Emami2020-nt said blah.
+
+This is an inline equation $Y= X^2$.
+
+This is a section equation: $$ Y= X^2$$. 
+
+[Two issues](https://stackoverflow.com/questions/30006822/read-sas-sas7bdat-data-into-r) with the method: 
+
+# Reference
+
+
