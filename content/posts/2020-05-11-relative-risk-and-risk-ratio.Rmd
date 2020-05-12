@@ -1,0 +1,11 @@
+---
+title: Relative Risk and Risk Ratio
+author: Yuan Tian
+date: '2020-05-11'
+slug: relative-risk-and-risk-ratio
+categories: []
+tags: []
+draft: yes
+---
+
+This is a post about relative risk and risk ratio.
