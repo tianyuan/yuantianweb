@@ -8,13 +8,23 @@
   </url>
   
   <url>
-    <loc>/posts/relative-risk-and-risk-ratio/</loc>
+    <loc>/posts/relative-risk-and-odds-ratio/</loc>
     <lastmod>2020-05-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/</loc>
     <lastmod>2020-05-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/exercises/</loc>
+    <lastmod>2020-03-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/exercises/flightsdata/</loc>
+    <lastmod>2020-03-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -44,11 +54,6 @@
   
   <url>
     <loc>/tags/exercise/</loc>
-    <lastmod>2020-01-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/exercises/</loc>
     <lastmod>2020-01-24T00:00:00+00:00</lastmod>
   </url>
   

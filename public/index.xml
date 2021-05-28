@@ -13,12 +13,22 @@
     
     
     <item>
-      <title>Relative Risk and Risk Ratio</title>
-      <link>/posts/relative-risk-and-risk-ratio/</link>
+      <title>Relative Risk and Odds Ratio </title>
+      <link>/posts/relative-risk-and-odds-ratio/</link>
       <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>/posts/relative-risk-and-risk-ratio/</guid>
-      <description>This is a post about relative risk and risk ratio.</description>
+      <guid>/posts/relative-risk-and-odds-ratio/</guid>
+      <description>This is a new article about relative risk and odds ratio.This is testing.This is another testing.</description>
+    </item>
+    
+    <item>
+      <title>Flight Data Havesting Flight24</title>
+      <link>/exercises/flightsdata/</link>
+      <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/exercises/flightsdata/</guid>
+      <description>Harvesting the Flight Data from https://flightaware.com/Step 1: Get all the flight number
+Use Dest_ICAO and Source_ICAO to get all the flight numbers between two airports: https://flightaware.com/live/findflight?origin=CYXE&amp;amp;destination=CYYZDest_ICAO and Source_ICAO are 4-digit airports IDRegister a free acount with FlightAware, then you will have access to 90 day history of a flight.E.g., get 80-day history of a specific flight number WJA506. https://flightaware.com/live/flight/WJA506/history/80Sources:</description>
     </item>
     
     <item>

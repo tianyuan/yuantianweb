@@ -2,7 +2,7 @@
 title: R Notebook
 author: Yuan Tian
 date: '2019-08-16'
-description: "Getting started with R, website creation and writing reproducible papers. "
+description: "Getting started with R, website creation and writing reproducible papers, tips and FAQs. "
 slug: r-notebook
 categories:
   - r
@@ -40,6 +40,7 @@ install.packages(c("stargazer","plotly","knitr","bookdown"))
 #To import the SAS files
 install.packages('haven')
 install.packages('sas7bdat')
+install.packages('HSAUR3')
 # Activate the `sas7bdat` library
 library(sas7bdat)
 library(haven)
@@ -268,4 +269,29 @@ studies.table$Reference <- c("(ref:studies-table-ref1)", "(ref:studies-table-ref
 
 
 
+
+
+
+# **FAQs and Tips**
+
+## `save()` and `load()` datasets in R
+
+For big datasets, importing the data and doing manipulaiton, aggregation and selection could take several minutes (or even longer), you might not want to start from scrach everytime you are working with the data. 
+
+So, you hope you can save your dataset at a stage (e.g. pre-analyses). You can do that using the `save()` and `load()` functions in base-R. 
+
+* [How to save and load datasets in R: an overview](https://www.r-bloggers.com/how-to-save-and-load-datasets-in-r-an-overview/)
+
+## How to knit a document without rerunnning code
+
+Dynamic Documents with and `knitr`: `knitr::options` give you multiple options which allow you to knit a document without re-running or displaying the code. 
+
+Chunk options and package options can be found <https://yihui.org/knitr/options/>
+
+A few highlights from the document: 
+
+* `echo`: (TRUE; `logical` or `numeric`) whether to include R source code in the output file
+* `eval`: (TRUE; `logical`) whether to evaluate the code chunk
+* `collapse`: (FALSE; `logical`) collapse all the source and output blocks from one code chunk into a single block
+* `include`: (TRUE; `logical`) whether to include the chunk output in the final output document; if include=FALSE, nothing will be written into the output document, **but the code is still evaluated** and plot files are generated. 
 

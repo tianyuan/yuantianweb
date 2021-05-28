@@ -124,7 +124,7 @@ Given $\beta_1 = 0.05$, $HR=exp(5*0.06)=1.35$. The event relative risk will incr
 Even though $h_0(t)$ is unspecified, we estimate the $\beta$s. We can estimate $S(t,x)$ using a minimum of assumptions. There are two techniques to adjust the partical likelihood for tied lifetimes: Brceslow and Efron. 
 
 The code can be found in the [Google Drive folder](https://drive.google.com/drive/folders/1u8N6ISovKj680Yr3Sv5nUeIUFVaZKBK2?usp=sharing). 
-```{r echo=TRUE,eval=FALSE}
+```{r echo=TRUE}
 library(survival)
 mgus.data<-read.csv("C:/Users/ytian/Google Drive/PhD/Data Science Bootcamp June 10-21 2019/D3 Code/mgus.data.csv",header = TRUE)
 ```
@@ -152,8 +152,7 @@ library(ROCR)
 library(broom)
 library(DescTools)
 ```
-
-```{r eval=FALSE}
+```{r}
 diabetes<-read.csv("C:/Users/ytian/Google Drive/PhD/Data Science Bootcamp June 10-21 2019/C3 Case Study_Diabetes/diabetes_data_full.csv")
 
 diabetes_data <- read.csv("C:/Users/ytian/Google Drive/PhD/Data Science Bootcamp June 10-21 2019/C3 Case Study_Diabetes/diabetes_analytic_data.csv")

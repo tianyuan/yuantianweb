@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Fri, 24 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/exercises/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Flight Data Havesting Flight24</title>
+      <link>/exercises/flightsdata/</link>
+      <pubDate>Thu, 19 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/exercises/flightsdata/</guid>
+      <description>Harvesting the Flight Data from https://flightaware.com/Step 1: Get all the flight number
+Use Dest_ICAO and Source_ICAO to get all the flight numbers between two airports: https://flightaware.com/live/findflight?origin=CYXE&amp;amp;destination=CYYZDest_ICAO and Source_ICAO are 4-digit airports IDRegister a free acount with FlightAware, then you will have access to 90 day history of a flight.E.g., get 80-day history of a specific flight number WJA506. https://flightaware.com/live/flight/WJA506/history/80Sources:</description>
+    </item>
     
     <item>
       <title>Statistical Analysis Using R 3rd Edition (Chpt1)</title>

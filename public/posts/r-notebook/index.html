@@ -6,14 +6,14 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>R Notebook - Yuan Tian</title><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta property="og:title" content="R Notebook" />
-<meta property="og:description" content="Getting started with R, website creation and writing reproducible papers. " />
+<meta property="og:description" content="Getting started with R, website creation and writing reproducible papers, tips and FAQs. " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/r-notebook/" />
 <meta property="article:published_time" content="2019-08-16T00:00:00+00:00" />
 <meta property="article:modified_time" content="2019-08-16T00:00:00+00:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="R Notebook"/>
-<meta name="twitter:description" content="Getting started with R, website creation and writing reproducible papers. "/>
+<meta name="twitter:description" content="Getting started with R, website creation and writing reproducible papers, tips and FAQs. "/>
 <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,300italic,400italic|Raleway:200,300" rel="stylesheet">
 	<link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css" />
@@ -135,6 +135,10 @@
 <li><a href="#yaml-options"><span class="toc-section-number">3.2</span> YAML options</a></li>
 <li><a href="#tricks---citations-in-a-table"><span class="toc-section-number">3.3</span> Tricks - citations in a table</a></li>
 </ul></li>
+<li><a href="#faqs-and-tips"><span class="toc-section-number">4</span> <strong>FAQs and Tips</strong></a><ul>
+<li><a href="#save-and-load-datasets-in-r"><span class="toc-section-number">4.1</span> <code>save()</code> and <code>load()</code> datasets in R</a></li>
+<li><a href="#how-to-knit-a-document-without-rerunnning-code"><span class="toc-section-number">4.2</span> How to knit a document without rerunnning code</a></li>
+</ul></li>
 </ul>
 </div>
 
@@ -157,6 +161,7 @@ install.packages(c(&quot;stargazer&quot;,&quot;plotly&quot;,&quot;knitr&quot;,&q
 #To import the SAS files
 install.packages(&#39;haven&#39;)
 install.packages(&#39;sas7bdat&#39;)
+install.packages(&#39;HSAUR3&#39;)
 # Activate the `sas7bdat` library
 library(sas7bdat)
 library(haven)
@@ -307,7 +312,7 @@ author:  |
   | My Name
   | Department of Computer Science
 date: |
-  | 2 February, 2020
+  | 28 February, 2020
   |
 abstract: this is my abstract
 colorlinks: true
@@ -369,6 +374,29 @@ In my case, I defined the references first outside of a code block, e.g.</p>
 <blockquote>
 <p>And kable interpreted them correctly.</p>
 </blockquote>
+</div>
+</div>
+<div id="faqs-and-tips" class="section level1">
+<h1><span class="header-section-number">4</span> <strong>FAQs and Tips</strong></h1>
+<div id="save-and-load-datasets-in-r" class="section level2">
+<h2><span class="header-section-number">4.1</span> <code>save()</code> and <code>load()</code> datasets in R</h2>
+<p>For big datasets, importing the data and doing manipulaiton, aggregation and selection could take several minutes (or even longer), you might not want to start from scrach everytime you are working with the data.</p>
+<p>So, you hope you can save your dataset at a stage (e.g. pre-analyses). You can do that using the <code>save()</code> and <code>load()</code> functions in base-R.</p>
+<ul>
+<li><a href="https://www.r-bloggers.com/how-to-save-and-load-datasets-in-r-an-overview/">How to save and load datasets in R: an overview</a></li>
+</ul>
+</div>
+<div id="how-to-knit-a-document-without-rerunnning-code" class="section level2">
+<h2><span class="header-section-number">4.2</span> How to knit a document without rerunnning code</h2>
+<p>Dynamic Documents with and <code>knitr</code>: <code>knitr::options</code> give you multiple options which allow you to knit a document without re-running or displaying the code.</p>
+<p>Chunk options and package options can be found <a href="https://yihui.org/knitr/options/" class="uri">https://yihui.org/knitr/options/</a></p>
+<p>A few highlights from the document:</p>
+<ul>
+<li><code>echo</code>: (TRUE; <code>logical</code> or <code>numeric</code>) whether to include R source code in the output file</li>
+<li><code>eval</code>: (TRUE; <code>logical</code>) whether to evaluate the code chunk</li>
+<li><code>collapse</code>: (FALSE; <code>logical</code>) collapse all the source and output blocks from one code chunk into a single block</li>
+<li><code>include</code>: (TRUE; <code>logical</code>) whether to include the chunk output in the final output document; if include=FALSE, nothing will be written into the output document, <strong>but the code is still evaluated</strong> and plot files are generated.</li>
+</ul>
 </div>
 </div>
 

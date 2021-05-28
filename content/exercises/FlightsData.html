@@ -1,0 +1,33 @@
+---
+title: "Flight Data Havesting Flight24"
+author: "Yuan Tian"
+date: '2020-03-19'
+output: html_document
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="harvesting-the-flight-data-from-httpsflightaware.com" class="section level2">
+<h2>Harvesting the Flight Data from <a href="https://flightaware.com/" class="uri">https://flightaware.com/</a></h2>
+<p>Step 1: Get all the flight number</p>
+<ol style="list-style-type: decimal">
+<li>Use <code>Dest_ICAO</code> and <code>Source_ICAO</code> to get all the flight numbers between two airports: <a href="https://flightaware.com/live/findflight?origin=CYXE&amp;destination=CYYZ" class="uri">https://flightaware.com/live/findflight?origin=CYXE&amp;destination=CYYZ</a></li>
+</ol>
+<ul>
+<li><code>Dest_ICAO</code> and <code>Source_ICAO</code> are 4-digit airports ID</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Register a free acount with FlightAware, then you will have access to 90 day history of a flight.</li>
+</ol>
+<ul>
+<li>E.g., get 80-day history of a specific flight number <code>WJA506</code>. <a href="https://flightaware.com/live/flight/WJA506/history/80" class="uri">https://flightaware.com/live/flight/WJA506/history/80</a></li>
+</ul>
+<p>Sources:</p>
+<ul>
+<li><a href="https://openflights.org/data.html#country" class="uri">https://openflights.org/data.html#country</a></li>
+<li><a href="https://towardsdatascience.com/scraping-flight-data-using-python-e71b97e859d3">Scraping Flight Data Using Python</a></li>
+<li><a href="https://www.flightradar24.com/" class="uri">https://www.flightradar24.com/</a></li>
+<li><a href="https://stackoverflow.com/questions/45296198/how-to-web-scraping-from-a-website-where-there-is-a-loading-table" class="uri">https://stackoverflow.com/questions/45296198/how-to-web-scraping-from-a-website-where-there-is-a-loading-table</a></li>
+</ul>
+</div>

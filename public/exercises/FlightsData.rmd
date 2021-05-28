@@ -1,0 +1,31 @@
+---
+title: "Flight Data Havesting Flight24"
+author: "Yuan Tian"
+date: '2020-03-19'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Harvesting the Flight Data  from <https://flightaware.com/>
+
+Step 1: Get all the flight number
+
+1. Use `Dest_ICAO` and `Source_ICAO` to get all the flight numbers between two airports: <https://flightaware.com/live/findflight?origin=CYXE&destination=CYYZ>
+ * `Dest_ICAO` and `Source_ICAO` are 4-digit airports ID
+
+2. Register a free acount with FlightAware, then you will have access to 90 day history of a flight. 
+ * E.g., get 80-day history of a specific flight number `WJA506`.  <https://flightaware.com/live/flight/WJA506/history/80>
+
+
+
+
+
+Sources: 
+
+* <https://openflights.org/data.html#country>
+* [Scraping Flight Data Using Python](https://towardsdatascience.com/scraping-flight-data-using-python-e71b97e859d3)
+* <https://www.flightradar24.com/>
+* <https://stackoverflow.com/questions/45296198/how-to-web-scraping-from-a-website-where-there-is-a-loading-table>

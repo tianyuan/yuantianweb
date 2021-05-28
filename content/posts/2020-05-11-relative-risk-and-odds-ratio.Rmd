@@ -1,0 +1,13 @@
+---
+title: 'Relative Risk and Odds Ratio '
+author: Yuan Tian
+date: '2020-05-11'
+slug: relative-risk-and-odds-ratio
+categories: []
+tags: []
+draft: yes
+---
+
+This is a new article about relative risk and odds ratio.
+This is testing. 
+This is another testing. 
